@@ -3,38 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/pl/blog/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/"
-                />
-  </url>
-  
-  <url>
     <loc>/pl/categories/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -63,38 +32,7 @@
   </url>
   
   <url>
-    <loc>/pl/categories/hugo/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/categories/hugo/"
-                />
-  </url>
-  
-  <url>
     <loc>/pl/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -119,136 +57,6 @@
                 rel="alternate"
                 hreflang="pl"
                 href="/pl/"
-                />
-  </url>
-  
-  <url>
-    <loc>/pl/blog/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/creating-a-new-theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/creating-a-new-theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/blog/creating-a-new-theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/blog/creating-a-new-theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/creating-a-new-theme/"
-                />
-  </url>
-  
-  <url>
-    <loc>/pl/blog/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/goisforlovers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/goisforlovers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/goisforlovers/"
-                />
-  </url>
-  
-  <url>
-    <loc>/pl/blog/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/hugoisforlovers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/hugoisforlovers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/hugoisforlovers/"
-                />
-  </url>
-  
-  <url>
-    <loc>/pl/categories/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/categories/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/categories/go/"
-                />
-  </url>
-  
-  <url>
-    <loc>/pl/categories/jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/jekyll/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/categories/jekyll/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/categories/jekyll/"
-                />
-  </url>
-  
-  <url>
-    <loc>/pl/blog/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/migrate-from-jekyll/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/migrate-from-jekyll/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/migrate-from-jekyll/"
                 />
   </url>
   

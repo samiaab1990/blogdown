@@ -5,31 +5,6 @@
   <url>
     <loc>/blog/</loc>
     <lastmod>2019-09-21T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/blog/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/"
-                />
   </url>
   
   <url>
@@ -68,8 +43,15 @@
   </url>
   
   <url>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/bookmarks/</loc>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -98,43 +80,7 @@
   </url>
   
   <url>
-    <loc>/categories/markdown/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/examples/</loc>
-    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/2015-07-23-r-rmarkdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/regression/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -160,174 +106,6 @@
                 hreflang="en"
                 href="/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>/blog/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/creating-a-new-theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/blog/creating-a-new-theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/creating-a-new-theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/blog/creating-a-new-theme/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/creating-a-new-theme/"
-                />
-  </url>
-  
-  <url>
-    <loc>/categories/hugo/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/categories/hugo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/hugo/"
-                />
-  </url>
-  
-  <url>
-    <loc>/blog/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/goisforlovers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/goisforlovers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/goisforlovers/"
-                />
-  </url>
-  
-  <url>
-    <loc>/blog/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/hugoisforlovers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/hugoisforlovers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/hugoisforlovers/"
-                />
-  </url>
-  
-  <url>
-    <loc>/categories/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/categories/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/categories/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/go/"
-                />
-  </url>
-  
-  <url>
-    <loc>/categories/jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/categories/jekyll/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/categories/jekyll/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/jekyll/"
-                />
-  </url>
-  
-  <url>
-    <loc>/blog/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/migrate-from-jekyll/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/blog/migrate-from-jekyll/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/migrate-from-jekyll/"
-                />
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/bookmarks/</loc>
   </url>
   
 </urlset>
