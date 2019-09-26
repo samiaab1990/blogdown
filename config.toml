@@ -1,6 +1,6 @@
-baseurl                 = "/"
+baseurl                 = "https://example.com/"
 DefaultContentLanguage  = "en"
-title                   = "Samia Ali"
+title                   = "Hugo Future Imperfect Slim"
 theme = "hugo-future-imperfect-slim"
 preserveTaxonomyNames   = true
 paginate                = 3
@@ -27,7 +27,8 @@ disableLanguages        = [""]
   readingTime           = true
   # Sets which Social Share links appear in posts.
   # Options are twitter, facebook, reddit, linkedin, pinterest, email
-  socialShare           = ["twitter"]
+  socialShare           = ["twitter", "facebook", "reddit", "linkedin",
+                          "pinterest", "email"]
 
   [params.meta]
     # Sets the meta tag description
@@ -46,7 +47,7 @@ disableLanguages        = [""]
 
   [params.header]
     # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "Samia Ali"
+    navbarTitle         = "Future Imperfect"
     # Sets navbarTitle to match the section of the website
     dynamicTitles       = true
     searchMenu          = true
@@ -56,19 +57,19 @@ disableLanguages        = [""]
   # These are optional params related to the sidebar. They are recommended, but not
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
-    header                = "Samia Ali"
-    paragraph             = "Interests: Using data, statistics & methods in epidemiology to better understand clinical decision making & healthcare."
+    header                = "Hugo Future Imperfect Slim"
+    paragraph             = "Another fine, responsive site template by <a href='http://html5up.net'>HTML5 UP</a>."
     rssIntro              = true
     socialIntro           = true
 
     # This appears at the top of the sidebar above params.intro.header.
     # A width of less than 100px is recommended from a design perspective.
     [params.intro.pic]
-      #src                 = ""
+      src                 = "/img/main/logo.jpg"
       # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
       shape               = "circle"
       width               = ""
-      #alt                 = ""
+      alt                 = "Hugo Future Imperfect Slim"
 
   [params.sidebar]
     about               = "test"
@@ -128,13 +129,19 @@ disableLanguages        = [""]
     weight            = 3
 
   [[menu.main]]
-    name              = "Bookmarks"
-    identifier        = "bookmarks"
-    url               = "/bookmarks/"
-    pre               = "<i class='fas fa-star'></i>"
+    name              = "Categories"
+    identifier        = "categories"
+    url               = "/categories/"
+    pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 5
 
-  
+  [[menu.main]]
+    name              = "Contact"
+    identifier        = "contact"
+    url               = "/contact/"
+    pre               = "<i class='far fa-envelope'></i>"
+    weight            = 6
+
 [Languages]
   # Each language has its own menu.
   [Languages.en]
@@ -315,49 +322,49 @@ disableLanguages        = [""]
 # and socialAppearAtBottom.
 [social]
   # Coding Communities
-  github                = "samiaab1990"
-  #gitlab                = ""
-  #stackoverflow         = "" 
-  #bitbucket             = ""
-  #jsfiddle              = ""
-  #codepen               = ""
+  github                = "pacollins/hugo-future-imperfect-slim"
+  gitlab                = ""
+  stackoverflow         = "" # User Number
+  bitbucket             = ""
+  jsfiddle              = ""
+  codepen               = ""
   # Visual Art Communities
-  #deviantart            = ""
-  #flickr                = "example"
-  #behance               = ""
-  #dribbble              = ""
+  deviantart            = ""
+  flickr                = "example"
+  behance               = ""
+  dribbble              = ""
   # Publishing Communities
-  #wordpress             = ""
-  #medium                = ""
+  wordpress             = ""
+  medium                = ""
   # Professional/Business Oriented Communities
-  #linkedin              = "example"
-  #linkedin_company      = "examplebusiness"
-  #foursquare            = ""
-  #xing                  = ""
-  #slideshare            = ""
+  linkedin              = "example"
+  linkedin_company      = "examplebusiness"
+  foursquare            = ""
+  xing                  = ""
+  slideshare            = ""
   # Social Networks
-  #facebook              = "example"
-  #googleplus            = ""
-  #reddit                = "example"
-  #quora                 = ""
-  #youtube               = ""
-  #vimeo                 = ""
-  #whatsapp              = "" # WhatsApp Number
+  facebook              = "example"
+  googleplus            = ""
+  reddit                = "example"
+  quora                 = ""
+  youtube               = ""
+  vimeo                 = ""
+  whatsapp              = "" # WhatsApp Number
     # WeChat and QQ need testing.
-    #wechat              = ""
-    #qq                  = "" # User ID Number
-  #instagram             = "example"
-  #tumblr                = ""
-  twitter               = "samiasab90"
-  #skype                 = ""
-  #snapchat              = ""
-  #pinterest             = "example"
-  #telegram              = "example"
-  #vine                  = ""
-  #googlescholar         = ""
-  #orcid                 = ""
-  #researchgate          = "example"
-  #keybase               = "example"
-  #mastodon              = "example.com/@example"
+    wechat              = ""
+    qq                  = "" # User ID Number
+  instagram             = "example"
+  tumblr                = ""
+  twitter               = "example"
+  skype                 = ""
+  snapchat              = ""
+  pinterest             = "example"
+  telegram              = "example"
+  vine                  = ""
+  googlescholar         = ""
+  orcid                 = ""
+  researchgate          = "example"
+  keybase               = "example"
+  mastodon              = "example.com/@example"
   # Email
-  #email                 = "example"
+  email                 = "example"
