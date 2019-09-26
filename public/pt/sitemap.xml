@@ -153,60 +153,6 @@
   </url>
   
   <url>
-    <loc>/pt/about/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>/pt/contact/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/contact/"
-                />
-  </url>
-  
-  <url>
     <loc>/pt/tags/</loc>
     <xhtml:link
                 rel="alternate"

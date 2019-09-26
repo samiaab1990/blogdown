@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Hugo Future Imperfect Slim</title>
+    <title>Blog on Samia Ali</title>
     <link>/blog/</link>
-    <description>Recent content in Blog on Hugo Future Imperfect Slim</description>
+    <description>Recent content in Blog on Samia Ali</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jekyll vs Hugo and my Overall Site Building Experience</title>
+      <link>/blog/jekyll-vs-hugo-and-my-overall-site-building-experience/</link>
+      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/jekyll-vs-hugo-and-my-overall-site-building-experience/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Markdown and Shortcodes</title>
