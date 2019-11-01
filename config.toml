@@ -1,4 +1,4 @@
-baseurl                 = "/"
+baseurl                 = "samiaab.netlify.com"
 DefaultContentLanguage  = "en"
 title                   = "Samia Ali"
 theme = "hugo-future-imperfect-slim"
@@ -56,15 +56,15 @@ disableLanguages        = [""]
   # These are optional params related to the sidebar. They are recommended, but not
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
-    header                = "Samia Ali"
+    header                = "<img src = 'img/main/name.png'>"
     paragraph             = "Interests: Using data, statistics & methods in epidemiology to better understand clinical decision making & healthcare."
-    rssIntro              = true
+    #rssIntro             = true
     socialIntro           = true
 
     # This appears at the top of the sidebar above params.intro.header.
     # A width of less than 100px is recommended from a design perspective.
     [params.intro.pic]
-      #src                 = ""
+      src                 = ""
       # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
       shape               = "circle"
       width               = ""

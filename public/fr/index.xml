@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo Future Imperfect Slim en français</title>
-    <link>/fr/</link>
+    <link>/samiaab.netlify.com/fr/</link>
     <description>Recent content on Hugo Future Imperfect Slim en français</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
     
-	<atom:link href="/fr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/samiaab.netlify.com/fr/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

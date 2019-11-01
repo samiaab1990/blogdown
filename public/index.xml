@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Samia Ali</title>
-    <link>/</link>
+    <link>/samiaab.netlify.com/</link>
     <description>Recent content on Samia Ali</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/samiaab.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Jekyll vs Hugo and my Overall Site Building Experience</title>
-      <link>/blog/jekyll-vs-hugo-and-my-overall-site-building-experience/</link>
-      <pubDate>Sat, 21 Sep 2019 00:00:00 +0000</pubDate>
+      <title>test</title>
+      <link>/samiaab.netlify.com/blog/test/</link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/jekyll-vs-hugo-and-my-overall-site-building-experience/</guid>
+      <guid>/samiaab.netlify.com/blog/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bookmarks</title>
-      <link>/bookmarks/</link>
+      <link>/samiaab.netlify.com/bookmarks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/bookmarks/</guid>
+      <guid>/samiaab.netlify.com/bookmarks/</guid>
       <description></description>
     </item>
     
