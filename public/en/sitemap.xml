@@ -3,108 +3,108 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/samiaab.netlify.com/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2019-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/samiaab.netlify.com/</loc>
+    <loc>/</loc>
     <lastmod>2019-11-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/samiaab.netlify.com/de/"
+                href="/de/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/samiaab.netlify.com/fr/"
+                href="/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="/samiaab.netlify.com/pl/"
+                href="/pl/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="/samiaab.netlify.com/pt/"
+                href="/pt/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/samiaab.netlify.com/"
+                href="/"
                 />
   </url>
   
   <url>
-    <loc>/samiaab.netlify.com/blog/test/</loc>
+    <loc>/blog/test/</loc>
     <lastmod>2019-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/samiaab.netlify.com/about/</loc>
+    <loc>/about/</loc>
   </url>
   
   <url>
-    <loc>/samiaab.netlify.com/bookmarks/</loc>
+    <loc>/bookmarks/</loc>
   </url>
   
   <url>
-    <loc>/samiaab.netlify.com/categories/</loc>
+    <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/samiaab.netlify.com/de/categories/"
+                href="/de/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/samiaab.netlify.com/fr/categories/"
+                href="/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="/samiaab.netlify.com/pl/categories/"
+                href="/pl/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="/samiaab.netlify.com/pt/categories/"
+                href="/pt/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/samiaab.netlify.com/categories/"
+                href="/categories/"
                 />
   </url>
   
   <url>
-    <loc>/samiaab.netlify.com/tags/</loc>
+    <loc>/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="/samiaab.netlify.com/de/tags/"
+                href="/de/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="/samiaab.netlify.com/fr/tags/"
+                href="/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pl"
-                href="/samiaab.netlify.com/pl/tags/"
+                href="/pl/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="/samiaab.netlify.com/pt/tags/"
+                href="/pt/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/samiaab.netlify.com/tags/"
+                href="/tags/"
                 />
   </url>
   

@@ -1,4 +1,4 @@
-baseurl                 = "samiaab.netlify.com"
+baseurl                 = "/"
 DefaultContentLanguage  = "en"
 title                   = "Samia Ali"
 theme = "hugo-future-imperfect-slim"
