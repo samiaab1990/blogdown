@@ -10,4 +10,9 @@
       <p>{{ . }}</p>
     {{ end }}
 </div>
+<div class ="image">
+              
+              <img src="{{ with .Params.image }}{{ . }}{{ end }}" class="position"/>
+              
+            </div>
 </header>

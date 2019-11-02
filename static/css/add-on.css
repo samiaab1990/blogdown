@@ -1085,3 +1085,10 @@
     margin-right: 540px;
     width: 25%;
  }
+ 
+  .position2 {
+    display: block;
+    margin-left: -50px;
+    margin-right: 540px;
+    width: 50%;
+ }
