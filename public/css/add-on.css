@@ -19,7 +19,7 @@
  /* Type */
 
  body, input, select, textarea {
-   color: #BC68EB;
+   color: #017EA4;
    font-family: "Source Sans Pro", Helvetica, sans-serif;
    line-height: 1.75em;
  }
@@ -269,6 +269,7 @@
 
  #site-header {
    background-color: #3D3D3E;
+   color: #F5B9FF;
    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
    -webkit-box-shadow:  0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23);
    -moz-box-shadow:  0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23);
@@ -286,7 +287,6 @@
      border: 0;
      border-left: 1px solid rgba(160, 160, 160, 0.3);
      font-family: "Raleway", Helvetica, sans-serif;
-     color: #C96BF7;
      font-size: 0.7em;
      font-weight: 400;
      letter-spacing: 0.25em;
@@ -295,7 +295,7 @@
      text-transform: uppercase;
    }
    .flyout-menu {
-     background-color: #000000;
+     color: #F5B9FF;
      border-left: 1px solid rgba(160, 160, 160, 0.3);
      height: 100%;
      margin-top: 3.5em;
@@ -320,7 +320,6 @@
        }
      }
      h1 {
-       color: #DCC1FD;
        font-size: 1em;
      }
    }
@@ -403,6 +402,7 @@
      margin: 0;
      a {
        border: 0;
+       color: #F5B9FF;
        font-size: 0.35em;
        font-weight: 800;
        margin-left: 1.5em;
@@ -588,6 +588,8 @@
    
    header h1 {
      font-size: 1em;
+     color: #F5B9FF;
+     
    }
    > * {
      border-top: solid 1px rgba(160, 160, 160, 0.3);
