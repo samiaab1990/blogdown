@@ -6,7 +6,8 @@
 
 
  body {
-   background: #FFFFFF;
+   background-color: transparent;
+   background-image: url("/img/gradient.png");
    margin-top: 3.5em;
    max-width: 100vw;
    -ms-overflow-style: scrollbar;
@@ -608,8 +609,10 @@
    > header {
      flex: 1 1 100%;
    }
+   .postbox{
+      background-color:transparent;
+   }
    .mini-post {
-     background: #000000;
      border: solid 1px rgba(160, 160, 160, 0.3);
  display: flex;
  flex-direction: column;
@@ -920,7 +923,7 @@
     }
 }
 .post {
-   background: #FFFFFF;
+   background: transparent;
    margin: 1.5em auto;
    padding: 1em;
    max-width: 55em;
@@ -1081,14 +1084,14 @@
  
  .position {
     display: block;
-    margin-left: -50px;
     margin-right: 540px;
     width: 25%;
  }
  
   .position2 {
     display: block;
-    margin-left: -50px;
     margin-right: 540px;
     width: 50%;
  }
+ 
+
