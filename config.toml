@@ -56,7 +56,7 @@ disableLanguages        = [""]
   # These are optional params related to the sidebar. They are recommended, but not
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
-    header                = "<img src = 'img/main/name.png'>"
+    header                = "<img src = '/img/main/name.png'>"
     paragraph             = "Interests: Using data, statistics & methods in epidemiology to better understand clinical decision making & healthcare."
     #rssIntro             = true
     socialIntro           = true
