@@ -57,7 +57,7 @@ disableLanguages        = [""]
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
     header                = "<img src = '/img/main/name.png'>"
-    paragraph             = "Interests: Using data, statistics & methods in epidemiology to better understand clinical decision making & healthcare."
+    paragraph             = "Interests: Data science, statistics & epidemiology in clinical research & public health."
     #rssIntro             = true
     socialIntro           = true
 
