@@ -27,7 +27,7 @@ disableLanguages        = [""]
   readingTime           = true
   # Sets which Social Share links appear in posts.
   # Options are twitter, facebook, reddit, linkedin, pinterest, email
-  socialShare           = ["twitter"]
+  socialShare           = ["twitter", "linkedin", "email"]
 
   [params.meta]
     # Sets the meta tag description
@@ -57,7 +57,7 @@ disableLanguages        = [""]
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
     header                = "<img src = '/img/main/name.png'>"
-    paragraph             = "Interests: Data science, statistics & epidemiology in clinical research & public health."
+    paragraph             = "Interests: Data science, biostatistics & epidemiology for clinical research & public health."
     #rssIntro             = true
     socialIntro           = true
 
