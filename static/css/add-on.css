@@ -396,13 +396,13 @@
      }
    }
    .nav-title {
+     color:#F5B9FF;
      align-items: center;
      display: flex;
      flex-grow: 1;
      margin: 0;
      a {
        border: 0;
-       color: #F5B9FF;
        font-size: 0.35em;
        font-weight: 800;
        margin-left: 1.5em;
