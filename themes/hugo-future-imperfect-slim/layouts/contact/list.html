@@ -8,6 +8,11 @@
       <main id="site-main">
         <article class="post">
           <header>
+             <div class ="image">
+              
+              <img src="{{ with .Params.image }}{{ . }}{{ end }}" class="position3"/>
+              
+            </div>
             <div class="title">
               {{ if $.Scratch.Get "h1" }}
                 <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>

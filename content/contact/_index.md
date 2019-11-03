@@ -1,5 +1,5 @@
 +++
-title = "Contact"
+image = "contact.png"
 type = "contact"
 netlify = false
 emailservice = "formspree.io/mgewbrgn"
