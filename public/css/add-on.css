@@ -1074,20 +1074,23 @@
    }
  }
  
- .position {
+   .abtimg {
     display: block;
-    width: 65%;
-    padding-right:100px;
+    width: 80%;
+    padding-right:350px;
  }
  
-  .position2 {
+  .bookmarksimg {
     display: block;
-    width: 70%;
-    padding-right:30px;
+    width: 95%;
+    padding-right:300px;
  }
 
-   .position3 {
+   .contactimg {
     display: block;
-    width: 68%;
-    padding-left:230px;
+    width: 50%;
+    padding-left:40px;
+   
  }
+
+
