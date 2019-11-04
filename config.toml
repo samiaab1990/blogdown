@@ -67,7 +67,7 @@ disableLanguages        = [""]
       src                 = "/img/main/logo2.png"
       # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
       shape               = "hexagon"
-      width               = "200 px"
+      width               = "170 px"
       #alt                 = ""
 
   [params.sidebar]
