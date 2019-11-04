@@ -8,6 +8,11 @@
       <main id="site-main">
         <article class="post">
           <header>
+             <div class ="image">
+              
+              <img src="{{ with .Params.image }}{{ . }}{{ end }}" class="contactimg"/>
+              
+            </div>
             <div class="title">
               {{ if $.Scratch.Get "h1" }}
                 <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
@@ -26,7 +31,6 @@
                 {{ else }}
                   <form id="contact" action="//{{ .Params.emailService }}" method="post" center width="300px">
                 {{ end }}
-                <h4>{{ i18n "repliestext" .Params.contactanswertime }}</h4>
                 <fieldset>
                   <input placeholder="{{ with .Params.contactname }}{{ . }}{{ else }}Name{{ end }}" type="text" name="name" tabindex="1" required autofocus>
                 </fieldset>

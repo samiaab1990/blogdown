@@ -1,3 +1,4 @@
+
 <section id="site-sidebar">
   {{ if gt .Site.Params.sidebar.postAmount 0 }}
     <section id="recent-posts">
@@ -5,7 +6,7 @@
         <h1>{{ i18n "recent_posts" }}</h1>
       </header>
       {{ range first (.Site.Params.sidebar.postAmount | default 5) (where .Site.Pages  "Type" "post") }}
-      <article class="mini-post">
+      <article class="mini-post" style="background-color:transparent;">
         <section>
           {{ .Render "featured" }}
         </section>
