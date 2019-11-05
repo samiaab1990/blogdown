@@ -4,7 +4,6 @@
 
 
 
-
  body {
    background-color: transparent;
    background-image: url("/img/gradient.png");
@@ -18,7 +17,7 @@
 
  body, input, select, textarea {
    color: #017EA4;
-   font-family: "Merriweather", Helvetica, sans-serif;
+   font-family: 'Segoe UI', Helvetica sans-serif;
    line-height: 1.75em;
  }
  
@@ -26,7 +25,7 @@
 
  h1, h2, h3, h4, h5, h6 {
    color: #3E2A68;
-   font-family: "Raleway", Helvetica, sans-serif;
+   font-family: "Segoe UI", Helvetica, sans-serif;
    letter-spacing: 0.25em;
    line-height: 1.65;
    text-transform: uppercase;
@@ -741,7 +740,7 @@
  #socnet-share {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: start;
    margin: 1em 1em 0 1em;
    @include for-laptop-up {
      justify-content: flex-start;
@@ -1078,7 +1077,7 @@
  }
  
    .abtimg {
-    display: block;
+    display: inline-block;
     width: 30%;
     ;
  }
@@ -1134,7 +1133,6 @@
      background: transparent;
      color: #017EA4;
      opacity:.7;
-     float:left;
      }
 
    .share-btn.linkedin {
@@ -1142,7 +1140,6 @@
      background: transparent;
      color: #017EA4;
      opacity:.7;
-     float:left;
      }
 
    .share-btn.email {
@@ -1150,5 +1147,4 @@
      background: transparent;
      color: #017EA4;
      opacity:.7;
-     float:left;
      }
