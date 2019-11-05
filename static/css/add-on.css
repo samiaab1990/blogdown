@@ -1151,3 +1151,87 @@
      color: #017EA4;
      opacity:.7;
      }
+/*Buttons on Bookmark Page*/
+.statsbutton{
+  background-color: transparent; /* Green */
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  color: #3E2A68 ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+   }
+  
+ .statsbutton:hover {
+    background:#3E2A68;
+    color:white;
+     
+ }
+   
+.publichealthbutton{
+  background-color: transparent; /* Green */
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  color: #3E2A68 ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+ .publichealthbutton:hover {
+    background:#3E2A68;
+    color:white;
+}
+    
+.epibutton{
+  background-color: transparent; /* Green */
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  color: #3E2A68 ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+ .epibutton:hover {
+    background:#3E2A68;
+    color:white;
+ }
+.programmingbutton{
+  background-color: transparent; /* Green */
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  color: #3E2A68 ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.programmingbutton:hover {
+    background:#3E2A68;
+    color:white;
+}
+.clinicalbutton{
+  background-color: transparent; /* Green */
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  color: #3E2A68 ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.clinicalbutton:hover {
+    background:#3E2A68;
+    color:white;
+}
+.miscbutton{
+  background-color: transparent; /* Green */
+  border: solid 1px rgba(160, 160, 160, 0.3);
+  color: #3E2A68 ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.miscbutton:hover {
+    background:#3E2A68;
+    color:white;
+}
