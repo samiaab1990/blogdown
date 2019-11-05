@@ -1133,6 +1133,7 @@
      background: transparent;
      color: #017EA4;
      opacity:.7;
+     float:left;
      }
 
    .share-btn.linkedin {
@@ -1140,6 +1141,7 @@
      background: transparent;
      color: #017EA4;
      opacity:.7;
+     float:left;
      }
 
    .share-btn.email {
@@ -1147,4 +1149,5 @@
      background: transparent;
      color: #017EA4;
      opacity:.7;
+     float:left;
      }
