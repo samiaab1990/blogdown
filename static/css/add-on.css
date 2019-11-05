@@ -1077,7 +1077,7 @@
  }
  
    .abtimg {
-    display: inline-block;
+    display: block;
     width: 30%;
     ;
  }
