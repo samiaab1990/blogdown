@@ -17,7 +17,7 @@
 
  body, input, select, textarea {
    color: #017EA4;
-   font-family: 'Segoe UI', Helvetica sans-serif;
+   font-family: "Source Sans Pro", Helvetica, sans-serif;;
    line-height: 1.75em;
  }
  
@@ -25,7 +25,7 @@
 
  h1, h2, h3, h4, h5, h6 {
    color: #3E2A68;
-   font-family: "Segoe UI", Helvetica, sans-serif;
+   font-family: "Raleway", Helvetica, sans-serif;
    letter-spacing: 0;
    line-height: 1.65;
    text-transform: uppercase;
