@@ -1114,7 +1114,7 @@
    box-shadow: 0 0px 0 0 rgba(0,0,0,0);
    color: #ffffff;
    font-size:10px;
-   display: block;
+   display: inline-block;
    text-align: center;
    &:hover {
      color: #ffffff !important;
@@ -1129,6 +1129,7 @@
  }
 
  .share-btn.twitter {
+     display:inline-block;
      border: 1px solid #017EA4;
      background: transparent;
      color: #017EA4;
@@ -1136,6 +1137,7 @@
      }
 
    .share-btn.linkedin {
+     display:inline-block;
      border: 1px solid #017EA4;
      background: transparent;
      color: #017EA4;
@@ -1143,6 +1145,7 @@
      }
 
    .share-btn.email {
+     display:inline-block;
      border: 1px solid #017EA4;
      background: transparent;
      color: #017EA4;
