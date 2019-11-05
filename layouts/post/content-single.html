@@ -1,12 +1,12 @@
 <article class="post">
   {{ .Render "header" }}
-  <section id="socnet-share">
-    {{ partial "share-buttons" . }}
-  </section>
   {{ .Render "featured" }}
   <div class="content">
     {{ .Content }}
   </div>
+  <section id="socnet-share">
+    {{ partial "share-buttons" . }}
+  </section>
   <footer>
     {{ .Render "stats" }}
   </footer>

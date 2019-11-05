@@ -1095,4 +1095,60 @@
    
  }
 
+.postimg {
+   display: block;
+   width:50%;
+   margin-left:auto;
+   margin-right:auto;
+}
 
+.imgcaption{
+   text-align:center;
+   font-size:.5em;
+   font-family: ;
+   color:#3D3D3E;
+}
+
+.share-btn {
+   border: none;
+   border-radius: 0px;
+   box-shadow: 0 0px 0 0 rgba(0,0,0,0);
+   color: #ffffff;
+   font-size:10px;
+   display: inline-block;
+   text-align: center;
+   &:hover {
+     color: #ffffff !important;
+   }
+   &:active {
+     position: relative;
+     top: 2px;
+     box-shadow: none;
+     color: #e2e2e2;
+     outline: none;
+   }
+ }
+
+ .share-btn.twitter {
+     border: 1px solid #017EA4;
+     background: transparent;
+     color: #017EA4;
+     opacity:.7;
+     float:left;
+     }
+
+   .share-btn.linkedin {
+     border: 1px solid #017EA4;
+     background: transparent;
+     color: #017EA4;
+     opacity:.7;
+     float:left;
+     }
+
+   .share-btn.email {
+     border: 1px solid #017EA4;
+     background: transparent;
+     color: #017EA4;
+     opacity:.7;
+     float:left;
+     }
