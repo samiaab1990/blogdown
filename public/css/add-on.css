@@ -61,14 +61,14 @@
    text-align: center;
    text-transform: uppercase;
    width: fit-content;
-   &:hover {
-     border: solid 1px $accent-color;
-     color: $accent-color !important;
-     &:active {
+}
+   .button:hover {
+     border: solid 1px #43A3C9;
+     color: #43A3C9;
+   }
+    .button:active {
        background-color: rgba(46, 186, 174, 0.05);
      }
-   }
- }
 
  
 
@@ -233,7 +233,7 @@
  }
 
  /* Copied from other blocks for reply and 'x' buttons */
- .button {
+.button {
    margin: .25em 0;
    background-color: transparent;
    border: solid 1px rgba(160, 160, 160, 0.3);
@@ -249,16 +249,7 @@
    text-align: center;
    text-transform: uppercase;
    width: fit-content;
-   &:hover {
-     border: solid 1px $accent-color;
-     color: $accent-color !important;
-   }
-   &:active {
-     background-color: rgba(46, 186, 174, 0.05);
-   }
- }
-
-
+}
  /* ---------------------------------Classes--------------------------------- */
 
 
@@ -1093,6 +1084,12 @@
     width: 45%;
    
  }
+ 
+ .projimg {
+   display:block;
+   width:35%;
+   
+}
 
 .postimg {
    display: block;
@@ -1100,6 +1097,8 @@
    margin-left:auto;
    margin-right:auto;
 }
+
+
 
 .imgcaption{
    text-align:center;
@@ -1151,54 +1150,85 @@
      color: #017EA4;
      opacity:.7;
      }
+     
 /*Buttons on Bookmark Page*/
 .statsbutton{
-  background-color: transparent; /* Green */
-  border: solid 1px rgba(160, 160, 160, 0.3);
-  color: #3E2A68 ;
-  text-align: center;
+  
+ background:#3D3D3E;
+ font-size: 16px;
+ letter-spacing: 0;
+ border: solid 1px rgba(160, 160, 160, 160);
+ color:#F5B9FF;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-weight:700;
+  -moz-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -webkit-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -ms-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   text-align: center;
+   text-transform: uppercase;
+   width: fit-content;
    }
   
  .statsbutton:hover {
-    background:#3E2A68;
-    color:white;
+   background: #3D3D3E;
+    color: #2EBAAE;
+     border: solid 1px rgba(160, 160, 160, 160);
      
  }
    
 .publichealthbutton{
-  background-color: transparent; /* Green */
-  border: solid 1px rgba(160, 160, 160, 0.3);
-  color: #3E2A68 ;
+  background-color: #3D3D3E ;
+  border: solid 1px rgba(160, 160, 160, 160);
+  color: #F5B9FF;
+  text-decoration:none;
   text-align: center;
-  text-decoration: none;
+  text-transform:uppercase;
+  font-weight:700;
   display: inline-block;
   font-size: 16px;
+  -moz-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -webkit-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -ms-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   text-align: center;
+   text-transform: uppercase;
+   width: fit-content;
 }
 
  .publichealthbutton:hover {
-    background:#3E2A68;
-    color:white;
+    background:#3D3D3E;
+    color: #2EBAAE;
+      border: solid 1px rgba(160, 160, 160, 160);
 }
     
 .epibutton{
-  background-color: transparent; /* Green */
-  border: solid 1px rgba(160, 160, 160, 0.3);
-  color: #3E2A68 ;
-  text-align: center;
+  background-color: #3D3D3E; 
+  border: solid 1px rgba(160, 160, 160, 160);
+  color: #F5B9FF;
   text-decoration: none;
+  font-weight:700;
   display: inline-block;
   font-size: 16px;
+  -moz-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -webkit-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -ms-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   text-align: center;
+   text-transform: uppercase;
+   width: fit-content;
 }
  .epibutton:hover {
-    background:#3E2A68;
-    color:white;
+      border: solid 1px rgba(160, 160, 160, 160);
+    background:#3D3D3E;
+    color:#2EBAAE;
  }
 .programmingbutton{
-  background-color: transparent; /* Green */
-  border: solid 1px rgba(160, 160, 160, 0.3);
+  background-color: #3D3D3E; 
+  text-transform: #F5B9FF;
+  font-weight:700;
+  border: solid 1px rgba(160, 160, 160, 160);
   color: #3E2A68 ;
   text-align: center;
   text-decoration: none;
@@ -1210,28 +1240,69 @@
     color:white;
 }
 .clinicalbutton{
-  background-color: transparent; /* Green */
-  border: solid 1px rgba(160, 160, 160, 0.3);
-  color: #3E2A68 ;
-  text-align: center;
+  background-color: #3D3D3E; 
+  font-weight:700;
+  border: solid 1px rgba(160, 160, 160, 160);
+  color: #F5B9FF ;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  -moz-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -webkit-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -ms-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   text-align: center;
+   text-transform: uppercase;
+   width: fit-content;
 }
 .clinicalbutton:hover {
-    background:#3E2A68;
-    color:white;
+    background: #3D3D3E;
+    color:#2EBAAE;
+      border: solid 1px rgba(160, 160, 160, 160);
 }
 .miscbutton{
-  background-color: transparent; /* Green */
-  border: solid 1px rgba(160, 160, 160, 0.3);
-  color: #3E2A68 ;
+  background-color: #3D3D3E; 
+  border: solid 1px rgba(160, 160, 160, 160);
+  color: #F5B9FF;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight:700;
+  -moz-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -webkit-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -ms-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   text-align: center;
+   text-transform: uppercase;
+   width: fit-content;
+}
+.miscbutton:hover {
+    background: #3D3D3E;
+    color:#2EBAAE;
+      border: solid 1px rgba(160, 160, 160, 160);
+}
+
+.gitbtn {
+   
+  background-color: transparent; 
+  border: solid 1px rgba(160, 160, 160, 160);
+  color: #017EA4;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-weight:700;
+  -moz-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -webkit-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   -ms-transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+   text-align: center;
+   text-transform: uppercase;
+   width: fit-content;
 }
-.miscbutton:hover {
-    background:#3E2A68;
-    color:white;
+.gitbtn:hover {
+    background:transparent;
+    color:#2EBAAE; 
+    border: solid 1px #43A3C9;
 }
+

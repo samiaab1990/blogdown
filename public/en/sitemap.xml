@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/2019-11-05-making-a-static-website/</loc>
+    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/</loc>
     <lastmod>2019-11-05T00:00:00+00:00</lastmod>
   </url>
@@ -38,11 +43,6 @@
   </url>
   
   <url>
-    <loc>/blog/testing/</loc>
-    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/about/</loc>
   </url>
   
@@ -52,6 +52,10 @@
   
   <url>
     <loc>/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
   </url>
   
   <url>

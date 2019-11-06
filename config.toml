@@ -133,13 +133,18 @@ disableLanguages        = [""]
     url               = "/bookmarks/"
     pre               = "<i class='fas fa-star'></i>"
     weight            = 5
-    
+[[menu.main]]  
+    name              = "Projects"
+    identifier        = "projects"
+    url               = "/projects/"
+    pre               = "<i class='fas fa-folder-open'></i>"
+    weight            = 6
 [[menu.main]]
     name              = "Contact"
     identifier        = "contact"
     url               = "/contact/"
     pre               = "<i class='fas fa-envelope'></i>"
-    weight            = 6
+    weight            = 7
   
 [Languages]
   # Each language has its own menu.
