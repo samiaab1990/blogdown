@@ -51,14 +51,6 @@
   </url>
   
   <url>
-    <loc>/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>/projects/</loc>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -85,6 +77,14 @@
                 hreflang="en"
                 href="/categories/"
                 />
+  </url>
+  
+  <url>
+    <loc>/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
   </url>
   
   <url>

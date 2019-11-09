@@ -1,5 +1,5 @@
 ---
-image: about.png
+Title: About
 ---
 
 

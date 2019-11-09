@@ -1,5 +1,4 @@
 ---
-image : "contact.png"
 type : "contact"
 netlify : false
 emailservice : "formspree.io/mgewbrgn"
@@ -8,4 +7,5 @@ contactemail : "Your Email"
 contactsubject : "Subject"
 contactmessage : "Your Message"
 contactlang : "en"
+title : Contact
 ---

@@ -1,6 +1,5 @@
 ---
-
-image: projects.png
+title: Projects
 ---
 
 ## Blogdown {#blogdown} 

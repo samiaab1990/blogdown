@@ -46,17 +46,18 @@ disableLanguages        = [""]
 
   [params.header]
     # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "<font color='#F5B9FF'>Samia Ali</font>"
+    navbarTitle         = "Samia Ali"
     # Sets navbarTitle to match the section of the website
     dynamicTitles       = true
     searchMenu          = true
     shareMenu           = true
     languageMenu        = true
+    themeMenu           = true
 
   # These are optional params related to the sidebar. They are recommended, but not
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
-    header                = "<img src = '/img/main/name.png'>"
+    header                = "<img id='name-image' src=/>"
     paragraph             = "Interests: Data science, biostatistics & epidemiology for clinical research & public health"
     #rssIntro             = true
     socialIntro           = true

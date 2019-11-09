@@ -3,6 +3,7 @@
   {{ partial "head" . }}
   <body>
     {{ partial "site-header" . }}
+    {{ partial "dark-mode-switch" .}}
     <div id="wrapper">
       {{ partial "site-intro" . }}
       <main id="site-main">
@@ -20,7 +21,7 @@
             
             <div class ="image">
               
-              <img src="{{ with .Params.image }}{{ . }}{{ end }}" class="bookmarksimg"/>
+              <img src="{{ with .Params.image }}{{ . }}{{ end }}" id="bookmarks-image" class="bookmarksimg"/>
               
             </div>
             

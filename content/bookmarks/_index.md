@@ -1,5 +1,5 @@
 ---
-image: bookmarks2.png
+title: Bookmarks
 ---
 <a href="#stats"><button class = "statsbutton">stats</button></a>
 <a href="#epi"><button class = "epibutton">epi</button></a>

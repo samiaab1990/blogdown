@@ -1,12 +1,32 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+:root {
+    --header-color: #3E2A68;
+    --main-background-image: url("/img/gradient.png");
+    --font-color: #017EA4;
+    --header-link-color:#F5B9FF;
+    --about-image-url: url("/img/about/about.png")
+}
 
+[data-theme="dark"] {
+  --header-color: #F5B9FF;
+  --main-background-image: url("/img/dark-gradient.png");
+  --font-color: #11a2cf;
+  --header-link-color:#B39AF7;
+  --about-image-url: url("/img/about/dark-themeabout.png")
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+      content: "dark";
+    }
+}
 
 
  body {
    background-color: transparent;
-   background-image: url("/img/gradient.png");
+   background-image: var(--main-background-image);
    margin-top: 3.5em;
    max-width: 100vw;
    -ms-overflow-style: scrollbar;
@@ -16,15 +36,15 @@
  /* Type */
 
  body, input, select, textarea {
-   color: #017EA4;
-   font-family: "Source Sans Pro", Helvetica, sans-serif;;
+   color: var(--font-color);
+   font-family: "Source Sans Pro", Helvetica, sans-serif;
    line-height: 1.75em;
  }
  
 
 
  h1, h2, h3, h4, h5, h6 {
-   color: #3E2A68;
+   color: var(--header-color);
    font-family: "Raleway", Helvetica, sans-serif;
    letter-spacing: 0;
    line-height: 1.65;
@@ -255,7 +275,8 @@
 
  #site-header {
    background-color: #3D3D3E;
-   color: #F5B9FF;
+   opacity:.9;
+   color: var(--header-link-color);
    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
    -webkit-box-shadow:  0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23);
    -moz-box-shadow:  0 3px 6px rgba(0,0,0,0.19), 0 3px 6px rgba(0,0,0,0.23);
@@ -382,8 +403,9 @@
        }
      }
    }
+}
    .nav-title {
-     color:#F5B9FF;
+     color:var(--header-link-color);
      align-items: center;
      display: flex;
      flex-grow: 1;
@@ -1305,4 +1327,99 @@
     border: solid 1px #2EBAAE;
 }
 
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  position:absolute;
+  right:0px;
+}
+.theme-switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 50px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 10px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 10px;
+}
+
+input:checked + .slider {
+  background-color: #3d3d3e;
+}
+
+input:checked + .slider:before {
+  transform: translateX(34px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.light
+{
+  display: none;
+}
+
+.light
+{
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+.dark{
+color: #3D3D3E;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif; 
+}
+input:checked+ .slider .light
+{display: block;}
+
+input:checked + .slider .dark
+{display: none;}
+
+#about-image-id
+{
+ background-image:var(--about-image-url); 
+ display: block;
+background-size:cover;
+height:300px;
+}
 
