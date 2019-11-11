@@ -11,13 +11,11 @@ const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme
 if (currentTheme) {
 
 document.documentElement.setAttribute('data-theme', currentTheme);
-document.getElementById('name-image').src='/img/main/name.png'; 
+ 
 
 if (currentTheme === 'dark') {
 toggleSwitch.checked = true;
 document.getElementById('name-image').src='/img/main/dark-themename.png';
-
-
 }
 }
 
