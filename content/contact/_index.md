@@ -8,4 +8,5 @@ contactsubject : "Subject"
 contactmessage : "Your Message"
 contactlang : "en"
 title : Contact
+image: /img/main/page-logo.png
 ---

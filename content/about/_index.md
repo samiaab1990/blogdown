@@ -1,4 +1,5 @@
 ---
+image: /img/main/page-logo.png
 Title: About
 ---
 

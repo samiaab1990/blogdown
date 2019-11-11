@@ -1,4 +1,5 @@
 ---
+image: /img/main/page-logo.png
 title: Bookmarks
 ---
 <a href="#stats"><button class = "statsbutton">stats</button></a>
