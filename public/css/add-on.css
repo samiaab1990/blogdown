@@ -5,16 +5,17 @@
     --header-color: #3E2A68;
     --main-background-image: url("/img/gradient.png");
     --font-color: #017EA4;
-    --header-link-color:#F5B9FF;
-    --about-image-url: url("/img/about/about.png")
+    --header-link-color:#B78FDA;
+    --button-color:white;
 }
 
 [data-theme="dark"] {
   --header-color: #F5B9FF;
   --main-background-image: url("/img/dark-gradient.png");
   --font-color: #11a2cf;
-  --header-link-color:#B39AF7;
-  --about-image-url: url("/img/about/dark-themeabout.png")
+  --header-link-color:#F5B9FF;
+  --button-color:#3D3D3E;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1175,11 +1176,11 @@
 /*Buttons on Bookmark Page*/
 .statsbutton{
   
- background:#3D3D3E;
+ background:var(--header-color);
  font-size: 16px;
  letter-spacing: 0;
  border: solid 1px rgba(160, 160, 160, 160);
- color:#F5B9FF;
+ color:var(--button-color);
   text-decoration: none;
   display: inline-block;
   font-weight:700;
@@ -1200,9 +1201,9 @@
  }
    
 .publichealthbutton{
-  background-color: #3D3D3E ;
+  background-color: var(--header-color);
   border: solid 1px rgba(160, 160, 160, 160);
-  color: #F5B9FF;
+  color: var(--button-color);
   text-decoration:none;
   text-align: center;
   text-transform:uppercase;
@@ -1225,9 +1226,9 @@
 }
     
 .epibutton{
-  background-color: #3D3D3E; 
+  background-color: var(--header-color); 
   border: solid 1px rgba(160, 160, 160, 160);
-  color: #F5B9FF;
+  color: var(--button-color);
   text-decoration: none;
   font-weight:700;
   display: inline-block;
@@ -1250,7 +1251,7 @@
   text-transform: #F5B9FF;
   font-weight:700;
   border: solid 1px rgba(160, 160, 160, 160);
-  color: #3E2A68 ;
+  color: var(--button-color) ;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -1261,10 +1262,10 @@
     color:white;
 }
 .clinicalbutton{
-  background-color: #3D3D3E; 
+  background-color: var(--header-color); 
   font-weight:700;
   border: solid 1px rgba(160, 160, 160, 160);
-  color: #F5B9FF ;
+  color: var(--button-color) ;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -1282,9 +1283,9 @@
       border: solid 1px rgba(160, 160, 160, 160);
 }
 .miscbutton{
-  background-color: #3D3D3E; 
+  background-color: var(--header-color); 
   border: solid 1px rgba(160, 160, 160, 160);
-  color: #F5B9FF;
+  color: var(--button-color);
   text-decoration: none;
   display: inline-block;
   font-size: 16px;

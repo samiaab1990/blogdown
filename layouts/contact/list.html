@@ -9,21 +9,21 @@
       <main id="site-main">
         <article class="post">
           <header>
-             <div class ="image">
-              
-              <img src="{{ with .Params.image }}{{ . }}{{ end }}" id="contact-image" class="contactimg"/>
-              
-            </div>
             <div class="title">
               {{ if $.Scratch.Get "h1" }}
                 <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
                 {{ $.Scratch.Set "h1" false }}
               {{ else }}
-                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <h2 style="font-size:300%;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
               {{ end }}
               {{ with .Description }}<p>{{ . }}</p>{{ end }}
             </div>
           </header>
+          <div class ="image">
+              
+              <img src="{{ with .Params.image }}{{ . }}{{ end }}" id="contact-image" class="contactimg"/>
+              
+            </div>
             <div id="content">
               {{ .Content }}
               <div class="contact-container">
