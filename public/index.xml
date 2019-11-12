@@ -6,9 +6,19 @@
     <description>Recent content on Samia Ali</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Tue, 12 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making a Static Website</title>
+      <link>/blog/making-a-static-website/</link>
+      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/making-a-static-website/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
