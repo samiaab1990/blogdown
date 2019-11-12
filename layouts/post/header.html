@@ -11,7 +11,7 @@
     {{ end }}
 </div>
   <div class="meta">
-    <time class="published" datetime="{{ .Date }}">
+    <time class="published" datetime="{{ .Lastmod }}">
       {{ default (i18n "date_format") | .Date.Format }}
     </time>
     <span class="author">{{ .Params.author }}</span>
