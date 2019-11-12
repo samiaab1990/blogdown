@@ -1159,7 +1159,7 @@
  background:var(--header-color);
  font-size: 16px;
  letter-spacing: 0;
- border: solid 0px;
+ border: none;
  color:var(--button-color);
   text-decoration: none;
   display: inline-block;
@@ -1176,13 +1176,13 @@
  .statsbutton:hover {
    background: #3D3D3E;
     color: #2EBAAE;
-     border: solid 0px;
+     border: none;
      
  }
    
 .publichealthbutton{
   background-color: var(--header-color);
-  border: solid 0px;
+  border: none;
   color: var(--button-color);
   text-decoration:none;
   text-align: center;
@@ -1202,12 +1202,12 @@
  .publichealthbutton:hover {
     background:#3D3D3E;
     color: #2EBAAE;
-      border: solid 0px;
+      border: none;
 }
     
 .epibutton{
   background-color: var(--header-color); 
-  border: solid 0px;
+  border: none;
   color: var(--button-color);
   text-decoration: none;
   font-weight:700;
@@ -1222,29 +1222,16 @@
    width: fit-content;
 }
  .epibutton:hover {
-      border: solid 0px;
+      border: none;
     background:#3D3D3E;
     color:#2EBAAE;
  }
-.programmingbutton{
-  background-color: #3D3D3E; 
-  text-transform: #F5B9FF;
-  font-weight:700;
-  border: solid 1px rgba(160, 160, 160, 160);
-  color: var(--button-color) ;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-.programmingbutton:hover {
-    background:#3E2A68;
-    color:white;
-}
+
+
 .clinicalbutton{
   background-color: var(--header-color); 
   font-weight:700;
-  border: solid 0px;
+  border: none;
   color: var(--button-color) ;
   text-decoration: none;
   display: inline-block;
@@ -1260,11 +1247,11 @@
 .clinicalbutton:hover {
     background: #3D3D3E;
     color:#2EBAAE;
-      border: solid 0px;
+   border: none;
 }
 .miscbutton{
   background-color: var(--header-color); 
-  border: solid 0px;
+  border: none;
   color: var(--button-color);
   text-decoration: none;
   display: inline-block;
@@ -1281,7 +1268,7 @@
 .miscbutton:hover {
     background: #3D3D3E;
     color:#2EBAAE;
-    border: solid 0px;
+    border: none;
 }
 
 .gitbtn {
