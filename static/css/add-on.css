@@ -8,6 +8,7 @@
     --header-link-color:#B78FDA;
     --button-color: #B78FDA;
     --projects-button:linear-gradient(to right, #92F3FF, #C792FF);
+   
 }
 
 [data-theme="dark"] {
@@ -17,6 +18,7 @@
   --header-link-color:#F5B9FF;
   --button-color:#3D3D3E;
   --projects-button:linear-gradient(to right, #0517A0, #2A0275);
+
 
 }
 
@@ -1095,7 +1097,7 @@
 
 .postimg {
    display: block;
-   width:30%;
+   width:30;%;
    margin-left:auto;
    margin-right:auto;
 }
@@ -1131,25 +1133,25 @@
 
  .share-btn.twitter {
      display:inline-block;
-     border: 1px solid #017EA4;
+     border: 1px solid var(--font-color);
      background: transparent;
-     color: #017EA4;
+     color: var(--font-color);
      opacity:.7;
      }
 
    .share-btn.linkedin {
      display:inline-block;
-     border: 1px solid #017EA4;
+     border: 1px solid var(--font-color);
      background: transparent;
-     color: #017EA4;
+     color: var(--font-color);
      opacity:.7;
      }
 
    .share-btn.email {
      display:inline-block;
-     border: 1px solid #017EA4;
+     border: 1px solid var(--font-color);
      background: transparent;
-     color: #017EA4;
+     color: var(--font-color);
      opacity:.7;
      }
      
