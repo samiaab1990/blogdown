@@ -7,6 +7,7 @@
     --font-color: #017EA4;
     --header-link-color:#B78FDA;
     --button-color: #B78FDA;
+    --projects-button:linear-gradient(to right, #92F3FF, #C792FF);
 }
 
 [data-theme="dark"] {
@@ -15,6 +16,7 @@
   --font-color: #11a2cf;
   --header-link-color:#F5B9FF;
   --button-color:#3D3D3E;
+  --projects-button:linear-gradient(to right, #0517A0, #2A0275);
 
 }
 
@@ -1157,7 +1159,7 @@
  background:var(--header-color);
  font-size: 16px;
  letter-spacing: 0;
- border: solid 1px rgba(160, 160, 160, 160);
+ border: solid 0px;
  color:var(--button-color);
   text-decoration: none;
   display: inline-block;
@@ -1174,13 +1176,13 @@
  .statsbutton:hover {
    background: #3D3D3E;
     color: #2EBAAE;
-     border: solid 1px rgba(160, 160, 160, 160);
+     border: solid 0px;
      
  }
    
 .publichealthbutton{
   background-color: var(--header-color);
-  border: solid 1px rgba(160, 160, 160, 160);
+  border: solid 0px;
   color: var(--button-color);
   text-decoration:none;
   text-align: center;
@@ -1200,12 +1202,12 @@
  .publichealthbutton:hover {
     background:#3D3D3E;
     color: #2EBAAE;
-      border: solid 1px rgba(160, 160, 160, 160);
+      border: solid 0px;
 }
     
 .epibutton{
   background-color: var(--header-color); 
-  border: solid 1px rgba(160, 160, 160, 160);
+  border: solid 0px;
   color: var(--button-color);
   text-decoration: none;
   font-weight:700;
@@ -1220,7 +1222,7 @@
    width: fit-content;
 }
  .epibutton:hover {
-      border: solid 1px rgba(160, 160, 160, 160);
+      border: solid 0px;
     background:#3D3D3E;
     color:#2EBAAE;
  }
@@ -1242,7 +1244,7 @@
 .clinicalbutton{
   background-color: var(--header-color); 
   font-weight:700;
-  border: solid 1px rgba(160, 160, 160, 160);
+  border: solid 0px;
   color: var(--button-color) ;
   text-decoration: none;
   display: inline-block;
@@ -1258,11 +1260,11 @@
 .clinicalbutton:hover {
     background: #3D3D3E;
     color:#2EBAAE;
-      border: solid 1px rgba(160, 160, 160, 160);
+      border: solid 0px;
 }
 .miscbutton{
   background-color: var(--header-color); 
-  border: solid 1px rgba(160, 160, 160, 160);
+  border: solid 0px;
   color: var(--button-color);
   text-decoration: none;
   display: inline-block;
@@ -1279,14 +1281,14 @@
 .miscbutton:hover {
     background: #3D3D3E;
     color:#2EBAAE;
-    border: solid 1px rgba(160, 160, 160, 160);
+    border: solid 0px;
 }
 
 .gitbtn {
    
-  background-color: transparent; 
-  border: solid 1px rgba(160, 160, 160, 160);
-  color: #017EA4;
+  background-image: var(--projects-button);
+  border: solid 1px var(--font-color);
+  color: var(--font-color);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -1301,7 +1303,7 @@
    width: fit-content;
 }
 .gitbtn:hover {
-    background:transparent;
+   background-image: var(--projects-button);
     color:#2EBAAE; 
     border: solid 1px #2EBAAE;
 }
