@@ -8,5 +8,6 @@ tags: []
 description: ''
 linktitle: ''
 type: post
-image: /img/main/page-logo.png
 ---
+
+As I've started to do more work 
