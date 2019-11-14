@@ -61,6 +61,48 @@
    }
  }
 
+code {
+   border: solid 1px rgba(160, 160, 160, 0.3);
+   background-color:transparent;
+   font-family: "Courier New", monospace;
+   font-size: 0.9em;
+   margin: 0 0.25em;
+   padding: 0.25em 0.65em;
+   overflow-x: auto;
+   &::-webkit-scrollbar {
+     height: .25em;
+   }
+   &::-webkit-scrollbar-track {
+     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   }
+   &::-webkit-scrollbar-thumb {
+     background-color: darkgrey;
+     outline: 1px solid slategrey;
+   }
+ }
+
+ pre {
+   display: table;
+   background-color:transparent;
+   font-family: "Courier New", monospace;
+   font-size: 0.9em;
+   table-layout: fixed;
+   width: 100%;
+   code {
+     display: block;
+     padding: 1em 1.5em;
+     overflow-x: auto;
+     background-color:transparent;
+   }
+ }
+
+ hr {
+   border: 0;
+   background-color:transparent;
+   border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+   margin: 2em 0;
+ }
+
  
  /* Button */
 
@@ -1416,5 +1458,4 @@ label {
  	font-size: 0.9em;
  	font-weight: 700;
  }
- 
  

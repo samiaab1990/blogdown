@@ -8,6 +8,16 @@ tags: []
 description: ''
 linktitle: ''
 type: post
+
 ---
 
-As I've started to do more work 
+There's a myriad of reasons to have a personal website these days. As for me, I've been wanting to create a blog to keep track and reflect on things I've read, learned or put together the bits and pieces of information for a problem I needed to solve together so that it's not only easier for me, but also for anybody else who might find it useful.
+
+
+
+
+
+```
+summary(cars)
+```
+
