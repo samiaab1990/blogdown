@@ -8,12 +8,12 @@ title: Bookmarks
 <a href="#clinical"><button class = "clinicalbutton"> clinical</button></a>
 <a href="#misc"><button class = "miscbutton">misc</button></a>
 
-## Statistics Resources {#stats}
+## Stats Topics {#stats}
 ### R 
 * [R For Data Science](https://r4ds.had.co.nz/)
 * [Blogdown Book] (https://bookdown.org/yihui/blogdown/)
 
-## Epidemiology Resources {#epi}
+## Epidemiology Topics {#epi}
 
 
 
