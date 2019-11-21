@@ -2,11 +2,6 @@
 image: /img/main/page-logo.png
 title: Bookmarks
 ---
-<a href="#stats"><button class = "statsbutton">stats</button></a>
-<a href="#epi"><button class = "epibutton">epi</button></a>
-<a href="#publichealth"><button class = "publichealthbutton"> public health </button></a>
-<a href="#clinical"><button class = "clinicalbutton"> clinical</button></a>
-<a href="#misc"><button class = "miscbutton">misc</button></a>
 
 ## Stats Topics {#stats}
 ### R 

@@ -19,7 +19,7 @@ disableLanguages        = [""]
   jsFiles               = ["default"]
   # Sets options for highlight.js
   highlightjs           = true
-  highlightjsTheme      = "github"
+  highlightjsTheme      = "hybrid"
   highlightjsLang       = ["html", "css", "js", "toml"]
   # Sets where "View More Posts" links to
   viewMorePostsLink     = "/blog/"
