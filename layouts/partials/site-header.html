@@ -3,7 +3,7 @@
 <![endif]-->
 <header id="site-header">
   <nav id="site-nav">
-    <h1 class="nav-title">
+    <div class="header-links">
       <a href="{{ "/" | relLangURL }}">
         {{ if or .IsHome (not .Site.Params.header.dynamicTitles) }}
           {{ .Site.Params.header.navbarTitle  | safeHTML }}
@@ -17,7 +17,7 @@
           {{ .Title }}
         {{ end }}
       </a>
-      </h1>
+      </div>
     <menu id="site-nav-menu" class="flyout-menu">
       {{ range .Site.Menus.main }}
         {{ if and (gt (len (findRE "fa[rsb]( fa-([a-z-]+))+" .Identifier)) 0) (not .Pre) }}

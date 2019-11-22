@@ -46,12 +46,12 @@ disableLanguages        = [""]
 
   [params.header]
     # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "Samia Ali"
+    navbarTitle         = ""
     # Sets navbarTitle to match the section of the website
-    dynamicTitles       = true
+    dynamicTitles       = false
     searchMenu          = true
     shareMenu           = true
-    languageMenu        = true
+    languageMenu        = false
     themeMenu           = true
 
   # These are optional params related to the sidebar. They are recommended, but not
