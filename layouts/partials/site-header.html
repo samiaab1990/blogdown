@@ -3,11 +3,13 @@
 <![endif]-->
 <header id="site-header">
   <nav id="site-nav">
-    <div class="header-links">
-      <a href="{{ "/" | relLangURL }}">
+    <h1 class="nav-title">
         {{ if or .IsHome (not .Site.Params.header.dynamicTitles) }}
           {{ .Site.Params.header.navbarTitle  | safeHTML }}
         {{ else if ne .Section "" }}
+        {{end}}
+    </h1>
+     <a href="{{ "/" | relLangURL }}">
           {{ if i18n .Section }}
             {{ i18n .Section }}
           {{ else }}
@@ -17,7 +19,6 @@
           {{ .Title }}
         {{ end }}
       </a>
-      </div>
     <menu id="site-nav-menu" class="flyout-menu">
       {{ range .Site.Menus.main }}
         {{ if and (gt (len (findRE "fa[rsb]( fa-([a-z-]+))+" .Identifier)) 0) (not .Pre) }}
