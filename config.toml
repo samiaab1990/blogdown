@@ -46,7 +46,7 @@ disableLanguages        = [""]
 
   [params.header]
     # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = ""
+    navbarTitle         = "samia.rbind.io"
     # Sets navbarTitle to match the section of the website
     dynamicTitles       = true
     searchMenu          = true

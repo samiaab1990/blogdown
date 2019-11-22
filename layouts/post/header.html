@@ -1,4 +1,4 @@
-<header>
+<header id ="post-header">
   <div class="title">
     {{ if $.Scratch.Get "h1" }}
         <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
@@ -6,17 +6,15 @@
     {{ else }}
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     {{ end }}
+    <time class="published" datetime="{{ .Lastmod }}">
+      <i class="far fa-calendar-alt"></i>&nbsp;{{ default (i18n "date_format") | .Date.Format }}
+    </time>
+    <span class="author">{{ .Params.author }}</span>
+    {{ if .Site.Params.ReadingTime }}
+      <p class="reading-time">{{ i18n "postreadingtime" .ReadingTime }}</p>
+    {{ end }}
     {{ with .Description }}
         <p>{{ . }}</p>
     {{ end }}
 </div>
-  <div class="meta">
-    <time class="published" datetime="{{ .Lastmod }}">
-      {{ default (i18n "date_format") | .Date.Format }}
-    </time>
-    <span class="author">{{ .Params.author }}</span>
-    {{ if .Site.Params.ReadingTime }}
-      <p>{{ i18n "postreadingtime" .ReadingTime }}</p>
-    {{ end }}
-  </div>
 </header>

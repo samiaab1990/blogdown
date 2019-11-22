@@ -7,10 +7,9 @@
   <div class="content">
     {{ .Content }}
   </div>
- 
-  <footer>
-    {{ .Render "stats" }}
-  </footer>
+ <footer>
+   {{.Render "stats"}}
+</footer>
 </article>
 {{ .Render "comments" }}
 {{ .Render "pagination" }}

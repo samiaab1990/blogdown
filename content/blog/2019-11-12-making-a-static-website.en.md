@@ -3,8 +3,8 @@ title: Making a Static Website
 author: ''
 date: '2019-11-12'
 slug: making-a-static-website
-categories: []
-tags: []
+categories: [hugo]
+tags: [r, hugo]
 description: ''
 linktitle: ''
 type: post
