@@ -13,6 +13,7 @@
     {{ if .Site.Params.ReadingTime }}
       <p class="reading-time">{{ i18n "postreadingtime" .ReadingTime }}</p>
     {{ end }}
+<span class="categories-tags"> {{ .Render "stats" }}</span>
     {{ with .Description }}
         <p>{{ . }}</p>
     {{ end }}
