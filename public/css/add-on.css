@@ -48,6 +48,7 @@
 font-family: "Segoe UI", Roboto,"Helvetica Neue";
    line-height: 1.75em;
    font-weight:400;
+   font-size:16px;
  }
  
 
@@ -67,14 +68,11 @@ h1, h2, h3, h4, h5, h6 a {
 a {
    border-bottom: none ;
 }
-/*Page specific*/
-/*#content-bookmarks a{
-   font-size:1em;
-   letter-spacing:0;
-   font-family: "Raleway", Helvetica, sans-serif;
-   font-weight:700;
-   line-height:0;
-}*/
+
+#content-bookmarks li:before
+{
+   content:'\f02e';
+}
 
 
 code {
@@ -1231,7 +1229,8 @@ input:checked + .slider .dark
 
 
 .page-header{
- font-size:70px; 
+ font-size:65px; 
+ font-weight:550;
 
 }
 
