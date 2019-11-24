@@ -63,7 +63,10 @@ font-family: "Segoe UI", Roboto,"Helvetica Neue";
 h1, h2, h3, h4, h5, h6 a {
      border-bottom: 0;
    }
-   
+
+a {
+   border-bottom: none ;
+}
 /*Page specific*/
 /*#content-bookmarks a{
    font-size:1em;
@@ -784,15 +787,17 @@ a.nav-title {
 
     a,
     a:visited {
-        text-decoration: underline;
+        text-decoration: none !important;
     }
 
     a[href]:after {
         content: " (" attr(href) ")";
+        text-decoration:none;
     }
 
     abbr[title]:after {
         content: " (" attr(title) ")";
+        text-decoration:none;
     }
 
     /*
@@ -977,7 +982,7 @@ justify-content:center;
            margin: 0 0 0 0em;
            padding: 0 0 0 1em;
 }
-
+input[type="button"],
 #post-header .categories-tags .stats li ul li {
              display: flex;
              text-align: center;
@@ -988,7 +993,7 @@ justify-content:center;
              line-height:.25em;
              margin: .15em;
              padding:5px;
-             border: 1px solid var(--header-color);
+             border: 1px solid var(--header-color) !important;
            background-color:transparent;
            color: var(--header-color);
 border-radius:3px;
@@ -1001,10 +1006,7 @@ border-radius:3px;
 #post-header .categories-tags .stats li ul li:hover, 
 #post-header .categories-tags .stats li ul li:active{
     color:#2EBAAE; 
-    border: solid 1px #2EBAAE;
-               line-height: .25em;
-               width:auto;
-               text-align:center;
+    border: solid 1px #2EBAAE !important;
 }
 
 
