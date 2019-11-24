@@ -3,7 +3,7 @@
     {{ if ne ($.Scratch.Get "showCategories") false }}
       <section id="categories">
         <header>
-          <h1><a href="{{ "categories" | relLangURL }}">{{ i18n "categories" }}</a></h1>
+          <h1><i class="far fa-folder"></i>&nbsp;<a href="{{ "categories" | relLangURL }}">{{ i18n "categories" }}</a></h1>
         </header>
         <ul>
           {{ if .Site.Params.sidebar.categoriesByCount }}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wrap on Samia Ali</title>
+    <link>/tags/wrap/</link>
+    <description>Recent content in wrap on Samia Ali</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/wrap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making a Static Generated Website </title>
+      <link>/blog/making-a-static-generated-website/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/making-a-static-generated-website/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

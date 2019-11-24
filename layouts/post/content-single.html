@@ -4,11 +4,10 @@
   <section id="socnet-share">
     {{ partial "share-buttons" . }}
   </section>
-  <div class="content">
+  <div class="content-post">
     {{ .Content }}
   </div>
  <footer>
-   {{.Render "stats"}}
 </footer>
 </article>
 {{ .Render "comments" }}
