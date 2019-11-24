@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
+    <loc>/blog/2019-11-23-making-a-static-website/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/blogdown/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+  </url>
+  
+  <url>
+    <loc>/bookmarks/</loc>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -43,38 +49,15 @@
   </url>
   
   <url>
-    <loc>/tags/css/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
+    <loc>/contact/</loc>
   </url>
   
   <url>
-    <loc>/tags/html/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/hugo/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/javascript/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/making-a-static-website/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
+    <loc>/projects/</loc>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -104,7 +87,6 @@
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -130,22 +112,6 @@
                 hreflang="en"
                 href="/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/bookmarks/</loc>
-  </url>
-  
-  <url>
-    <loc>/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>/projects/</loc>
   </url>
   
 </urlset>

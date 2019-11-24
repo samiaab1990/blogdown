@@ -6,8 +6,9 @@
     {{ else }}
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     {{ end }}
-    <time class="published" datetime="{{ .Lastmod }}">
-      <i class="far fa-calendar-alt"></i>&nbsp;{{ default (i18n "date_format") | .Date.Format }}
+    <time class="published">
+      <i class="far fa-calendar-alt"></i>&nbsp;<span class=date>{{ default (i18n "date_format") | .Date.Format }}
+    </span>
     </time>
     <span class="author">{{ .Params.author }}</span>
     {{ if .Site.Params.ReadingTime }}

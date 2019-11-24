@@ -17,7 +17,9 @@
       <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/blog/making-a-static-website/</guid>
-      <description>Static websites offer a great alternative to</description>
+      <description>https://www.staticgen.com/ https://wsvincent.com/static-vs-dynamic-websites-pros-and-cons/ https://dzone.com/articles/6-reasons-why-you-should-go-for-a-static-website https://devopedia.org/package-manager
+Like many users, I started using R regularly to do statistical analysis. I never thought at the time I would be able to use
+Choosing a Static Website Generator Even though I have been using RStudio IDE regularly, I didn&amp;rsquo;t initially resort to the blogdown package but decided to test Jekyll out, which is the generator for pages that use the .github.io domain. There was really no preference for a particular generator for me since I was new to the process, but Jekyll seemed popular (this is likely because it came out earlier than most other static website generators) and has a compelling showcase.</description>
     </item>
     
   </channel>
