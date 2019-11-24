@@ -1262,7 +1262,6 @@ label {
 #content{
    font-size:1.20em;
    line-height:1.4em;
-   padding-left:5%;
    }
 #content a{
    color:var(--font-color);

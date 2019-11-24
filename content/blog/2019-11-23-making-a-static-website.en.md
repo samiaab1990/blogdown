@@ -12,9 +12,8 @@ tags:
   - html
   - css
 description: ''
-images:
-  - ''
 linktitle: ''
 type: post
 ---
 
+Static websites offer a great alternative to 
