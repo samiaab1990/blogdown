@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+/* Defining the specific variables for regular/dark-mode*/ 
 :root {
     --header-color: #3E2A68;
     --main-background-image: linear-gradient(180deg, rgba(213,194,250,1) 4%, rgba(230,201,255,1) 19%, rgba(251,212,255,1) 43%, rgba(230,254,255,1) 89%);
@@ -30,6 +28,7 @@
 }
 
 
+/*Theme CSS Starts here*/ 
  body {
    background-color: transparent;
    background-image: var(--main-background-image);
@@ -41,7 +40,7 @@
  }
 
 
- /* Type */
+ /* Default font colors*/ 
 
  body, input, select, textarea {
    color: var(--font-color);
@@ -52,7 +51,7 @@ font-family: "Segoe UI", Roboto,"Helvetica Neue";
  }
  
 
-
+/*Default header colors*/ 
  h1, h2, h3, h4, h5, h6 {
    color: var(--header-color);
    font-family: "Raleway", Helvetica, sans-serif;
@@ -65,29 +64,30 @@ h1, h2, h3, h4, h5, h6 a {
      border-bottom: 0;
    }
 
+/*Default link setting. Removes dotted gray bottom*/ 
 a {
    border-bottom: none;
 }
 
-/*#content-bookmarks li::before
-{
-   content:'\f02e';
-}
-*/ 
 
+/*Code block formatting*/ 
+
+/*Inline code*/ 
 code {
-   border: solid 0px rgba(160, 160, 160, 0.3);
-  font-family: "Monaco",Menlo,Ubuntu Mono,Droid Sans Mono,Consolas   ,monospace;
-  padding: 0 .25rem;
-    margin: 0 .0625rem;
-    border-radius: .125rem;
-    color: #3D3D3E;
-   background-color: #8EC5FC;
+
+border: solid 0px rgba(160, 160, 160, 0.3);
+font-family: "Monaco",Menlo,Ubuntu Mono,Droid Sans Mono,Consolas      ,monospace;
+padding: 0 .25rem;
+margin: 0 .0625rem;
+border-radius: .125rem;
+color: #3D3D3E;
+background-color: #8EC5FC;
 background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 font-size: 0.9em;
-   overflow-x: auto;
+overflow-x: auto;
 }
 
+/*Code block. Using highlight.JS for color, styling done here*/ 
 pre {
    display: table;
    font-size: .8em;
@@ -189,6 +189,8 @@ pre code hr {
    width: 100%;
    z-index: 10000;
 }
+
+/*Site-header links*/ 
 #site-header   a {
      border: 0;
      border-left: 0px solid rgba(160, 160, 160, 0.3);
@@ -200,7 +202,8 @@ pre code hr {
      padding: 0 1em;
      text-transform: uppercase;
    }
-   
+ 
+/*Menu styling for language, share, etc.*/   
    .flyout-menu {
      background-color: #fff;
      border-left: 0px solid rgba(160, 160, 160, 0.3);
@@ -232,7 +235,7 @@ a.flyout-menu:link {
        font-size: .8em;
      }
  
- 
+/*Container for site nav links*/  
  #site-nav {
    align-items: center;
    display: flex;
@@ -306,6 +309,7 @@ a.flyout-menu:link {
      }
    }
 
+/*Edit the left title/dynamic titles*/ 
 .nav-title {
      align-items: center;
      display: flex;
@@ -461,7 +465,7 @@ a.nav-title {
 
     
 
- /* Intro */
+ /* Sidebar image/paragraph*/ 
 
  #site-intro {
    align-items: center;
@@ -489,13 +493,8 @@ a.nav-title {
      }
 
 
- /* Site Main */
 
- #site-main {
-
- }
-
- /* Sidebar */
+ /* Rest of the side-bar */
 
  #site-sidebar {
    header h1 {
@@ -513,7 +512,7 @@ a.nav-title {
    }
  }
 
- #recent-posts {
+ /*#recent-posts {
    display: flex;
    flex-wrap: wrap;
    justify-content: space-between;
@@ -590,8 +589,10 @@ a.nav-title {
        }
      }
    }
- 
 
+*/ 
+
+/*Formatting Categories on sidebar*/ 
 #categories .count {
      float: right;
    }
@@ -844,6 +845,9 @@ a.nav-title {
         page-break-after: avoid;
     }
 }
+
+
+/*Appearance of blog posts*/ 
 .post {
    background: transparent;
    margin: 1.5em auto;
@@ -911,7 +915,8 @@ a.nav-title {
    }
 }
 
- 
+
+/*Appearance of blog post dates*/  
 .published {
          font-family: "Raleway", Helvetica, sans-serif;
          font-size: 0.1em;
@@ -920,6 +925,7 @@ a.nav-title {
          text-transform: uppercase;
 }
 
+/*Appearance of rest of meta*/ 
 .reading-time, .author, .format {
          font-family: "Raleway", Helvetica, sans-serif;
          font-size: 0.6em;
@@ -929,7 +935,7 @@ a.nav-title {
    
 }
 
-
+/*Appearance and styling of categories and tags*/ 
 #post-header .categories-tags {
 display: flex;
 justify-content:center;
@@ -1043,6 +1049,7 @@ border-radius:3px;
 }*/ 
 
 
+/*Formatting if image is to be included in blog*/ 
 .postimg {
    display: block;
    width:30;%;
@@ -1059,6 +1066,8 @@ border-radius:3px;
    color:#3D3D3E;
 }
 
+
+/*Share button styling*/ 
 .share-btn {
    border: none;
    border-radius: 0px;
@@ -1139,7 +1148,7 @@ border-radius:3px;
     border: solid 1px #2EBAAE;
 }
 
-/*Simple css to style it like a toggle switch*/
+/*Dark mode switch styling*/
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
@@ -1228,6 +1237,7 @@ input:checked + .slider .dark
 {display: none;}
 
 
+/*Styling of headers of all pages*/ 
 .page-header{
  font-size:2em; 
  text-align:left;
@@ -1247,7 +1257,8 @@ label {
  	font-weight: 700;
  }
  
- 
+
+/*Styling of page content for list page.html*/  
 #content{
    font-size:1.20em;
    line-height:1.4em;
