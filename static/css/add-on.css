@@ -69,11 +69,11 @@ a {
    border-bottom: none ;
 }
 
-#content-bookmarks li:before
+/*#content-bookmarks li::before
 {
    content:'\f02e';
 }
-
+*/ 
 
 code {
    border: solid 0px rgba(160, 160, 160, 0.3);
