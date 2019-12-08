@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+<title>Making an Animated Measles Map: A Tidy Tuesday Project - Samia Ali</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <meta name="generator" content="Hugo 0.57.2" />
+  <meta itemprop="name" content="Making an Animated Measles Map: A Tidy Tuesday Project">
+<meta itemprop="description" content="For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this SimplyStats blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.
+Packages #packages library(tidyverse) library(gganimate) library(ggplot2) library(grid) library(sf) library(usmap) library(scales) library(Hmisc)  Read in the diseases file diseases&lt;-read.csv(file=&quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&quot;)  View the dataset diseases %&gt;%dim()  ## [1] 18870 6  The diseases dataset contains 18870 rows and 6 columns">
+
+
+<meta itemprop="datePublished" content="2020-01-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-01-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1249">
+
+  <meta itemprop="image" content="/">
+
+
+
+<meta itemprop="keywords" content="ggplot,gganimate,TidyTuesday," />
+
+  <meta property="og:title" content="Making an Animated Measles Map: A Tidy Tuesday Project" />
+<meta property="og:description" content="For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this SimplyStats blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.
+Packages #packages library(tidyverse) library(gganimate) library(ggplot2) library(grid) library(sf) library(usmap) library(scales) library(Hmisc)  Read in the diseases file diseases&lt;-read.csv(file=&quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&quot;)  View the dataset diseases %&gt;%dim()  ## [1] 18870 6  The diseases dataset contains 18870 rows and 6 columns" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/making-an-animated-measles-map-a-tidy-tuesday-project/" />
+
+<meta property="og:image" content="/" />
+<meta property="article:published_time" content="2020-01-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-18T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="Making an Animated Measles Map: A Tidy Tuesday Project"/>
+<meta name="twitter:description" content="For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this SimplyStats blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.
+Packages #packages library(tidyverse) library(gganimate) library(ggplot2) library(grid) library(sf) library(usmap) library(scales) library(Hmisc)  Read in the diseases file diseases&lt;-read.csv(file=&quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&quot;)  View the dataset diseases %&gt;%dim()  ## [1] 18870 6  The diseases dataset contains 18870 rows and 6 columns"/>
+<meta name="twitter:site" content="@samiasab90"/>
+
+  
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.df53c1edadafb8a1aaadcf6624a13b50f5d7bc72fd7e046927c32c5ea541e244.css" integrity="sha256-31PB7a2vuKGqrc9mJKE7UPXXvHL9fgRpJ8MsXqVB4kQ=">
+      <link rel="stylesheet" href="/css/add-on.css">
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            post
+          
+        
+      </a>
+      </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/bookmarks/" class="link"><i class='fas fa-star'></i> Bookmarks</a>
+          
+        
+      
+        
+          
+          
+            <a href="/projects/" class="link"><i class='fas fa-folder-open'></i> Projects</a>
+          
+        
+      
+        
+          
+          
+            <a href="/contact/" class="link"><i class='fas fa-envelope'></i> Contact</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Making%20an%20Animated%20Measles%20Map%3a%20A%20Tidy%20Tuesday%20Project&amp;url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f&amp;title=Making%20an%20Animated%20Measles%20Map%3a%20A%20Tidy%20Tuesday%20Project" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round">
+        <span class="light">
+          <i class="fas fa-sun"></i>
+        </span>
+        <span class="dark">
+        <i class="fas fa-moon"></i>
+        </span>
+        </div>
+  </label>
+</div>
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo2.png" class="hexagon" width="170 px" alt="" /></a>
+  <header>
+    <h1><img id='name-image' src='/img/main/name.png'/></h1>
+  </header>
+  <main>
+    
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/samiaab1990" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/samiasab90" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header id ="post-header">
+  <div class="title">
+    
+        <h2><a href="/post/making-an-animated-measles-map-a-tidy-tuesday-project/">Making an Animated Measles Map: A Tidy Tuesday Project</a></h2>
+    
+    <time class="published">
+      <p><i class="far fa-calendar-alt"></i>&nbsp;<span class=date>January 18, 2020
+    </span></p>
+    </time>
+    
+      <p class="reading-time">6 minutes read</p>
+    
+<span class="author"></span>
+<span class="categories-tags"> <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="/categories/r">r</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="/tags/ggplot">ggplot</a></li>
+          
+            
+            <li><a class="article-category-link" href="/tags/gganimate">gganimate</a></li>
+          
+            
+            <li><a class="article-category-link" href="/tags/tidytuesday">TidyTuesday</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+</span>
+    
+</div>
+</header>
+
+  
+  <a href="/post/making-an-animated-measles-map-a-tidy-tuesday-project/" class="image-featured">
+    
+    <figure>
+      <img class="postimg" src="/" alt="">
+    
+  </a>
+  <figcaption class="imgcaption"></figcaption>
+  </figure>
+
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Making%20an%20Animated%20Measles%20Map%3a%20A%20Tidy%20Tuesday%20Project&amp;url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f&amp;title=Making%20an%20Animated%20Measles%20Map%3a%20A%20Tidy%20Tuesday%20Project" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  <div id="content">
+    
+
+<p>For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this <a href="https://simplystatistics.org/2019/08/28/you-can-replicate-almost-any-plot-with-ggplot2/">SimplyStats</a> blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.</p>
+
+<h1 id="packages">Packages</h1>
+
+<pre><code class="language-r">#packages
+library(tidyverse)
+library(gganimate)
+library(ggplot2)
+library(grid)
+library(sf)
+library(usmap)
+library(scales)
+library(Hmisc)
+</code></pre>
+
+<h1 id="read-in-the-diseases-file">Read in the diseases file</h1>
+
+<pre><code class="language-r">diseases&lt;-read.csv(file=&quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&quot;)
+</code></pre>
+
+<h1 id="view-the-dataset">View the dataset</h1>
+
+<pre><code class="language-r">diseases %&gt;%dim()
+</code></pre>
+
+<pre><code>## [1] 18870     6
+</code></pre>
+
+<p>The <code>diseases</code> dataset contains 18870 rows and 6 columns</p>
+
+<pre><code class="language-r">diseases %&gt;% colnames()
+</code></pre>
+
+<pre><code>## [1] &quot;disease&quot;         &quot;state&quot;           &quot;year&quot;            &quot;weeks_reporting&quot;
+## [5] &quot;count&quot;           &quot;population&quot;
+</code></pre>
+
+<p>The <code>diseases</code> dataset contains columns for: disease, state, year, weeks_reporting, count, state population</p>
+
+<pre><code class="language-r">head(diseases)
+</code></pre>
+
+<pre><code>##       disease   state year weeks_reporting count population
+## 1 Hepatitis A Alabama 1966              50   321    3345787
+## 2 Hepatitis A Alabama 1967              49   291    3364130
+## 3 Hepatitis A Alabama 1968              52   314    3386068
+## 4 Hepatitis A Alabama 1969              49   380    3412450
+## 5 Hepatitis A Alabama 1970              51   413    3444165
+## 6 Hepatitis A Alabama 1971              51   378    3481798
+</code></pre>
+
+<p>The first 6 rows of the <code>diseases</code> dataset</p>
+
+<pre><code class="language-r">diseases %&gt;% summary()
+</code></pre>
+
+<pre><code>##         disease            state            year      weeks_reporting
+##  Hepatitis A:2346   Alabama   :  370   Min.   :1928   Min.   : 0.00  
+##  Measles    :3876   Alaska    :  370   1st Qu.:1956   1st Qu.:14.00  
+##  Mumps      :1836   Arizona   :  370   Median :1977   Median :44.00  
+##  Pertussis  :3774   Arkansas  :  370   Mean   :1974   Mean   :33.28  
+##  Polio      :3774   California:  370   3rd Qu.:1992   3rd Qu.:50.00  
+##  Rubella    :1938   Colorado  :  370   Max.   :2011   Max.   :52.00  
+##  Smallpox   :1326   (Other)   :16650                                 
+##      count            population      
+##  Min.   :     0.0   Min.   :   86853  
+##  1st Qu.:     1.0   1st Qu.: 1046542  
+##  Median :    47.0   Median : 2824918  
+##  Mean   :  1367.5   Mean   : 4242911  
+##  3rd Qu.:   440.8   3rd Qu.: 5153640  
+##  Max.   :132342.0   Max.   :37607525  
+##                     NA's   :204
+</code></pre>
+
+<pre><code class="language-r">unique (diseases$disease)
+</code></pre>
+
+<pre><code>## [1] Hepatitis A Measles     Mumps       Pertussis   Polio       Rubella    
+## [7] Smallpox   
+## Levels: Hepatitis A Measles Mumps Pertussis Polio Rubella Smallpox
+</code></pre>
+
+<p>The diseases listed in the <code>diseases</code> dataset</p>
+
+<pre><code class="language-r">diseases %&gt;% select(&quot;count&quot;) %&gt;% by(diseases$disease,sum)
+</code></pre>
+
+<pre><code>## diseases$disease: Hepatitis A
+## [1] 976362
+## ------------------------------------------------------------ 
+## diseases$disease: Measles
+## [1] 18670996
+## ------------------------------------------------------------ 
+## diseases$disease: Mumps
+## [1] 832110
+## ------------------------------------------------------------ 
+## diseases$disease: Pertussis
+## [1] 2329020
+## ------------------------------------------------------------ 
+## diseases$disease: Polio
+## [1] 2329020
+## ------------------------------------------------------------ 
+## diseases$disease: Rubella
+## [1] 434966
+## ------------------------------------------------------------ 
+## diseases$disease: Smallpox
+## [1] 232828
+</code></pre>
+
+<p>I summarized the cases of each disease by counts to get an idea of which one had the most cases in all of US over the span of the 76 years in the dataset. As anticipated, measles had the greatest number, with 18,670,996 cases in the United States from 1928 to 2003.</p>
+
+<h1 id="calculate-incidence-rate">Calculate incidence rate</h1>
+
+<p>To compare the number of cases between states, I mutated the dataset to add an incidence rate that takes into account the case count over state population by 100,000 people for each state per year.</p>
+
+<pre><code class="language-r">#Calculate incidence 
+
+diseases&lt;- diseases %&gt;%
+mutate(incidence=(count/population*100000*(ifelse(weeks_reporting==0,0,52/weeks_reporting))))
+
+</code></pre>
+
+<h1 id="filter-measles-from-the-dataset">Filter measles from the dataset</h1>
+
+<p>Because measles had the most cases of all diseases in the dataset, I decided to filter the dataset and explore measles for my visualization</p>
+
+<pre><code class="language-r">#filter by measles/summary
+diseases %&gt;% filter(disease==&quot;Measles&quot;) %&gt;% summary()
+</code></pre>
+
+<pre><code>##         disease            state           year      weeks_reporting
+##  Hepatitis A:   0   Alabama   :  76   Min.   :1928   Min.   : 0.00  
+##  Measles    :3876   Alaska    :  76   1st Qu.:1947   1st Qu.:32.00  
+##  Mumps      :   0   Arizona   :  76   Median :1966   Median :47.00  
+##  Pertussis  :   0   Arkansas  :  76   Mean   :1966   Mean   :37.45  
+##  Polio      :   0   California:  76   3rd Qu.:1984   3rd Qu.:50.00  
+##  Rubella    :   0   Colorado  :  76   Max.   :2003   Max.   :52.00  
+##  Smallpox   :   0   (Other)   :3420                                 
+##      count          population         incidence        
+##  Min.   :     0   Min.   :   86853   Min.   :   0.0000  
+##  1st Qu.:     8   1st Qu.:  966309   1st Qu.:   0.3458  
+##  Median :   543   Median : 2590843   Median :  27.7595  
+##  Mean   :  4817   Mean   : 3858493   Mean   : 166.6918  
+##  3rd Qu.:  3986   3rd Qu.: 4696902   3rd Qu.: 226.1823  
+##  Max.   :132342   Max.   :34861711   Max.   :2964.4269  
+##                   NA's   :64         NA's   :64
+</code></pre>
+
+<pre><code class="language-r">#create a measles dataset
+measles&lt;-diseases %&gt;% filter(disease==&quot;Measles&quot;) 
+measles&lt;-measles %&gt;% mutate (incidence_rounded = round(incidence, digits=1))
+</code></pre>
+
+<p>Since the dataset has data for each state by year, I decided it would be ideal to use a chloropleth map with <code>gganimate</code> to show how the incidence rate varies by each state over the years. The <code>usmaps</code> package provides one of many options to display state level data on a US map, which can also be done using the <code>spData</code> package, however with additional steps to <a href="https://nowosad.github.io/post/making-alternative-inset-maps-of-the-usa/">include Alaska and Hawaii</a>.</p>
+
+<h1 id="create-a-fips-column-using-fips-from-usmaps-package">Create a FIPS column using <code>fips()</code> from <code>usmaps</code> package</h1>
+
+<p>The <code>usmaps</code> package has a <code>fips()</code> function that outputs the FIPs code for a state name string input. To have the state level data plotted onto the map, a FIPs column corresponding to each state needs to be created.</p>
+
+<pre><code class="language-r">#Create a FIPS column using the fips() function from usmap 
+measles$fips&lt;-fips(measles$state)
+</code></pre>
+
+<h1 id="create-a-new-column-to-classify-year-by-vaccine-availability-will-be-used-for-subtitle-in-ggplot">Create a new column to classify year by vaccine availability-will be used for subtitle in ggplot</h1>
+
+<p>There is another important piece of information to account for in the visualization to make sense of the changes in trends: vaccine introduction. <a href="https://en.wikipedia.org/wiki/Measles_vaccine#/media/File:Measles_cases_graph.svg">The measles vaccine was introduced in 1963 in the United States with a second dose recomended by 1989</a>. To show this on the map, I created a factor variable corresponding each year to three phases of vaccine availability: the time frame when there was no vaccine, the time frame when the vaccine was introduced and the years onwards when the second dose was reccomended. This column will be used as a the subtitle on the map to demonstrate the trends relative to vaccine availability over the course of the years.</p>
+
+<pre><code class="language-r">#Create a column to classify year by vaccine availability
+measles$vaccine&lt;-ifelse((measles$year&gt;=1963) &amp; (measles$year&lt;1989),2,
+                 ifelse((measles$year&gt;=1989),3,
+                 ifelse((measles$year&lt;1963), 1,1)))
+measles$vaccine&lt;-recode(measles$vaccine, '1'=&quot;&quot;,
+                                     '2'=&quot;Vaccine introduced&quot;,
+                                     '3'=&quot;Second dose recommended&quot;)
+</code></pre>
+
+<h1 id="creating-quantiles-for-gradient-breaks">Creating quantiles for gradient breaks</h1>
+
+<pre><code class="language-r">measles %&gt;% select(incidence) %&gt;% summary()
+</code></pre>
+
+<pre><code>##    incidence        
+##  Min.   :   0.0000  
+##  1st Qu.:   0.3458  
+##  Median :  27.7595  
+##  Mean   : 166.6918  
+##  3rd Qu.: 226.1823  
+##  Max.   :2964.4269  
+##  NA's   :64
+</code></pre>
+
+<p>If you take a look at the summary stats for the incidence in the <code>measles</code> data, you can see how variability between the rates would unevenly polarize rates above and below the third quartile, which would obscure interpretation of the rates on a gradient scale. Instead of using the default scale in <code>scale_color_gradient()</code> in the <code>ggplot2</code> package which creates breaks by evenly spacing the intervals, quartiles are a better quantification of breaks in the dataset. a <code>breaks</code> vector is created to be read into the&rsquo;breaks&rsquo; argument of the <code>scale_color_gradient()</code> function in the plot.</p>
+
+<pre><code class="language-r">#Quantile breaks for gradient scale
+breaks&lt;- quantile(measles$incidence_rounded, probs=seq(0,1,.25), na.rm=TRUE) %&gt;% unname() %&gt;% round(digits=1)
+</code></pre>
+
+<h1 id="display">Display</h1>
+
+<p>A few other things I added here in my code is a vector for a manual gradient color scheme and the resolution for the plot .gif file.</p>
+
+<pre><code class="language-r">#Color palette
+gradient&lt;-c(&quot;#B1C055&quot;,&quot;#6CC682&quot;,&quot;#39C2B6&quot;,&quot;#6BB4D7&quot;,&quot;#B69DD1&quot;,&quot;#E685A8&quot;,&quot;#ED7F72&quot;)
+
+#Set these image quality options 
+options(gganimate.dev_args = list(width = 6, height = 4, units = 'in', res=300))
+</code></pre>
+
+<h1 id="create-the-plot">Create the plot</h1>
+
+<pre><code class="language-r">#Create the plot
+measles_plot&lt;-plot_usmap(data=measles, color=&quot;#262626&quot;, size=.3, values=&quot;incidence_rounded&quot;)+
+theme_void()+
+scale_fill_gradientn(colors = gradient, trans=&quot;pseudo_log&quot;, 
+#The pseudo_log allows for log transformation even though 0 is in the dataset
+na.value=&quot;grey&quot;,limits=c(min(breaks), max(breaks)),breaks=breaks[c(1,3:5)], labels=breaks[c(1,3:5)])+
+#only including min, 50th, 75th and max values  
+guides(fill = guide_colorbar(title=&quot;&quot;,
+                               frame.colour = &quot;black&quot;,
+                               label.position=&quot;top&quot;,
+                               barwidth = 8,
+                               barheight = 1, 
+                               ticks=FALSE,
+                               keywidth=15,
+                               label.hjust = 0.5,
+                               label.vjust = 0.3,
+                    label.theme = element_text(angle = 45, size=10)))+
+  labs(title = &quot;Measles Incidence per 100,000 in {frame_time}&quot;,
+       subtitle=&quot;{unique(measles$vaccine[measles$year==(frame_time)])}&quot;)+ 
+       #Allows for vaccine column to display as a subtitle relative to plot animation
+  theme(legend.position=&quot;bottom&quot;, legend.justification=c(.8,0),
+        plot.title=element_text(face=&quot;bold&quot;, size=14, color=&quot;#262626&quot;,hjust=.5),
+        plot.subtitle=element_text(hjust=.5))+
+   transition_time(year)
+</code></pre>
+
+<h1 id="save">Save</h1>
+
+<pre><code class="language-r">anim&lt;-animate(measles_plot, nframes=76, fps=1)
+#76 frames because 76 years 
+anim_save(&quot;measlesmap.gif&quot;, anim)
+#save the map 
+</code></pre>
+
+<h1 id="the-map">The Map</h1>
+
+<p><img src="/img/post/CopyOfmeaslesmap.gif" alt="Measles Map" /></p>
+
+  </div>
+ <footer>
+</footer>
+</article>
+
+
+<div class="pagination">
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    
+      <section id="categories">
+        <header>
+          <h1><i class="far fa-folder"></i>&nbsp;<a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/hugo/">hugo<span class="count">1</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/r/">r<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+</section>
+
+      <footer id="site-footer">
+  
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        Samia Ali
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.57.2' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+
+    </div>
+  </body>
+</html>

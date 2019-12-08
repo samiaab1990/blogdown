@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hugo on Samia Ali</title>
+    <title>Hugo on Samia Ali</title>
     <link>/categories/hugo/</link>
-    <description>Recent content in hugo on Samia Ali</description>
+    <description>Recent content in Hugo on Samia Ali</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 23 Nov 2019 00:00:00 +0000</lastBuildDate>
@@ -12,14 +12,12 @@
     
     
     <item>
-      <title>Making a Static Website </title>
-      <link>/blog/making-a-static-website/</link>
+      <title>Making a Static Website Using Blogdown</title>
+      <link>/blog/making-a-static-website-using-blogdown/</link>
       <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/making-a-static-website/</guid>
-      <description>https://www.staticgen.com/ https://wsvincent.com/static-vs-dynamic-websites-pros-and-cons/ https://dzone.com/articles/6-reasons-why-you-should-go-for-a-static-website https://devopedia.org/package-manager
-Like many users, I started using R regularly to do statistical analysis. I never thought at the time I would be able to use
-Choosing a Static Website Generator Even though I have been using RStudio IDE regularly, I didn&amp;rsquo;t initially resort to the blogdown package but decided to test Jekyll out, which is the generator for pages that use the .github.io domain. There was really no preference for a particular generator for me since I was new to the process, but Jekyll seemed popular (this is likely because it came out earlier than most other static website generators) and has a compelling showcase.</description>
+      <guid>/blog/making-a-static-website-using-blogdown/</guid>
+      <description>I made this website using Hugo via the blogdown package in R. Like probably many R users, I started using R for its data analysis capabilities&amp;mdash;I never thought that I&amp;rsquo;d be making a whole website with it! I sp</description>
     </item>
     
   </channel>

@@ -94,7 +94,6 @@ pre {
    display: table;
    font-size: .8em;
    table-layout: fixed;
-   width: 85%;
    font-family: "monospace";
    background: rgb(66,8,117);
 }
@@ -128,7 +127,7 @@ pre code hr {
     /* right-align */
     display: block;
     margin-left: auto;
-    margin-right: 15.1%;
+
 
     margin-bottom: -1.4em;
     padding: 4px 8px;
@@ -980,10 +979,10 @@ a.nav-title {
          text-transform: uppercase;
 }
 .far.fa-calendar-alt{
-   color:var(--accent-color);
+   color:var(--header-color);
 }
 .date{
-   color:var(--accent-color);
+   color:var(--header-color);
    font-size:.9em;
    font-weight:600;
 }
@@ -992,8 +991,8 @@ a.nav-title {
          font-family: "Raleway", Helvetica, sans-serif;
          font-size: 0.6em;
          letter-spacing: 0em;
-         text-transform: uppercase;
-         color:var(--accent-color);
+         text-transform: lowercase;
+         color:var(--header-color);
        }
    
 }
@@ -1157,7 +1156,7 @@ border-radius:3px;
      border: 1px solid var(--accent-color);
      background: transparent;
      color: var(--accent-color);
-     opacity:.7;
+     opacity:1;
      }
 
    .share-btn.linkedin {
@@ -1166,7 +1165,7 @@ border-radius:3px;
      border: 1px solid var(--accent-color);
      background: transparent;
      color: var(--accent-color);
-     opacity:.7;
+     opacity:1;
      }
 
    .share-btn.email {
@@ -1175,7 +1174,7 @@ border-radius:3px;
      border: 1px solid var(--accent-color);
      background: transparent;
      color: var(--accent-color);
-     opacity:.7;
+     opacity:1;
      }
      
 

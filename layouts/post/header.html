@@ -7,13 +7,13 @@
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     {{ end }}
     <time class="published">
-      <i class="far fa-calendar-alt"></i>&nbsp;<span class=date>{{ default (i18n "date_format") | .Date.Format }}
-    </span>
+      <p><i class="far fa-calendar-alt"></i>&nbsp;<span class=date>{{ default (i18n "date_format") | .Date.Format }}
+    </span></p>
     </time>
-    <span class="author">{{ .Params.author }}</span>
     {{ if .Site.Params.ReadingTime }}
       <p class="reading-time">{{ i18n "postreadingtime" .ReadingTime }}</p>
     {{ end }}
+<span class="author">{{ .Params.author }}</span>
 <span class="categories-tags"> {{ .Render "stats" }}</span>
     {{ with .Description }}
         <p>{{ . }}</p>
