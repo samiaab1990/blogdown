@@ -979,10 +979,10 @@ a.nav-title {
          text-transform: uppercase;
 }
 .far.fa-calendar-alt{
-   color:var(--header-color);
+   color:var(--accent-color);
 }
 .date{
-   color:var(--header-color);
+   color:var(--accent-color);
    font-size:.9em;
    font-weight:600;
 }
@@ -992,7 +992,7 @@ a.nav-title {
          font-size: 0.6em;
          letter-spacing: 0em;
          text-transform: lowercase;
-         color:var(--header-color);
+         color:var(--accent-color);
        }
    
 }
