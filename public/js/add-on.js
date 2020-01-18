@@ -15,7 +15,8 @@ document.documentElement.setAttribute('data-theme', currentTheme);
 
 if (currentTheme === 'dark') {
 toggleSwitch.checked = true;
-document.getElementById('name-image').src='/img/main/dark-themename.png';
+document.getElementById('name-image').src='/img/main/dark-themename-2.png';
+
 }
 }
 
@@ -23,16 +24,16 @@ function switchTheme(e) {
     if (e.target.checked) {
         
   document.documentElement.setAttribute('data-theme', 'dark');
-  document.getElementById('name-image').src='/img/main/dark-themename.png';
-
+  document.getElementById('name-image').src='/img/main/dark-themename-2.png';
+  
   
 
         localStorage.setItem('theme', 'dark');
     }
     else {
           document.documentElement.setAttribute('data-theme', 'light');
-          document.getElementById('name-image').src='/img/main/name.png';
-         
+          document.getElementById('name-image').src='/img/main/name-2.png';
+          
 
           localStorage.setItem('theme', 'light');
     }    
