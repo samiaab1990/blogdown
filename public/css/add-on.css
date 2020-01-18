@@ -1210,6 +1210,12 @@ border-radius:3px;
     border: solid 1px #2EBAAE;
 }
 
+/*Images on projects page*/
+
+.projimg{
+   border-radius:10px;
+   border:solid 1px var(--header-color);
+}
 /*Dark mode switch styling*/
 .theme-switch-wrapper {
   display: flex;
