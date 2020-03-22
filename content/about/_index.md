@@ -1,5 +1,5 @@
 ---
-image: /img/main/page-logo-monotone.png
+image: /img/main/page-logo2.png
 title: About
 
 ---
