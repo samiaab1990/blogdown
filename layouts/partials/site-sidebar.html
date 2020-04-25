@@ -1,0 +1,27 @@
+<section id="site-sidebar">
+  {{ if .Site.Params.sidebar.categories }}
+    {{ if ne ($.Scratch.Get "showCategories") false }}
+      <section id="categories">
+        <header>
+          <h1><i class="far fa-folder"></i>&nbsp;<a href="{{ "categories" | relLangURL }}">{{ i18n "categories" }}</a></h1>
+        </header>
+        <ul>
+          {{ if .Site.Params.sidebar.categoriesByCount }}
+            {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.ByCount }}
+          {{ else }}
+            {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.Alphabetical }}
+          {{ end }}
+          {{ range $key, $value := $.Scratch.Get "categories" }}
+          <li>
+            {{ if ne $value.Name "" }}
+              <a href="{{ printf "%s/%s" "categories" $value.Name | urlize | relLangURL }}/">{{ $value.Name }}<span class="count">{{ $value.Count }}</span></a>
+            {{ else }}
+              {{ i18n "uncategorized" }}<span class="count">{{ $value.Count }}</span>
+            {{ end }}
+          {{ end }}
+          </li>
+        </ul>
+      </section>
+    {{ end }}
+  {{ end }}
+</section>

@@ -1,0 +1,14 @@
+<article class="post">
+  {{ .Render "header" }}
+  {{ .Render "featured" }}
+  <section id="socnet-share">
+    {{ partial "share-buttons" . }}
+  </section>
+  <div id="content">
+    {{ .Content }}
+  </div>
+ <footer>
+</footer>
+</article>
+{{ .Render "comments" }}
+{{ .Render "pagination" }}

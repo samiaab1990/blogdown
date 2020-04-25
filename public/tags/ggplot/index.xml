@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ggplot on samia.rbind.io</title>
+    <link>/tags/ggplot/</link>
+    <description>Recent content in ggplot on samia.rbind.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ggplot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires</title>
+      <link>/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/</guid>
+      <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&amp;rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
+My heatmap visualizations were inspired by Nick Tierny&amp;rsquo;s tutorial on Github transform Australia&amp;rsquo;s Bureau of Meteorology&amp;rsquo;s heatmap data into viridis themed maps and plots. Here&amp;rsquo;s a gallery of my maps from the project:</description>
+    </item>
+    
+    <item>
+      <title>Making an Animated Measles Map: A Tidy Tuesday Project</title>
+      <link>/post/making-an-animated-measles-map-a-tidy-tuesday-project/</link>
+      <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-an-animated-measles-map-a-tidy-tuesday-project/</guid>
+      <description>For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this SimplyStats blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.
+Packages #packages library(tidyverse) library(gganimate) library(ggplot2) library(grid) library(sf) library(usmap) library(scales) library(Hmisc)  Read in the diseases file diseases&amp;lt;-read.csv(file=&amp;quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&amp;quot;)  View the dataset diseases %&amp;gt;%dim()  ## [1] 18870 6  The diseases dataset contains 18870 rows and 6 columns</description>
+    </item>
+    
+  </channel>
+</rss>

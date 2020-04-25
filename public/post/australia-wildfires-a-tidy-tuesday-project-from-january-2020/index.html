@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <meta charset="utf-8">
+<title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires - samia.rbind.io</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <meta name="generator" content="Hugo 0.57.2" />
+  <meta itemprop="name" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires">
+<meta itemprop="description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
+My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots. Here&rsquo;s a gallery of my maps from the project:">
+
+
+<meta itemprop="datePublished" content="2020-04-18T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-04-18T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1241">
+
+  <meta itemprop="image" content="/">
+
+
+
+<meta itemprop="keywords" content="TidyTuesday,R,data viz,ggplot," />
+
+  <meta property="og:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires" />
+<meta property="og:description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
+My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots. Here&rsquo;s a gallery of my maps from the project:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/" />
+
+<meta property="og:image" content="/" />
+<meta property="article:published_time" content="2020-04-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-18T00:00:00+00:00" />
+
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires"/>
+<meta name="twitter:description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
+My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots. Here&rsquo;s a gallery of my maps from the project:"/>
+<meta name="twitter:site" content="@samiasab90"/>
+
+  
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.df53c1edadafb8a1aaadcf6624a13b50f5d7bc72fd7e046927c32c5ea541e244.css" integrity="sha256-31PB7a2vuKGqrc9mJKE7UPXXvHL9fgRpJ8MsXqVB4kQ=">
+      <link rel="stylesheet" href="/css/add-on.css">
+    
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          
+            post
+          
+        
+      </a>
+      </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        
+          
+          
+            <a href="/" class="link"><i class='fa fa-home'></i> Home</a>
+          
+        
+      
+        
+          
+          
+            <a href="/about/" class="link"><i class='far fa-id-card'></i> About</a>
+          
+        
+      
+        
+          
+          
+            <a href="/blog/" class="link"><i class='far fa-newspaper'></i> Blog</a>
+          
+        
+      
+        
+          
+          
+            <a href="/bookmarks/" class="link"><i class='fas fa-star'></i> Bookmarks</a>
+          
+        
+      
+        
+          
+          
+            <a href="/projects/" class="link"><i class='fas fa-folder-open'></i> Projects</a>
+          
+        
+      
+        
+          
+          
+            <a href="/contact/" class="link"><i class='fas fa-envelope'></i> Contact</a>
+          
+        
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div class="theme-switch-wrapper">
+    <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round">
+        <span class="light">
+          <i class="fas fa-sun"></i>
+        </span>
+        <span class="dark">
+        <i class="fas fa-moon"></i>
+        </span>
+        </div>
+  </label>
+</div>
+    <div id="wrapper">
+      <section id="site-intro">
+  <a href="/"><img src="/img/main/logo2.png" class="hexagon" width="170 px" alt="" /></a>
+  <header>
+    <h1><img id='name-image' src='/img/main/name-2.png'/></h1>
+  </header>
+  <main>
+    
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+        <li><a href="//github.com/samiaab1990" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/samiasab90" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        <article class="post">
+  <header id ="post-header">
+  <div class="title">
+    
+        <h2><a href="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/">Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires</a></h2>
+    
+    <time class="published">
+      <p><i class="far fa-calendar-alt"></i>&nbsp;<span class=date>April 18, 2020
+    </span></p>
+    </time>
+    
+      <p class="reading-time">6 minutes read</p>
+    
+<span class="author"></span>
+<span class="categories-tags"> <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="/categories/r">r</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="/tags/tidytuesday">TidyTuesday</a></li>
+          
+            
+            <li><a class="article-category-link" href="/tags/r">R</a></li>
+          
+            
+            <li><a class="article-category-link" href="/tags/data-viz">data viz</a></li>
+          
+            
+            <li><a class="article-category-link" href="/tags/ggplot">ggplot</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+</span>
+    
+</div>
+</header>
+
+  
+  <a href="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/" class="image-featured">
+    
+    <figure>
+      <img class="postimg" src="/" alt="">
+    
+  </a>
+  <figcaption class="imgcaption"></figcaption>
+  </figure>
+
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  <div id="content">
+    
+
+<p>It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for <a href="https://github.com/rfordatascience">R4DataScience</a> to visualize climate data during the Australia wildfires earlier this year.</p>
+
+<p>My heatmap visualizations were inspired by Nick Tierny&rsquo;s <a href="https://github.com/njtierney/ozviridis">tutorial on Github</a> transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into <code>viridis</code> themed maps and plots. Here&rsquo;s a gallery of my maps from the project:</p>
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+<p><img src="/img/post/CopyOfDec2019avg.png"
+     alt="December 2019 Temp Avg"
+     width="40%"
+     height="40%"
+     class="center"/></p>
+
+<p><img src="/img/post/CopyOfRainfallavg.png"
+alt="December 2019 Rainfall Avg"
+width="40%"
+height="40%"
+class="center"/></p>
+
+<p>Additionally, the <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-07/readme.md">Australia Wildfires TidyTuesday Github Repo</a> provided climate data for rainfall and temperatures, which I used to make descriptive facet wrap plots with for averages in six Australian cities.</p>
+
+<p><img src="/img/post/CopyOffacet-grid-temp.png"
+alt="Facet Grid Temperatures"
+class="center"/></p>
+
+<p><img src="/img/post/CopyOffacet-grid-rainfall.png"
+alt="Facet Grid Rainfall"
+class="center"/></p>
+
+<p>Missing annual average rainfall data was an unfortunate limitation of generating meaningful plots for some cities (Brisbane, Canberra, Melbourne and Perth), but the data still provided an opportunity to get a sense of some interesting ways to utilize various <code>ggplot</code> themes and features for descriptive statistics, which I will explain later in this post. For now, let&rsquo;s start with the heatmaps.</p>
+
+<h1 id="using-ggplot-to-create-your-own-heatmaps">Using <code>ggplot</code> To Create Your Own Heatmaps</h1>
+
+<p>As mentioned earlier, <a href="https://github.com/njtierney/ozviridis">Nick Tierny&rsquo;s tutorial</a> did a great job of explaining how to recreate <a href="http://www.bom.gov.au/jsp/awap/temp/index.jsp?colour=colour&amp;time=latest&amp;step=0&amp;map=maxave&amp;period=month&amp;area=nat">Australia&rsquo;s Bureau of Meteorology&rsquo;s climate maps</a>. BOM provides files by climate attribute (ie: temperature, rainfall) for daily, weekly or monthly averages in a .grid format that can be converted to an object of <code>SpatialPixelsDataFrame</code> class using the <code>sp</code> package in R and subsequently plotted using <code>ggplot</code> (you can use the base R <code>plot</code> function as well as demonstrated in the tutorial). <em>PC users-the .grid file you need will actually download as a .gridZ, which is a UNIX compressed format that will need to be extracted using <a href="https://www.winzip.com/win/en/">Winzip</a> or <a href="https://www.peazip.org/">PeaZip</a></em></p>
+
+<p><img src="/img/post/bom_map.gif"
+alt="BOM temperature map"
+class="center"/></p>
+
+<p><img src="/img/post/bom_rain.gif"
+alt="BOM temperature map"
+class="center"/></p>
+
+<p>The first thing needed to recreate the map is a shapefile of Australia, preferably with territorial boundaries. I was able to download it from the <a href="http://data.daff.gov.au/anrdl/metadata_files/pa_nsaasr9nnd_02211a04.xml">Australian Government website</a> but <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Natural Earth</a> is also a popular resource for retrieving map data. The <code>readOGR</code> function from the <code>rgdal</code> package reads in .shp files. I then use the <code>fortify()</code> function from <code>ggplot2</code> that converts the shapefile into a dataframe compatible with ggplot. <em>Note that <code>fortify</code> may be depreciated in the future and the <code>tidy()</code> function from the <code>broom</code> package is preferred. <code>Fortify()</code> works for me so I used it in this example-you can read <a href="https://ggplot2.tidyverse.org/reference/fortify.map.html">the documentation</a> to learn more about the function.</em></p>
+
+<pre><code>library(rgdal)
+library(ggplot2)
+library(tidyverse)
+
+# Converting the shapefile saved in the working directory into an r object 
+
+australia&lt;-readOGR(&quot;aust_cd66states.shp&quot;) 
+
+# Specifying the states and territories `STE` in the shapefile which will define the boundaries 
+
+australia_fortified&lt;-australia %&gt;% fortify(australia, region='STE')
+</code></pre>
+
+<p>Next, I used the <code>raster</code> package to read in the .grid files for the [temperature] and [rainfall] averages for December 2019. The sequence is essentially as follows: 1. Save the data into raster objects 2. Convert into a <code>SpatialPixelsDataFrame</code> using the sp package 3. convert the <code>sp</code> object into a data frame using the <code>as.data.frame()</code> function in base. This object can then be used in <code>geom_polygon()</code> in <code>ggplot</code>.</p>
+
+<pre><code>library(raster)
+library(sf)
+# Converting the .grid file saved in the working directory into an r object
+
+# Mean Maximum Temperature Averages for December 2019
+aus_climate&lt;-raster('2019120120191231 (1).grid') 
+
+#Rainfall Averages for December 2019
+rainfall_grid&lt;-raster('rainfall.grid')
+
+
+
+
+climate_spdf &lt;- as(aus_climate, &quot;SpatialPixelsDataFrame&quot;)
+climate_df &lt;- as.data.frame(climate_spdf)
+
+rainfall_spdf&lt;-as(rainfall_grid, &quot;SpatialPixelsDataFrame&quot;)
+rainfall_df&lt;-as.data.frame(rainfall_spdf)
+</code></pre>
+
+<p>By this point, the .grid files can be overlayed on the Australia shapefile to create <a href="https://github.com/njtierney/ozviridis#bob-rudiss-answer-on-so">this map in Nick&rsquo;s example</a>. I was interested in having the grid data only restricted to the boundaries within the Australia shapefile. This is basically subsetting the grid data using the Australia shapefile as a reference.</p>
+
+<p>This <a href="https://gis.stackexchange.com/questions/63793/how-to-overlay-a-polygon-over-spatialpointsdataframe-and-preserving-the-spdf-dat">example here</a> and the <a href="https://cran.r-project.org/web/packages/sp/vignettes/over.pdf">sp package documentation</a>(<em>I found this vignette after doing this project-Stack Overflow gave me the original answer</em>) show how you can use the <code>over()</code> function in the <code>sp</code> package to subset points that only fall within the polygon. Essentially, placing the spatial data object and shapefile in the function returns either a number or NA-the latter which denotes points in the data do not fall into the polygon. Restricting to values that are not NA will keep only the points that fall inside the polygon</p>
+
+<pre><code># Here, I'm creating an object called australia_climate_interior, which will only select points from the grid data that fall in the australia shapefile
+australia_climate_interior&lt;-climate_spdf[!is.na(over(climate_spdf, as(australia, &quot;SpatialPolygons&quot;))), ]
+
+#Converting this to data frame the way I did previously so that it can be read into geom_polygon later on 
+australia_climate_interior&lt;-as.data.frame(australia_climate_interior)
+
+# Doing the same thing for rainfall data
+rainfall_interior_spdf&lt;-rainfall_spdf[!is.na(over(rainfall_spdf, as(australia,&quot;SpatialPolygons&quot;))),]
+rainfall_interior&lt;-as.data.frame(rainfall_interior_spdf)
+</code></pre>
+
+<p>The rainfall and temperature .csv files will be used later to create the facet wrap plots, but they have the lat/long points of the cities, which I thought would be nice to have on the map to compliment the graphs.</p>
+
+<pre><code>rainfall &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-07/rainfall.csv')
+
+temperature &lt;- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-07/temperature.csv')
+
+australia_cities&lt;-rainfall %&gt;% dplyr::select(city_name,long,lat)
+australia_cities&lt;-unique(australia_cities)
+
+# Removing a duplicate name that some reason was included despite the unique() function
+
+australia_cities&lt;-australia_cities[-4,]
+
+</code></pre>
+
+<p>Lastly, I wanted to clean some things up and mutate the temperature variable to show both Celcius and Fahrenheit</p>
+
+<pre><code>#In this part, I am doing some renaming of the variable names (the temperature values in degrees Celcius are named under a lengthy variable reflecting the filename
+
+australia_climate_interior&lt;-australia_climate_interior %&gt;% rename(temp=X2019120120191231_.1.)
+
+#Creating a Fahrenheit Variable
+australia_climate_interior&lt;-australia_climate_interior %&gt;% mutate(temp.f=((temp*9/5)+32))
+
+</code></pre>
+
+<p>Since I want to show both Celcius and Farhenheit on the map, I created the breaks and labels manually before plotting. I used Farhenheit as my &ldquo;primary&rdquo; measure (I&rsquo;m based in the US <span style='font-size:20px;'>&#128541;</span> and admittedly am not well versed in reading Celcius) and put the corresponding Celcius value below. To do this, I found the minimum and maximum temperature values in Farhenheit and used 10 as the scale increments. Then I created the same object in Celcius using the Farhenheit to Celcius formula. I created a labels object based off these break values so the scale shows the Farhenheit values and corresponding Celcius values below.</p>
+
+<pre><code>min(australia_climate_interior$temp.f)
+max(australia_climate_interior$temp.f)
+
+breaks&lt;-seq(50,120, by=10)
+breaks.c&lt;-round(((breaks-32)*5/9),0)
+labels&lt;-paste0(breaks,sep=&quot;\n&quot;,breaks.c)
+</code></pre>
+
+<p><em>After revisiting my code months later, I realized I would have rather saved the min/max temperature values as objects so that the ggplot code is flexible and adaptable to different data file inputs</em></p>
+
+<pre><code>min&lt;-round(min(australia_climate_interior$temp.f),0)
+max&lt;-round(max(australia_climate_interior$temp.f),0)
+
+breaks&lt;-seq(min,max, by=10)
+breaks.c&lt;-round(((breaks-32)*5/9),0)
+labels&lt;-paste0(breaks,sep=&quot;\n&quot;,breaks.c)
+</code></pre>
+
+<p>And now for the actual plot&hellip;</p>
+
+<h2 id="temperature-plot">Temperature Plot</h2>
+
+<pre><code class="language-r">library(ggdark)
+library(showtext)
+library(ggrepel)
+
+#Windows function to use a different font than ggplot default
+
+showtext.auto()
+dec_avg&lt;-ggplot()+
+
+# The data essentially exists as tiny pixels which can be thought of as a tiny squares suitable for geom_tile. Here, I'm plotting the x and y coordinates and filling it in with the temperature in Farhenheit
+
+  geom_tile(data = australia_climate_interior, 
+            aes(x = x, 
+                y = y, 
+                fill = temp.f))+
+# The Australia shapefile
+  geom_polygon(data = australia_fortified, 
+               aes(x = long, 
+                   y = lat, 
+                   group = group), 
+               fill = NA, 
+               color = &quot;#3E3E3E&quot;, 
+               size = 0.3) +
+  # Add the city names as points on the map
+  geom_point(data=australia_cities,aes(long,lat), color=&quot;#D8D0D0&quot;)+
+  geom_text_repel(data=australia_cities,aes(long,lat,label=city_name), size=5, color=&quot;#D8D0D0&quot;)+
+  
+  # Using &quot;plasma&quot; from the viridis package for the color scheme of the map
+  scale_fill_viridis_c(option = &quot;plasma&quot;, breaks=breaks, labels=labels) +
+  coord_equal() +
+  
+  # Using dark theme from `ggdark`
+  dark_theme_gray()+
+  
+  # Labels
+  labs(title=&quot;Australia Climate Map&quot;,
+       subtitle=&quot;Daily Mean Maximum Temperatures December 2019&quot;,
+       caption=&quot;Source: Australian Government Bureau of Meteorology&quot;)+
+       
+  # Theme Attributes
+  theme(
+        plot.title = element_text(family=&quot;Roboto&quot;, size=10,color=&quot;#D7D7D7&quot;, face=&quot;bold&quot;),
+        plot.subtitle=element_text(family=&quot;Roboto&quot;, size=5, color=&quot;#D7D7D7&quot;),
+        plot.background = element_rect(fill = &quot;grey10&quot;),
+        legend.text=element_text(color=&quot;#B3B3B3&quot;, size=4, lineheight = .3),
+        legend.title=element_text(color=&quot;#B3B3B3&quot;, size=4, vjust=.8),
+        panel.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.background = element_blank(),
+        axis.ticks = element_blank(),
+        legend.key = element_blank(),
+        axis.text=element_blank(),
+        axis.title=element_blank(),
+        legend.position = &quot;bottom&quot;,
+        legend.justification=&quot;right&quot;,
+        plot.caption=element_text(hjust=0,size=3))+
+  
+  # Legend Attributes/Appearance
+
+guides(fill=guide_colorbar(title=&quot;Temperature °F/°C&quot;,ticks=FALSE,       direction=&quot;horizontal&quot;, barwidth = 5,  barheight=.8,label.position=&quot;bottom&quot;, title.position = &quot;top&quot;, title.vjust = -5, title.hjust=.5, label.vjust=1))
+
+</code></pre>
+
+<p><img src="/img/post/CopyOfDec2019avg.png"
+     alt="December 2019 Temp Avg"
+     width="75%"
+     height="75%"
+     class="center"/></p>
+
+  </div>
+ <footer>
+</footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/post/making-an-animated-measles-map-a-tidy-tuesday-project/" class="button big previous"><i class="fas fa-angle-left"></i> Making an Animated Measles Map: A Tidy Tuesday Project</a>
+  
+  
+</div>
+
+
+      </main>
+      <section id="site-sidebar">
+  
+    
+      <section id="categories">
+        <header>
+          <h1><i class="far fa-folder"></i>&nbsp;<a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+            
+          
+          
+          <li>
+            
+              <a href="/categories/r/">r<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/hugo/">hugo<span class="count">1</span></a>
+            
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+</section>
+
+      <footer id="site-footer">
+  
+  
+  <p class="copyright">
+    
+      &copy; 2020
+      
+        samia.rbind.io
+      
+    . <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.57.2' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/html.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/css.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/js.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/toml.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+
+
+    </div>
+  </body>
+</html>
