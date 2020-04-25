@@ -1,10 +1,11 @@
 ---
-title: 'Making an Animated Measles Map: A Tidy Tuesday Project'
+title: 'Visualizing 75 Years of Measles Incidence Using gganimate: A Tidy Tuesday Project'
 author: ''
 date: '2020-01-18'
 slug: making-an-animated-measles-map-a-tidy-tuesday-project
 categories:
   - r
+  - data viz
 tags:
   - ggplot
   - gganimate
