@@ -33,7 +33,7 @@
   </url>
   
   <url>
-    <loc>/tags/data-viz/</loc>
+    <loc>/categories/data-viz/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -48,12 +48,12 @@
   </url>
   
   <url>
-    <loc>/tags/r/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/r/</loc>
+    <loc>/tags/raster/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -85,6 +85,16 @@
                 hreflang="en"
                 href="/"
                 />
+  </url>
+  
+  <url>
+    <loc>/tags/sf/</loc>
+    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/sp/</loc>
+    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -138,11 +148,6 @@
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/blogdown/</loc>
     <lastmod>2019-11-23T00:00:00+00:00</lastmod>
   </url>
@@ -158,11 +163,6 @@
   </url>
   
   <url>
-    <loc>/categories/hugo/</loc>
-    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/javascript/</loc>
     <lastmod>2019-11-23T00:00:00+00:00</lastmod>
   </url>
@@ -173,37 +173,26 @@
   </url>
   
   <url>
-    <loc>/blog/making-a-static-website-using-blogdown/</loc>
+    <loc>/post/making-a-static-website-using-blogdown/</loc>
     <lastmod>2019-11-23T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/2019-11-23-making-a-static-website/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/making-a-static-website-using-blogdown/"
-                />
+  </url>
+  
+  <url>
+    <loc>/categories/web-development/</loc>
+    <lastmod>2019-11-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/blog/2019-11-23-making-a-static-website/</loc>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/making-a-static-website-using-blogdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/2019-11-23-making-a-static-website/"
-                />
   </url>
   
   <url>
     <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
   </url>
   
   <url>

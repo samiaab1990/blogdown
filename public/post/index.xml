@@ -12,23 +12,32 @@
     
     
     <item>
-      <title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires</title>
+      <title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1</title>
       <link>/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/</guid>
       <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&amp;rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
-My heatmap visualizations were inspired by Nick Tierny&amp;rsquo;s tutorial on Github transform Australia&amp;rsquo;s Bureau of Meteorology&amp;rsquo;s heatmap data into viridis themed maps and plots. Here&amp;rsquo;s a gallery of my maps from the project:</description>
+ .center { display: block; margin-left: auto; margin-right: auto; }  These heatmap visualizations were inspired by Nick Tierny&amp;rsquo;s tutorial on Github transform Australia&amp;rsquo;s Bureau of Meteorology&amp;rsquo;s heatmap data into viridis themed maps and plots.</description>
     </item>
     
     <item>
-      <title>Making an Animated Measles Map: A Tidy Tuesday Project</title>
+      <title>Visualizing 75 Years of Measles Incidence Using gganimate: A Tidy Tuesday Project</title>
       <link>/post/making-an-animated-measles-map-a-tidy-tuesday-project/</link>
       <pubDate>Sat, 18 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/making-an-animated-measles-map-a-tidy-tuesday-project/</guid>
       <description>For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this SimplyStats blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.
 Packages #packages library(tidyverse) library(gganimate) library(ggplot2) library(grid) library(sf) library(usmap) library(scales) library(Hmisc)  Read in the diseases file diseases&amp;lt;-read.csv(file=&amp;quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&amp;quot;)  View the dataset diseases %&amp;gt;%dim()  ## [1] 18870 6  The diseases dataset contains 18870 rows and 6 columns</description>
+    </item>
+    
+    <item>
+      <title>Making A Website With RStudio: The Blogdown Package</title>
+      <link>/post/making-a-static-website-using-blogdown/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-a-static-website-using-blogdown/</guid>
+      <description>As a consistent R user of about a year now, I mainly started to use it as another tool besides STATA and SAS. I had never really thought of the prospect of using a software I&amp;rsquo;d be using for data analysis to make a whole website! Although blogdown is quite different from my usual R use, it&amp;rsquo;s helped me become acquainted with the versatility of an open source language and all the ways that can enhance the regular data stuff.</description>
     </item>
     
   </channel>

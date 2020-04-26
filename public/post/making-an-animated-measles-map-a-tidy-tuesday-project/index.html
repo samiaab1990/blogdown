@@ -9,7 +9,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
   <meta charset="utf-8">
-<title>Making an Animated Measles Map: A Tidy Tuesday Project - samia.rbind.io</title>
+<title>Visualizing 75 Years of Measles Incidence Using gganimate: A Tidy Tuesday Project - samia.rbind.io</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -27,7 +27,7 @@
 
 
   <meta name="generator" content="Hugo 0.57.2" />
-  <meta itemprop="name" content="Making an Animated Measles Map: A Tidy Tuesday Project">
+  <meta itemprop="name" content="Visualizing 75 Years of Measles Incidence Using gganimate: A Tidy Tuesday Project">
 <meta itemprop="description" content="For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this SimplyStats blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.
 Packages #packages library(tidyverse) library(gganimate) library(ggplot2) library(grid) library(sf) library(usmap) library(scales) library(Hmisc)  Read in the diseases file diseases&lt;-read.csv(file=&quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&quot;)  View the dataset diseases %&gt;%dim()  ## [1] 18870 6  The diseases dataset contains 18870 rows and 6 columns">
 
@@ -42,7 +42,7 @@ Packages #packages library(tidyverse) library(gganimate) library(ggplot2) librar
 
 <meta itemprop="keywords" content="ggplot,gganimate,TidyTuesday," />
 
-  <meta property="og:title" content="Making an Animated Measles Map: A Tidy Tuesday Project" />
+  <meta property="og:title" content="Visualizing 75 Years of Measles Incidence Using gganimate: A Tidy Tuesday Project" />
 <meta property="og:description" content="For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this SimplyStats blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.
 Packages #packages library(tidyverse) library(gganimate) library(ggplot2) library(grid) library(sf) library(usmap) library(scales) library(Hmisc)  Read in the diseases file diseases&lt;-read.csv(file=&quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&quot;)  View the dataset diseases %&gt;%dim()  ## [1] 18870 6  The diseases dataset contains 18870 rows and 6 columns" />
 <meta property="og:type" content="article" />
@@ -55,7 +55,7 @@ Packages #packages library(tidyverse) library(gganimate) library(ggplot2) librar
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/"/>
 
-<meta name="twitter:title" content="Making an Animated Measles Map: A Tidy Tuesday Project"/>
+<meta name="twitter:title" content="Visualizing 75 Years of Measles Incidence Using gganimate: A Tidy Tuesday Project"/>
 <meta name="twitter:description" content="For Week 50 of the R4datascience project, I used the provided diseases data mentioned in this SimplyStats blog post. The dataset contains state level data of vaccine preventable infectious diseases over the span of ~70 years.
 Packages #packages library(tidyverse) library(gganimate) library(ggplot2) library(grid) library(sf) library(usmap) library(scales) library(Hmisc)  Read in the diseases file diseases&lt;-read.csv(file=&quot;~/GitHub/TidyTuesday/data/2019/2019-12-10/diseases.csv&quot;)  View the dataset diseases %&gt;%dim()  ## [1] 18870 6  The diseases dataset contains 18870 rows and 6 columns"/>
 <meta name="twitter:site" content="@samiasab90"/>
@@ -160,13 +160,13 @@ Packages #packages library(tidyverse) library(gganimate) library(ggplot2) librar
 
   
     
-    <a href="//twitter.com/share?text=Making%20an%20Animated%20Measles%20Map%3a%20A%20Tidy%20Tuesday%20Project&amp;url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Visualizing%2075%20Years%20of%20Measles%20Incidence%20Using%20gganimate%3a%20A%20Tidy%20Tuesday%20Project&amp;url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f&amp;title=Making%20an%20Animated%20Measles%20Map%3a%20A%20Tidy%20Tuesday%20Project" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f&amp;title=Visualizing%2075%20Years%20of%20Measles%20Incidence%20Using%20gganimate%3a%20A%20Tidy%20Tuesday%20Project" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -259,7 +259,7 @@ Packages #packages library(tidyverse) library(gganimate) library(ggplot2) librar
   <header id ="post-header">
   <div class="title">
     
-        <h2><a href="/post/making-an-animated-measles-map-a-tidy-tuesday-project/">Making an Animated Measles Map: A Tidy Tuesday Project</a></h2>
+        <h2><a href="/post/making-an-animated-measles-map-a-tidy-tuesday-project/">Visualizing 75 Years of Measles Incidence Using gganimate: A Tidy Tuesday Project</a></h2>
     
     <time class="published">
       <p><i class="far fa-calendar-alt"></i>&nbsp;<span class=date>January 18, 2020
@@ -278,6 +278,9 @@ Packages #packages library(tidyverse) library(gganimate) library(ggplot2) librar
           
             
             <li><a class="article-category-link" href="/categories/r">r</a></li>
+          
+            
+            <li><a class="article-category-link" href="/categories/data-viz">data viz</a></li>
           
         </ul>
       </li>
@@ -327,13 +330,13 @@ Packages #packages library(tidyverse) library(gganimate) library(ggplot2) librar
 
   
     
-    <a href="//twitter.com/share?text=Making%20an%20Animated%20Measles%20Map%3a%20A%20Tidy%20Tuesday%20Project&amp;url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Visualizing%2075%20Years%20of%20Measles%20Incidence%20Using%20gganimate%3a%20A%20Tidy%20Tuesday%20Project&amp;url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f&amp;title=Making%20an%20Animated%20Measles%20Map%3a%20A%20Tidy%20Tuesday%20Project" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fmaking-an-animated-measles-map-a-tidy-tuesday-project%2f&amp;title=Visualizing%2075%20Years%20of%20Measles%20Incidence%20Using%20gganimate%3a%20A%20Tidy%20Tuesday%20Project" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -605,8 +608,10 @@ anim_save(&quot;measlesmap.gif&quot;, anim)
 
 <div class="pagination">
   
+    <a href="/post/making-a-static-website-using-blogdown/" class="button big previous"><i class="fas fa-angle-left"></i> Making A Website With RStudio: The Blogdown Package</a>
   
-    <a href="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/" class="button big next">Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires <i class="fas fa-angle-right"></i></a>
+  
+    <a href="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/" class="button big next">Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1 <i class="fas fa-angle-right"></i></a>
   
 </div>
 
@@ -626,12 +631,17 @@ anim_save(&quot;measlesmap.gif&quot;, anim)
           
           <li>
             
-              <a href="/categories/r/">r<span class="count">2</span></a>
+              <a href="/categories/r/">r<span class="count">3</span></a>
             
           
           <li>
             
-              <a href="/categories/hugo/">hugo<span class="count">1</span></a>
+              <a href="/categories/data-viz/">data-viz<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/web-development/">web-development<span class="count">1</span></a>
             
           
           </li>

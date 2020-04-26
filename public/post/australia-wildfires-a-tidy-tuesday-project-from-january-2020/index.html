@@ -9,7 +9,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
   <meta charset="utf-8">
-<title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires - samia.rbind.io</title>
+<title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1 - samia.rbind.io</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -27,24 +27,24 @@
 
 
   <meta name="generator" content="Hugo 0.57.2" />
-  <meta itemprop="name" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires">
+  <meta itemprop="name" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1">
 <meta itemprop="description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
-My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots. Here&rsquo;s a gallery of my maps from the project:">
+ .center { display: block; margin-left: auto; margin-right: auto; }  These heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots.">
 
 
 <meta itemprop="datePublished" content="2020-04-18T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-04-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1241">
+<meta itemprop="wordCount" content="1669">
 
   <meta itemprop="image" content="/">
 
 
 
-<meta itemprop="keywords" content="TidyTuesday,R,data viz,ggplot," />
+<meta itemprop="keywords" content="TidyTuesday,ggplot,sp,sf,raster," />
 
-  <meta property="og:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires" />
+  <meta property="og:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1" />
 <meta property="og:description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
-My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots. Here&rsquo;s a gallery of my maps from the project:" />
+ .center { display: block; margin-left: auto; margin-right: auto; }  These heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/" />
 
@@ -55,9 +55,9 @@ My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Githu
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/"/>
 
-<meta name="twitter:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires"/>
+<meta name="twitter:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1"/>
 <meta name="twitter:description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
-My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots. Here&rsquo;s a gallery of my maps from the project:"/>
+ .center { display: block; margin-left: auto; margin-right: auto; }  These heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots."/>
 <meta name="twitter:site" content="@samiasab90"/>
 
   
@@ -160,13 +160,13 @@ My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Githu
 
   
     
-    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires-Part%201&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires-Part%201" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -259,14 +259,14 @@ My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Githu
   <header id ="post-header">
   <div class="title">
     
-        <h2><a href="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/">Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires</a></h2>
+        <h2><a href="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/">Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1</a></h2>
     
     <time class="published">
       <p><i class="far fa-calendar-alt"></i>&nbsp;<span class=date>April 18, 2020
     </span></p>
     </time>
     
-      <p class="reading-time">6 minutes read</p>
+      <p class="reading-time">8 minutes read</p>
     
 <span class="author"></span>
 <span class="categories-tags"> <ul class="stats">
@@ -278,6 +278,9 @@ My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Githu
           
             
             <li><a class="article-category-link" href="/categories/r">r</a></li>
+          
+            
+            <li><a class="article-category-link" href="/categories/data-viz">data viz</a></li>
           
         </ul>
       </li>
@@ -293,13 +296,16 @@ My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Githu
             <li><a class="article-category-link" href="/tags/tidytuesday">TidyTuesday</a></li>
           
             
-            <li><a class="article-category-link" href="/tags/r">R</a></li>
-          
-            
-            <li><a class="article-category-link" href="/tags/data-viz">data viz</a></li>
-          
-            
             <li><a class="article-category-link" href="/tags/ggplot">ggplot</a></li>
+          
+            
+            <li><a class="article-category-link" href="/tags/sp">sp</a></li>
+          
+            
+            <li><a class="article-category-link" href="/tags/sf">sf</a></li>
+          
+            
+            <li><a class="article-category-link" href="/tags/raster">raster</a></li>
           
         </ul>
       </li>
@@ -330,13 +336,13 @@ My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Githu
 
   
     
-    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires-Part%201&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires-Part%201" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -354,8 +360,6 @@ My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Githu
 
 <p>It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for <a href="https://github.com/rfordatascience">R4DataScience</a> to visualize climate data during the Australia wildfires earlier this year.</p>
 
-<p>My heatmap visualizations were inspired by Nick Tierny&rsquo;s <a href="https://github.com/njtierney/ozviridis">tutorial on Github</a> transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into <code>viridis</code> themed maps and plots. Here&rsquo;s a gallery of my maps from the project:</p>
-
 <style>
 .center {
   display: block;
@@ -366,31 +370,23 @@ My heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Githu
 
 <p><img src="/img/post/CopyOfDec2019avg.png"
      alt="December 2019 Temp Avg"
-     width="40%"
-     height="40%"
+     width="80%"
+     height="80%"
      class="center"/></p>
 
 <p><img src="/img/post/CopyOfRainfallavg.png"
 alt="December 2019 Rainfall Avg"
-width="40%"
-height="40%"
+width="80%"
+height="80%"
 class="center"/></p>
 
-<p>Additionally, the <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-07/readme.md">Australia Wildfires TidyTuesday Github Repo</a> provided climate data for rainfall and temperatures, which I used to make descriptive facet wrap plots with for averages in six Australian cities.</p>
+<p>These heatmap visualizations were inspired by Nick Tierny&rsquo;s <a href="https://github.com/njtierney/ozviridis">tutorial on Github</a> transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into <code>viridis</code> themed maps and plots.</p>
 
-<p><img src="/img/post/CopyOffacet-grid-temp.png"
-alt="Facet Grid Temperatures"
-class="center"/></p>
-
-<p><img src="/img/post/CopyOffacet-grid-rainfall.png"
-alt="Facet Grid Rainfall"
-class="center"/></p>
-
-<p>Missing annual average rainfall data was an unfortunate limitation of generating meaningful plots for some cities (Brisbane, Canberra, Melbourne and Perth), but the data still provided an opportunity to get a sense of some interesting ways to utilize various <code>ggplot</code> themes and features for descriptive statistics, which I will explain later in this post. For now, let&rsquo;s start with the heatmaps.</p>
+<p>Additionally, the <a href="https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-07/readme.md">Australia Wildfires TidyTuesday Github Repo</a> provided climate data for rainfall and temperature, which I used to make descriptive facet wrap plots for averages in six Australian cities. I will explain that analysis later in part 2.</p>
 
 <h1 id="using-ggplot-to-create-your-own-heatmaps">Using <code>ggplot</code> To Create Your Own Heatmaps</h1>
 
-<p>As mentioned earlier, <a href="https://github.com/njtierney/ozviridis">Nick Tierny&rsquo;s tutorial</a> did a great job of explaining how to recreate <a href="http://www.bom.gov.au/jsp/awap/temp/index.jsp?colour=colour&amp;time=latest&amp;step=0&amp;map=maxave&amp;period=month&amp;area=nat">Australia&rsquo;s Bureau of Meteorology&rsquo;s climate maps</a>. BOM provides files by climate attribute (ie: temperature, rainfall) for daily, weekly or monthly averages in a .grid format that can be converted to an object of <code>SpatialPixelsDataFrame</code> class using the <code>sp</code> package in R and subsequently plotted using <code>ggplot</code> (you can use the base R <code>plot</code> function as well as demonstrated in the tutorial). <em>PC users-the .grid file you need will actually download as a .gridZ, which is a UNIX compressed format that will need to be extracted using <a href="https://www.winzip.com/win/en/">Winzip</a> or <a href="https://www.peazip.org/">PeaZip</a></em></p>
+<p>As mentioned previously, <a href="https://github.com/njtierney/ozviridis">Nick Tierny&rsquo;s tutorial</a> did a great job of explaining how to recreate <a href="http://www.bom.gov.au/jsp/awap/temp/index.jsp?colour=colour&amp;time=latest&amp;step=0&amp;map=maxave&amp;period=month&amp;area=nat">Australia&rsquo;s Bureau of Meteorology&rsquo;s climate maps</a>. BOM provides files by climate attribute (ie: temperature, rainfall) for daily, weekly or monthly averages in a .grid format that can be converted to an object of <code>SpatialPixelsDataFrame</code> class using the <code>sp</code> package in R and subsequently plotted using <code>ggplot</code> (you can use the base R <code>plot</code> function as well as demonstrated in the tutorial). <em>PC users-the .grid file you need will actually download as a .gridZ, which is a UNIX compressed format that will need to be extracted using <a href="https://www.winzip.com/win/en/">Winzip</a> or <a href="https://www.peazip.org/">PeaZip</a></em></p>
 
 <p><img src="/img/post/bom_map.gif"
 alt="BOM temperature map"
@@ -400,7 +396,7 @@ class="center"/></p>
 alt="BOM temperature map"
 class="center"/></p>
 
-<p>The first thing needed to recreate the map is a shapefile of Australia, preferably with territorial boundaries. I was able to download it from the <a href="http://data.daff.gov.au/anrdl/metadata_files/pa_nsaasr9nnd_02211a04.xml">Australian Government website</a> but <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Natural Earth</a> is also a popular resource for retrieving map data. The <code>readOGR</code> function from the <code>rgdal</code> package reads in .shp files. I then use the <code>fortify()</code> function from <code>ggplot2</code> that converts the shapefile into a dataframe compatible with ggplot. <em>Note that <code>fortify</code> may be depreciated in the future and the <code>tidy()</code> function from the <code>broom</code> package is preferred. <code>Fortify()</code> works for me so I used it in this example-you can read <a href="https://ggplot2.tidyverse.org/reference/fortify.map.html">the documentation</a> to learn more about the function.</em></p>
+<p>The first thing needed to recreate the map is a shapefile of Australia, preferably with territorial boundaries. I was able to download it from the <a href="http://data.daff.gov.au/anrdl/metadata_files/pa_nsaasr9nnd_02211a04.xml">Australian Government website</a> but <a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Natural Earth</a> is also a popular resource for retrieving map data. The <code>readOGR()</code> function from the <code>rgdal</code> package reads in .shp files. I then used the <code>fortify()</code> function from <code>ggplot2</code> that converts the shapefile into a dataframe compatible with ggplot. <em>Note that <code>fortify</code> may be deprecated in the future and the <code>tidy()</code> function from the <code>broom</code> package is preferred. <code>Fortify()</code> works for me so I used it in this example-you can read <a href="https://ggplot2.tidyverse.org/reference/fortify.map.html">the documentation</a> to learn more about the function.</em></p>
 
 <pre><code>library(rgdal)
 library(ggplot2)
@@ -415,26 +411,17 @@ australia&lt;-readOGR(&quot;aust_cd66states.shp&quot;)
 australia_fortified&lt;-australia %&gt;% fortify(australia, region='STE')
 </code></pre>
 
-<p>Next, I used the <code>raster</code> package to read in the .grid files for the [temperature] and [rainfall] averages for December 2019. The sequence is essentially as follows: 1. Save the data into raster objects 2. Convert into a <code>SpatialPixelsDataFrame</code> using the sp package 3. convert the <code>sp</code> object into a data frame using the <code>as.data.frame()</code> function in base. This object can then be used in <code>geom_polygon()</code> in <code>ggplot</code>.</p>
+<p>Next, I used the <code>raster</code> package to read in the .grid files for the <a href="http://www.bom.gov.au/web03/ncc/www/awap/temperature/maxave/month/grid/0.05/history/nat/2019120120191231.grid.Z">temperature averages for December 2019</a>. The sequence is essentially as follows: 1. Save the data into raster objects 2. Convert into a <code>SpatialPixelsDataFrame</code> using the <code>sp</code> package 3. convert the <code>sp</code> object into a data frame using the <code>as.data.frame()</code> function in base. This object can then be used in <code>geom_polygon()</code> in <code>ggplot</code>.</p>
 
 <pre><code>library(raster)
-library(sf)
+library(sp)
 # Converting the .grid file saved in the working directory into an r object
 
 # Mean Maximum Temperature Averages for December 2019
 aus_climate&lt;-raster('2019120120191231 (1).grid') 
 
-#Rainfall Averages for December 2019
-rainfall_grid&lt;-raster('rainfall.grid')
-
-
-
-
 climate_spdf &lt;- as(aus_climate, &quot;SpatialPixelsDataFrame&quot;)
 climate_df &lt;- as.data.frame(climate_spdf)
-
-rainfall_spdf&lt;-as(rainfall_grid, &quot;SpatialPixelsDataFrame&quot;)
-rainfall_df&lt;-as.data.frame(rainfall_spdf)
 </code></pre>
 
 <p>By this point, the .grid files can be overlayed on the Australia shapefile to create <a href="https://github.com/njtierney/ozviridis#bob-rudiss-answer-on-so">this map in Nick&rsquo;s example</a>. I was interested in having the grid data only restricted to the boundaries within the Australia shapefile. This is basically subsetting the grid data using the Australia shapefile as a reference.</p>
@@ -447,9 +434,6 @@ australia_climate_interior&lt;-climate_spdf[!is.na(over(climate_spdf, as(austral
 #Converting this to data frame the way I did previously so that it can be read into geom_polygon later on 
 australia_climate_interior&lt;-as.data.frame(australia_climate_interior)
 
-# Doing the same thing for rainfall data
-rainfall_interior_spdf&lt;-rainfall_spdf[!is.na(over(rainfall_spdf, as(australia,&quot;SpatialPolygons&quot;))),]
-rainfall_interior&lt;-as.data.frame(rainfall_interior_spdf)
 </code></pre>
 
 <p>The rainfall and temperature .csv files will be used later to create the facet wrap plots, but they have the lat/long points of the cities, which I thought would be nice to have on the map to compliment the graphs.</p>
@@ -478,7 +462,7 @@ australia_climate_interior&lt;-australia_climate_interior %&gt;% mutate(temp.f=(
 
 </code></pre>
 
-<p>Since I want to show both Celcius and Farhenheit on the map, I created the breaks and labels manually before plotting. I used Farhenheit as my &ldquo;primary&rdquo; measure (I&rsquo;m based in the US <span style='font-size:20px;'>&#128541;</span> and admittedly am not well versed in reading Celcius) and put the corresponding Celcius value below. To do this, I found the minimum and maximum temperature values in Farhenheit and used 10 as the scale increments. Then I created the same object in Celcius using the Farhenheit to Celcius formula. I created a labels object based off these break values so the scale shows the Farhenheit values and corresponding Celcius values below.</p>
+<p>Since I want to show both Celcius and Farhenheit on the map, I created the breaks and labels manually before plotting. I used Farhenheit as my &ldquo;primary&rdquo; measure (I&rsquo;m based in the US <span style='font-size:20px;'>&#128541;</span> and admittedly am not well versed in reading Celcius) and put the corresponding Celcius value below. To do this, I found the minimum and maximum temperature values in Farhenheit and used 10 degrees as scale increments. Then I created the same object in Celcius using the Farhenheit to Celcius formula. I created a labels object based off these break values so the scale shows the Farhenheit values and corresponding Celcius values below.</p>
 
 <pre><code>min(australia_climate_interior$temp.f)
 max(australia_climate_interior$temp.f)
@@ -498,9 +482,9 @@ breaks.c&lt;-round(((breaks-32)*5/9),0)
 labels&lt;-paste0(breaks,sep=&quot;\n&quot;,breaks.c)
 </code></pre>
 
-<p>And now for the actual plot&hellip;</p>
+<p>And now for the actual maps&hellip;</p>
 
-<h2 id="temperature-plot">Temperature Plot</h2>
+<h2 id="temperature-map">Temperature Map</h2>
 
 <pre><code class="language-r">library(ggdark)
 library(showtext)
@@ -568,8 +552,118 @@ guides(fill=guide_colorbar(title=&quot;Temperature °F/°C&quot;,ticks=FALSE,   
 
 <p><img src="/img/post/CopyOfDec2019avg.png"
      alt="December 2019 Temp Avg"
-     width="75%"
-     height="75%"
+     width="85%"
+     height="85%"
+     class="center"/></p>
+
+<h2 id="rainfall-map">Rainfall map</h2>
+
+<p>For the rainfall map, I used a bit of a different process with the <code>raster</code> package to smooth the raster to a polygon so it doesn&rsquo;t give a grainy/pixelated look (a problem more so with rainfall data than temperature). <em>I was considering but ended up not using the <code>smoothr</code> package, which offers additional <a href="https://cran.r-project.org/web/packages/smoothr/vignettes/smoothr.html">options to smooth rasters to polygons</a>.</em></p>
+
+<p>The workflow starts the same: 1. Call in the .grid file using the <code>raster()</code> function 2. Convert to a spatial pixels data frame 3. Subset to points that fall within the Australia shapefile. In the last part, however, I&rsquo;m converting the spdf object back into a raster</p>
+
+<pre><code># Convert the rainfall.grid file saved in the working directory to a raster object
+rainfall_grid&lt;-raster('rainfall.grid')
+
+# Convert into a SpatialPixelsDataFrame
+rainfall_spdf&lt;-as(rainfall_grid, &quot;SpatialPixelsDataFrame&quot;)
+
+# Subset to only points that fall within the Australia shapefile
+rainfall_interior_spdf&lt;-rainfall_spdf[!is.na(over(rainfall_spdf, as(australia,&quot;SpatialPolygons&quot;))),]
+
+# Convert the subsetted object back to a raster
+rainfall_interior_raster&lt;-raster(rainfall_interior_spdf)
+</code></pre>
+
+<p>Unlike the temperature map, which uses the continuous value of each grid cell, I&rsquo;m converting the rainfall in mm to categorical levels that will be more suitable to visualize as polygons. This is essentially recreating the Bureau of Meteorology&rsquo;s map, except with a different color scheme. I used their breakpoints as levels for this map as well.</p>
+
+<pre><code># Create levels in the raster using the BOM's rainfall map breakpoints
+rainfall_interior_raster$level&lt;-cut(rainfall_interior_raster$rainfall, c(-Inf,1,5,10,25,50,100,200,300,400,Inf))
+</code></pre>
+
+<p>At this point, I&rsquo;m going to use the same raster to create two objects: one will be an <code>sf</code> object to fill the colors within the data frame object outlined using <code>geom_polygon()</code></p>
+
+<pre><code>library(sf)
+
+# Convert the polygon as an sf object
+rainfall_interior_raster_poly&lt;-rasterToPolygons(rainfall_interior_raster) %&gt;% st_as_sf()
+
+# Convert the polygon to a data frame to be used in geom_polygon()
+
+rainfall_interior_raster_df&lt;-rasterToPolygons(rainfall_interior_raster) 
+
+rainfall_interior_raster_df&lt;-SpatialPolygonsDataFrame(rainfall_interior_raster_df,rainfall_interior_raster_df@data) 
+
+rainfall_interior_raster_df&lt;-tidy(rainfall_interior_raster_df, region=&quot;level&quot;)
+</code></pre>
+
+<p>and now, the map!</p>
+
+<pre><code>
+# Defaults for output .png file
+png(&quot;Rainfallavg.png&quot;, units=&quot;in&quot;, width=10, height=9, res=300)
+
+# Use fonts different than ggplot default
+showtext.auto()
+
+rain_avg_plot&lt;-ggplot()+
+
+# The sf object used to fill the colors using the viridis palette
+  geom_sf(data=rainfall_interior_raster_poly, aes(fill=level), color=NA)+
+
+# the df object will be used to create a light grey outline of the polygon object
+  geom_polygon(data=rainfall_interior_raster_df, aes(long,lat,group=group), fill=NA, color=&quot;#3E3E3E&quot;, size=.3)+
+
+# another geom_polygon for the Australia shapefile 
+  geom_polygon(data = australia_fortified, 
+               aes(x = long, 
+                   y = lat, 
+                   group = group), 
+               fill = NA, 
+               color = &quot;#3E3E3E&quot;, 
+               size = 0.3) +
+# Add in the major cities as points similar to the temperature map
+  geom_point(data=australia_cities,aes(long,lat), color=&quot;#D8D0D0&quot;)+
+  geom_text_repel(data=australia_cities,aes(long,lat,label=city_name), size=12, color=&quot;#D8D0D0&quot;)+
+
+# Use the viridis scale option to manually set the breakpoints
+  scale_fill_viridis_c(option=&quot;viridis&quot;, breaks=c(1,2,3,4,5,6,7,8,9,10), label=c(&quot;0&quot;,&quot;1&quot;,&quot;5&quot;,&quot;10&quot;,&quot;25&quot;,&quot;50&quot;,&quot;100&quot;,&quot;200&quot;,&quot;300&quot;,&quot;400+&quot;))+
+
+# Use coord_sf() to compliment the sf object used for the map
+  coord_sf() +
+# Set theme to dark_theme_gray()
+  dark_theme_gray()+
+# Map labelling
+  labs(title=&quot;Australia Climate Map&quot;,
+       subtitle=&quot;Rainfall Totals December 2019&quot;,
+       caption=&quot;Source: Australian Government Bureau of Meteorology&quot;)+
+# Theme attributes
+  theme(plot.title = element_text(family=&quot;Roboto&quot;, size=100,color=&quot;#D7D7D7&quot;, face=&quot;bold&quot;),
+        plot.subtitle=element_text(family=&quot;Roboto&quot;, size=50, color=&quot;#D7D7D7&quot;),
+        plot.background = element_rect(fill = &quot;grey10&quot;),
+        legend.text=element_text(color=&quot;#B3B3B3&quot;, size=40, lineheight = .3),
+        legend.title=element_text(color=&quot;#B3B3B3&quot;, size=40, vjust=.8),
+        panel.background = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.background = element_blank(),
+        axis.ticks = element_blank(),
+        legend.key = element_blank(),
+        axis.text=element_blank(),
+        axis.title=element_blank(),
+        legend.position = &quot;bottom&quot;,
+        legend.justification=&quot;right&quot;,
+        plot.caption=element_text(hjust=0,size=36))+
+# Legend attributes  
+guides(fill=guide_colorbar(title=&quot;Rainfall(mm)&quot;,ticks=FALSE, direction=&quot;horizontal&quot;, barwidth = 20,  barheight=.8,label.position=&quot;bottom&quot;, title.position = &quot;top&quot;, title.vjust = -5, title.hjust=.5, label.vjust=5))
+rain_avg_plot
+dev.off()
+</code></pre>
+
+<p><img src="/img/post/CopyOfRainfallavg.png"
+     alt="December 2019 Rainfall Avg"
+     width="85%"
+     height="85%"
      class="center"/></p>
 
   </div>
@@ -580,7 +674,7 @@ guides(fill=guide_colorbar(title=&quot;Temperature °F/°C&quot;,ticks=FALSE,   
 
 <div class="pagination">
   
-    <a href="/post/making-an-animated-measles-map-a-tidy-tuesday-project/" class="button big previous"><i class="fas fa-angle-left"></i> Making an Animated Measles Map: A Tidy Tuesday Project</a>
+    <a href="/post/making-an-animated-measles-map-a-tidy-tuesday-project/" class="button big previous"><i class="fas fa-angle-left"></i> Visualizing 75 Years of Measles Incidence Using gganimate: A Tidy Tuesday Project</a>
   
   
 </div>
@@ -601,12 +695,17 @@ guides(fill=guide_colorbar(title=&quot;Temperature °F/°C&quot;,ticks=FALSE,   
           
           <li>
             
-              <a href="/categories/r/">r<span class="count">2</span></a>
+              <a href="/categories/r/">r<span class="count">3</span></a>
             
           
           <li>
             
-              <a href="/categories/hugo/">hugo<span class="count">1</span></a>
+              <a href="/categories/data-viz/">data-viz<span class="count">2</span></a>
+            
+          
+          <li>
+            
+              <a href="/categories/web-development/">web-development<span class="count">1</span></a>
             
           
           </li>

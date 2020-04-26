@@ -6,28 +6,18 @@
     <description>Recent content in R on samia.rbind.io</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires</title>
-      <link>/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/</link>
-      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/</guid>
-      <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&amp;rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
-My heatmap visualizations were inspired by Nick Tierny&amp;rsquo;s tutorial on Github transform Australia&amp;rsquo;s Bureau of Meteorology&amp;rsquo;s heatmap data into viridis themed maps and plots. Here&amp;rsquo;s a gallery of my maps from the project:</description>
-    </item>
-    
-    <item>
-      <title>Making a Static Website Using Blogdown</title>
-      <link>/blog/making-a-static-website-using-blogdown/</link>
+      <title>Making A Website With RStudio: The Blogdown Package</title>
+      <link>/post/making-a-static-website-using-blogdown/</link>
       <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/making-a-static-website-using-blogdown/</guid>
-      <description>I made this website using Hugo via the blogdown package in R. Like probably many R users, I started using R for its data analysis capabilities&amp;mdash;I never thought that I&amp;rsquo;d be making a whole website with it! I sp</description>
+      <guid>/post/making-a-static-website-using-blogdown/</guid>
+      <description>I made this website using Hugo via the blogdown package in R. Hugo is one of many static website generators that provides a simpler alternative to customary dynamic websites, which is especially useful for personal pages and blogs. You can read more about why static websites may offer some utility over dynamic ones here. Choosing a Static Website Generator Even though I have been using RStudio IDE regularly, I didn’t initially resort to the blogdown package but decided to test Jekyll out, which is the generator for pages that use the .</description>
     </item>
     
   </channel>

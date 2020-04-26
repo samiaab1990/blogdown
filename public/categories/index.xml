@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>data viz</title>
+      <link>/categories/data-viz/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/data-viz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>r</title>
       <link>/categories/r/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
@@ -21,11 +30,11 @@
     </item>
     
     <item>
-      <title>Hugo</title>
-      <link>/categories/hugo/</link>
+      <title>web development</title>
+      <link>/categories/web-development/</link>
       <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/categories/hugo/</guid>
+      <guid>/categories/web-development/</guid>
       <description></description>
     </item>
     

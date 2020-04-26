@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web development on samia.rbind.io</title>
+    <link>/categories/web-development/</link>
+    <description>Recent content in web development on samia.rbind.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Making A Website With RStudio: The Blogdown Package</title>
+      <link>/post/making-a-static-website-using-blogdown/</link>
+      <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/making-a-static-website-using-blogdown/</guid>
+      <description>As a consistent R user of about a year now, I mainly started to use it as another tool besides STATA and SAS. I had never really thought of the prospect of using a software I&amp;rsquo;d be using for data analysis to make a whole website! Although blogdown is quite different from my usual R use, it&amp;rsquo;s helped me become acquainted with the versatility of an open source language and all the ways that can enhance the regular data stuff.</description>
+    </item>
+    
+  </channel>
+</rss>

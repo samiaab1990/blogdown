@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>data viz</title>
-      <link>/tags/data-viz/</link>
-      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/data-viz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ggplot</title>
       <link>/tags/ggplot/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
@@ -30,11 +21,29 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>/tags/r/</link>
+      <title>raster</title>
+      <link>/tags/raster/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/r/</guid>
+      <guid>/tags/raster/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sf</title>
+      <link>/tags/sf/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sp</title>
+      <link>/tags/sp/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/sp/</guid>
       <description></description>
     </item>
     

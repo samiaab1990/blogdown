@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires</title>
+      <title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1</title>
       <link>/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/</guid>
       <description>It&amp;rsquo;s been a while since I&amp;rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&amp;rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
-My heatmap visualizations were inspired by Nick Tierny&amp;rsquo;s tutorial on Github transform Australia&amp;rsquo;s Bureau of Meteorology&amp;rsquo;s heatmap data into viridis themed maps and plots. Here&amp;rsquo;s a gallery of my maps from the project:</description>
+ .center { display: block; margin-left: auto; margin-right: auto; }  These heatmap visualizations were inspired by Nick Tierny&amp;rsquo;s tutorial on Github transform Australia&amp;rsquo;s Bureau of Meteorology&amp;rsquo;s heatmap data into viridis themed maps and plots.</description>
     </item>
     
   </channel>

@@ -57,7 +57,7 @@ class="center"/>
 alt="BOM temperature map"
 class="center"/>
 
-The first thing needed to recreate the map is a shapefile of Australia, preferably with territorial boundaries. I was able to download it from the [Australian Government website](http://data.daff.gov.au/anrdl/metadata_files/pa_nsaasr9nnd_02211a04.xml) but [Natural Earth](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/) is also a popular resource for retrieving map data. The `readOGR()` function from the `rgdal` package reads in .shp files. I then used the `fortify()` function from `ggplot2` that converts the shapefile into a dataframe compatible with ggplot. *Note that `fortify` may be depreciated in the future and the `tidy()` function from the `broom` package is preferred. `Fortify()` works for me so I used it in this example-you can read [the documentation](https://ggplot2.tidyverse.org/reference/fortify.map.html) to learn more about the function.*
+The first thing needed to recreate the map is a shapefile of Australia, preferably with territorial boundaries. I was able to download it from the [Australian Government website](http://data.daff.gov.au/anrdl/metadata_files/pa_nsaasr9nnd_02211a04.xml) but [Natural Earth](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/) is also a popular resource for retrieving map data. The `readOGR()` function from the `rgdal` package reads in .shp files. I then used the `fortify()` function from `ggplot2` that converts the shapefile into a dataframe compatible with ggplot. *Note that `fortify` may be deprecated in the future and the `tidy()` function from the `broom` package is preferred. `Fortify()` works for me so I used it in this example-you can read [the documentation](https://ggplot2.tidyverse.org/reference/fortify.map.html) to learn more about the function.*
 
 ```
 library(rgdal)
@@ -125,7 +125,7 @@ australia_climate_interior<-australia_climate_interior %>% mutate(temp.f=((temp*
 
 ```
 
-Since I want to show both Celcius and Farhenheit on the map, I created the breaks and labels manually before plotting. I used Farhenheit as my "primary" measure (I'm based in the US <span style='font-size:20px;'>&#128541;</span> and admittedly am not well versed in reading Celcius) and put the corresponding Celcius value below. To do this, I found the minimum and maximum temperature values in Farhenheit and used 10 as the scale increments. Then I created the same object in Celcius using the Farhenheit to Celcius formula. I created a labels object based off these break values so the scale shows the Farhenheit values and corresponding Celcius values below.
+Since I want to show both Celcius and Farhenheit on the map, I created the breaks and labels manually before plotting. I used Farhenheit as my "primary" measure (I'm based in the US <span style='font-size:20px;'>&#128541;</span> and admittedly am not well versed in reading Celcius) and put the corresponding Celcius value below. To do this, I found the minimum and maximum temperature values in Farhenheit and used 10 degrees as scale increments. Then I created the same object in Celcius using the Farhenheit to Celcius formula. I created a labels object based off these break values so the scale shows the Farhenheit values and corresponding Celcius values below.
 
 ```
 min(australia_climate_interior$temp.f)

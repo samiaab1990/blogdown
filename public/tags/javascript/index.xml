@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Making a Static Website Using Blogdown</title>
-      <link>/blog/making-a-static-website-using-blogdown/</link>
+      <title>Making A Website With RStudio: The Blogdown Package</title>
+      <link>/post/making-a-static-website-using-blogdown/</link>
       <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/making-a-static-website-using-blogdown/</guid>
-      <description>I made this website using Hugo via the blogdown package in R. Like probably many R users, I started using R for its data analysis capabilities&amp;mdash;I never thought that I&amp;rsquo;d be making a whole website with it! I sp</description>
+      <guid>/post/making-a-static-website-using-blogdown/</guid>
+      <description>As a consistent R user of about a year now, I mainly started to use it as another tool besides STATA and SAS. I had never really thought of the prospect of using a software I&amp;rsquo;d be using for data analysis to make a whole website! Although blogdown is quite different from my usual R use, it&amp;rsquo;s helped me become acquainted with the versatility of an open source language and all the ways that can enhance the regular data stuff.</description>
     </item>
     
   </channel>
