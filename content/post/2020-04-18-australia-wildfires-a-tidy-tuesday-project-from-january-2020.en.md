@@ -34,7 +34,7 @@ It's been a while since I've posted on this blog or have worked on a Tidy Tuesda
      height="80%"
      class="center"/>
 
-<img src="/img/post/CopyOfRainfallavg.png"
+<img src="/img/post/Rainfallavg2.png"
 alt="December 2019 Rainfall Avg"
 width="80%"
 height="80%"
@@ -325,7 +325,7 @@ guides(fill=guide_colorbar(title="Rainfall(mm)",ticks=FALSE, direction="horizont
 rain_avg_plot
 dev.off()
 ```
-<img src="/img/post/CopyOfRainfallavg.png"
+<img src="/img/post/Rainfallavg2.png"
      alt="December 2019 Rainfall Avg"
      width="85%"
      height="85%"

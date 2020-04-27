@@ -17,40 +17,51 @@ linktitle: ''
 type: post
 draft: true
 ---
-As a consistent R user of about a year now, I mainly started to use it as another tool besides STATA and SAS. I had never really thought of the prospect of using a software I'd be using for data analysis to make a whole website! Although `blogdown` is quite different from my usual R use, it's helped me become acquainted with the versatility of an open source language and all the ways that can enhance the regular data stuff. 
+
+Welcome to the first post of my `blogdown` blog! Although I started writing this post in November 2019, it's still been in the drafts as of currently April 2020 <span style='font-size:20px;'>&#128517;</span>. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.
+
+Before starting a page, it's helpful to have some idea of the difference between static websites vs. dynamic ones. Most websites people are probably best acquainted with are dynamic, which uses scripting language in the backend to process inputs provided by a user on the front end. Static websites, like the ones `blogdown` creates, don't have those behind the scenes processes: the site is a product of fixed content on pages. They provide a simpler and minimal option for blogs or personal websites, which are primarily meant for documenting rather than having users interact with servers.
+
+The static website workflow is basically as follows: 1. organizing the content of your site in a series of static files 2. using a static website generator to render these pages into a website 3. linking this to a platform that will deploy the website. `Blogdown` uses [Hugo](https://gohugo.io/) as its site generator whereas other platforms, like [Github pages](https://pages.github.com/), use [Jekyll](https://jekyllrb.com/), which is amongst the oldest and most commonly used generators. 
+
+The utility of markdown in RStudio makes it an ideal environment to create static site pages. The `blogdown` package simplifies the process further by allowing the site rendering to be done within the IDE as well: once you write and edit your site files, you can preview your page within the viewer and push your changes to Github with the version control addin, which then links with [Netlify](https://www.netlify.com/) to deploy the website. Outside of `blogdown`, a typical workflow would involve installing requirements from the static generators, using a markdown editor to create the files and using command line to preview and push changes, which can be an overwhelming learning curve for somebody new to these tools. 
+
+It takes very few steps to have a website going (according to the [blogdown book](https://bookdown.org/yihui/blogdown/other-themes.html)-it can be done in 10 minutes) without too much fancy web development knowledge. I did end up learning quite a lot of HTML and CSS and a bit of JavaScript along the way to make my page because I customized my theme a fair amount (not really reccomended by the blogdown book-whoops), but it was a personal preference and not something required to have a functional page. 
+
+If you're interested creating a website of your own using `blogdown`, here are some concepts to know and fun things I've discovered in making this page.
+
+# Getting Started
+The first step in getting started with a `blogdown` page is to have the [blogdown book](https://bookdown.org/yihui/blogdown/) handy.
+
+The next steps involve creating a new R project, installing the `blogdown` package and picking a [Hugo theme](https://themes.gohugo.io/) for your page. I used [Hugo Future Imperfect Slim](https://themes.gohugo.io/hugo-future-imperfect-slim/), which is specified by repository name in the `theme=` argument of the `new_site()` function that creates the blog. To find the theme's repo on Hugo, navigate to the Homepage button:
+
+<img src="/img/post/blogdown_1.png" width="70%" height="70%">
+
+<img src="/img/post/blogdown_2.png" width="70%" height="70%">
 
 
-The cool thing about `blogdown` vs Jekyll which I tried before (and didn't get very far since it was too huge of a learning curve for me at the time) is that everything can be done within the RStudio IDE: you can write and edit your site files, preview your page within the viewer and push your changes to Github with the version control addin, which then links with [Netlify](https://www.netlify.com/) to deploy the website. It takes very few steps to have a website going without too much fancy web development knowledge. I did end up learning quite a lot of HTML, CSS and a bit of JavaScript along the way because I customized my page and theme quite a lot ([not really reccomended by the blogdown book](https://bookdown.org/yihui/blogdown/other-themes.html)-whoops), but I found it pretty interesting and enjoyable. 
+The code I typed into the console was as follows:
+```
+# Install and call in the packages
+install.packages("blogdown")
+library(blogdown)
 
+# Use the new_site() function to start a new site with theme = to the theme repository 
 
-I made this website using Hugo via the blogdown package in R. Hugo is one of many static website generators that provides a simpler alternative to customary dynamic websites, which is especially useful for personal pages and blogs. You can read more about why static websites may offer some utility over dynamic ones here.
-Choosing a Static Website Generator
-Even though I have been using RStudio IDE regularly, I didn’t initially resort to the blogdown package but decided to test Jekyll out, which is the generator for pages that use the .github.io domain. There was really no preference for a particular generator for me since I was new to the process, but Jekyll seemed popular (this is likely because it came out earlier than most other static website generators) and has a compelling showcase. Using Jekyll requires a Ruby development environment and subsequent bundler gems, an editor and git. In retrospect, I’d say the best route in choosing a generator as a beginner is to pick one that uses an environment you’re familiar with. Creating a static generated website is different than the statistical programming R is typically used for, so to work through the site components along with some front-end elements is already a bit of a learning curve that can get even more confusing in an entirely new environment, as it was in my case.
-I started fresh with blogdown. The great thing about using blogdown as an already R user is that you don’t need to go through the typical Hugo installation process of manually installing Hugo and a package manager to get started. All you need to do is to install blogdown from CRAN like you would for any other package using the install.packages("blogdown") command and then install Hugo using the install_hugo() function. You can read more about the installation process from this chapter in the Blogdown book.
-While creating this site, I also came across resources for GatsbyJS, which is another popular static website generator. Most of my experience creating a website is limited to Hugo, so if you are interested in knowing more about the specifications of these generators and how they compare, you can read here to learn more.
-References
-The Blogdown Book, created by the developers of the package, is a thorough and easy to follow reference with helpful guidance on creating a personal website. Hugo’s documentation is also good to refer to, especially if you want to further customize your page beyond your theme’s default. I will be referring to these two resources often in the sections detailing the site build.
-Prerequisites
-The following are the basic components needed to create and deploy a static website:
-Git installed on your machine and a git repository host like GitHub, GitLab or Bitbucket.
-R and RStudio if you plan to use blogdown or a source code editor if you plan to make your website outside of R. Note: If you plan to develop your website outside of R, then you need to install Hugo (alternatively, if you’re interested in using Jekyll, you can read the documentation here)
-A Hugo theme. You can create a new theme if you’re using Hugo outside of blogdown, but to my knowledge I don’t think you create a site and theme together from scratch with blogdown.
-A Netlify account. Netlify deploys your website using your Github/GitLab/Bitbucket repository.
-You can get an idea of the workflow from this chapter of blogdown.
-Building The Site
-Set Up a Git Repository
-There are two ways to get started with your project: 
-Either you can create a new Github repository first. Initialize the repository with a README (you can just write something short in it like “My Website”). Once you’ve created the repository, go to RStudio and select File New Project Version Control Git. You will then be prompted to put the name of the repository. 
-Alternative, you can create a new directory in R by selecting File New Project New Directory New Project and check the “Create a git repository” box 
-To read more about using R and version control, the following resources are helpful: 
-Using Version Control with R Studio 
-Happy Git and GitHub for the useR 
-Git’s Reference Manual 
-
-Installing the blogdown package
-As mentioned earlier in the post, the blogdown package is available in CRAN and can be installed in the RStudio console using install.packages("blogdown"). The blogdown::install_hugo() function then installs Hugo.
-Selecting a theme
-I picked the Hugo Imperfect Slim theme for this page because it has blog appearance that I was going for. The Blogdown book offers some guidance on picking a theme, emphasizing minimal is better. Hugo Imperfect Slim is honestly a bit clunky in that regard—the template has probably more going on than it needs to and there were some challenges with the CSS defaults to change the appearance of the theme. A spent a good amount of time customizing, which is probably not the most reccomended route to build a site, but I actually really learned to enjoy it and developed a good understanding of HTML, CSS and Javascript in the process.
-Once you figure out what theme you want to use, click on the “Homepage” button of the Hugo theme page. It should take you to the Github repository where you will see the name of the repo on the upper left corner. You will need this name when creating a new site with your theme using the new_site() function. The command I used to create my site was
 blogdown::new_site(theme = 'pacollins/hugo-future-imperfect-slim')
-Understanding The Pages
+```
+Keep in mind you will need to link your local `blogdown` project to a repository on your Github. Either you can create the repository before creating the RProject and start a new RProject from version control. Or you can link the repository later in the project (for more on version control in R, you can read this [article on the RStudio support page](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)). 
+
+# The Anatomy of a Blogdown Directory
+After running `new_site()`, your project directory will have some version of the following files:
+
+<img src="/img/post/project_directory.png" width="30%" height="30%">
+
+Every theme may have variable directories, so it's best to refer to the theme's documentation. Most will have either a .toml, .yaml or .json config file, otherwise known as ["Front Matter"](https://gohugo.io/content-management/front-matter/), which determines the main features of your site. 
+
+I like to think of front matter as the *upfront* changes or kind of functionally what would be the settings page if you were using a dynamic blogging website like Wordpress. The inputs in the config file provide values for variables intrinsic to the theme's template. Here's an [example](https://github.com/pacollins/hugo-future-imperfect-slim/blob/master/exampleSite/config.toml) of a config.toml using the Future Imperfect Slim theme.
+
+# Previewing-Building-Deploying
+# Cool Add-ins for your page
+
+

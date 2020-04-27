@@ -17,7 +17,8 @@
       <pubDate>Sat, 23 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/making-a-static-website-using-blogdown/</guid>
-      <description>As a consistent R user of about a year now, I mainly started to use it as another tool besides STATA and SAS. I had never really thought of the prospect of using a software I&amp;rsquo;d be using for data analysis to make a whole website! Although blogdown is quite different from my usual R use, it&amp;rsquo;s helped me become acquainted with the versatility of an open source language and all the ways that can enhance the regular data stuff.</description>
+      <description>Welcome to the first post of my blogdown blog! Although I started writing this post in November 2019, it&amp;rsquo;s still been in the drafts as of currently April 2020 &amp;#128517;. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.
+Before starting a page, it&amp;rsquo;s helpful to have some idea of the difference between static websites vs.</description>
     </item>
     
   </channel>
