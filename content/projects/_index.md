@@ -8,7 +8,8 @@ title: Projects
 <a href="https://samia.rbind.io/post/making-an-animated-measles-map-a-tidy-tuesday-project/"><button class="gitbtn"> Blog Post <i class="far fa-sticky-note"></i></button></a>
 
 ### Blogdown {#blogdown} 
-<a href="https://github.com/samiaab1990/blogdown"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a>
+<p><a href="https://github.com/samiaab1990/blogdown"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a>
+<a href="http://samia.rbind.io/post/making-a-static-website-using-blogdown/"><button class="gitbtn"> Blog Post <i class="far fa-sticky-note"></i></button></a></p>
 
 ### Climate Maps
 <p><img class="projimg" src="/img/post/climate_mapgif.gif" width=40% height=30%></p>
