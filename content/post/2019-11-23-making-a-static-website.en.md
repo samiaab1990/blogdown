@@ -90,20 +90,25 @@ The `blogdown` package has a convenient add-in feature similar to what would be 
 title: 'Making A Website With RStudio: The Blogdown Package'
 author: ''
 date: '2019-11-23'
+# the date-automatically generated from the add-in
 slug: making-a-static-website-using-blogdown
+# the slug is the name added to the hyperlink of your page for this specific post. Also automatically generated from the add-in 
 categories:
   - r
   - web development
+# categories generated from the add-in
 tags:
   - blogdown
   - javascript
   - html
   - css
   - jekyll
+# tags generated from the add-in
 description: ''
 linktitle: ''
 type: post
 draft: true
+# put this to prevent it from deploying if still in draft mode
 ---
 ```
 To save the post as a draft, adding `draft: true` at the end keeps it from deploying when serving the website to make any other changes. You can remove that line once you're ready to deploy.
