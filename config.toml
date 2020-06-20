@@ -21,7 +21,7 @@ disableLanguages        = [""]
   highlightjs           = true
   highlightjsVersion    = "9.16.2"
   highlightjsCDN        = "//cdnjs.cloudflare.com/ajax/libs"
-  highlightjsTheme      = "monokai"
+  highlightjsTheme      = "dracula"
   highlightjsLang       = ["html", "css", "js", "toml", "r"]
   # Sets where "View More Posts" links to
   viewMorePostsLink     = "/blog/"

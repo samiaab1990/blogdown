@@ -28,20 +28,20 @@
 
   <meta name="generator" content="Hugo 0.57.2" />
   <meta itemprop="name" content="Making A Website With RStudio: The Blogdown Package">
-<meta itemprop="description" content="Welcome to the first post of my blogdown blog! Although I started writing this post in November 2019, it&rsquo;s still been in the drafts as of currently April 2020 &#128517;. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.
+<meta itemprop="description" content="Welcome to the first post of my blogdown blog! Although I started writing this post in November 2019, it&rsquo;s still been in the drafts as of currently June 2020 &#128517;. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.
 Before starting a page, it&rsquo;s helpful to have some idea of the difference between static websites vs.">
 
 
 <meta itemprop="datePublished" content="2019-11-23T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-11-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="751">
+<meta itemprop="wordCount" content="2399">
 
 
 
 <meta itemprop="keywords" content="blogdown,javascript,html,css,jekyll," />
 
   <meta property="og:title" content="Making A Website With RStudio: The Blogdown Package" />
-<meta property="og:description" content="Welcome to the first post of my blogdown blog! Although I started writing this post in November 2019, it&rsquo;s still been in the drafts as of currently April 2020 &#128517;. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.
+<meta property="og:description" content="Welcome to the first post of my blogdown blog! Although I started writing this post in November 2019, it&rsquo;s still been in the drafts as of currently June 2020 &#128517;. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.
 Before starting a page, it&rsquo;s helpful to have some idea of the difference between static websites vs." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/post/making-a-static-website-using-blogdown/" />
@@ -50,14 +50,14 @@ Before starting a page, it&rsquo;s helpful to have some idea of the difference b
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Making A Website With RStudio: The Blogdown Package"/>
-<meta name="twitter:description" content="Welcome to the first post of my blogdown blog! Although I started writing this post in November 2019, it&rsquo;s still been in the drafts as of currently April 2020 &#128517;. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.
+<meta name="twitter:description" content="Welcome to the first post of my blogdown blog! Although I started writing this post in November 2019, it&rsquo;s still been in the drafts as of currently June 2020 &#128517;. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.
 Before starting a page, it&rsquo;s helpful to have some idea of the difference between static websites vs."/>
 <meta name="twitter:site" content="@samiasab90"/>
 
   
 
   <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai.min.css">
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css">
   
     
       <link rel="stylesheet" href="/css/normalize.css">
@@ -260,7 +260,7 @@ Before starting a page, it&rsquo;s helpful to have some idea of the difference b
     </span></p>
     </time>
     
-      <p class="reading-time">4 minutes read</p>
+      <p class="reading-time">12 minutes read</p>
     
 <span class="author"></span>
 <span class="categories-tags"> <ul class="stats">
@@ -343,23 +343,21 @@ Before starting a page, it&rsquo;s helpful to have some idea of the difference b
   <div id="content">
     
 
-<p>Welcome to the first post of my <code>blogdown</code> blog! Although I started writing this post in November 2019, it&rsquo;s still been in the drafts as of currently April 2020 <span style='font-size:20px;'>&#128517;</span>. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.</p>
+<p>Welcome to the first post of my <code>blogdown</code> blog! Although I started writing this post in November 2019, it&rsquo;s still been in the drafts as of currently June 2020 <span style='font-size:20px;'>&#128517;</span>. I figured the debut post would be best dedicated to sharing my personal experience of using this package as an R user with little to no background in web development.</p>
 
-<p>Before starting a page, it&rsquo;s helpful to have some idea of the difference between static websites vs. dynamic ones. Most websites people are probably best acquainted with are dynamic, which uses scripting language in the backend to process inputs provided by a user on the front end. Static websites, like the ones <code>blogdown</code> creates, don&rsquo;t have those behind the scenes processes: the site is a product of fixed content on pages. They provide a simpler and minimal option for blogs or personal websites, which are primarily meant for documenting rather than having users interact with servers.</p>
+<p>Before starting a page, it&rsquo;s helpful to have some idea of <a href="https://wpamelia.com/static-vs-dynamic-website/">the difference between static websites vs. dynamic ones</a>. Most websites people are probably best acquainted with are dynamic, which uses scripting language in the backend to process inputs provided by a user on the front end. Static websites, like the ones <code>blogdown</code> creates, don&rsquo;t have those behind the scenes processes: the site is a product of fixed content on pages. They provide a simpler and minimal option for blogs or personal websites, which are primarily meant for documenting rather than having users interact with servers.</p>
 
-<p>The static website workflow is basically as follows: 1. organizing the content of your site in a series of static files 2. using a static website generator to render these pages into a website 3. linking this to a platform that will deploy the website. <code>Blogdown</code> uses <a href="https://gohugo.io/">Hugo</a> as its site generator whereas other platforms, like <a href="https://pages.github.com/">Github pages</a>, use <a href="https://jekyllrb.com/">Jekyll</a>, which is amongst the oldest and most commonly used generators.</p>
+<p>The static website workflow is basically as follows: 1. organizing the content of your site in a series of static files 2. using a static website generator to render these pages into a website 3. linking this to a platform that will deploy the website. <code>Blogdown</code> uses <a href="https://gohugo.io/">Hugo</a> as its site generator.</p>
 
-<p>The utility of markdown in RStudio makes it an ideal environment to create static site pages. The <code>blogdown</code> package simplifies the process further by allowing the site rendering to be done within the IDE as well: once you write and edit your site files, you can preview your page within the viewer and push your changes to Github with the version control addin, which then links with <a href="https://www.netlify.com/">Netlify</a> to deploy the website. Outside of <code>blogdown</code>, a typical workflow would involve installing requirements from the static generators, using a markdown editor to create the files and using command line to preview and push changes, which can be an overwhelming learning curve for somebody new to these tools.</p>
+<p>The utility of markdown in RStudio plus the <code>blogdown</code> package allows writing files, serving and building the site all within the IDE: once you write and edit your site files, you can preview your page within the viewer and push your changes to Github with the version control addin, which then links with <a href="https://www.netlify.com/">Netlify</a> to deploy the website. Outside of <code>blogdown</code>, a typical workflow would involve installing requirements from the static generators, using a markdown editor to create the files and using command line to preview and push changes, which can be an overwhelming learning curve for somebody new to these tools.</p>
 
 <p>It takes very few steps to have a website going (according to the <a href="https://bookdown.org/yihui/blogdown/other-themes.html">blogdown book</a>-it can be done in 10 minutes) without too much fancy web development knowledge. I did end up learning quite a lot of HTML and CSS and a bit of JavaScript along the way to make my page because I customized my theme a fair amount (not really reccomended by the blogdown book-whoops), but it was a personal preference and not something required to have a functional page.</p>
 
-<p>If you&rsquo;re interested creating a website of your own using <code>blogdown</code>, here are some concepts to know and fun things I&rsquo;ve discovered in making this page.</p>
+<p>If you&rsquo;re interested creating a website of your own using <code>blogdown</code>, here are some concepts to know and fun things I&rsquo;ve discovered while making this page.</p>
 
 <h1 id="getting-started">Getting Started</h1>
 
-<p>The first step in getting started with a <code>blogdown</code> page is to have the <a href="https://bookdown.org/yihui/blogdown/">blogdown book</a> handy.</p>
-
-<p>The next steps involve creating a new R project, installing the <code>blogdown</code> package and picking a <a href="https://themes.gohugo.io/">Hugo theme</a> for your page. I used <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a>, which is specified by repository name in the <code>theme=</code> argument of the <code>new_site()</code> function that creates the blog. To find the theme&rsquo;s repo on Hugo, navigate to the Homepage button:</p>
+<p>The first steps involve creating a new R project, installing the <code>blogdown</code> package and picking a <a href="https://themes.gohugo.io/">Hugo theme</a> for your page. I used <a href="https://themes.gohugo.io/hugo-future-imperfect-slim/">Hugo Future Imperfect Slim</a>, which needs to be specified by repository name in the <code>theme=</code> argument of the <code>new_site()</code> function that creates the blog. To find the theme&rsquo;s repo on Hugo, navigate to the Homepage button:</p>
 
 <p><img src="/img/post/blogdown_1.png" width="70%" height="70%"></p>
 
@@ -384,13 +382,171 @@ blogdown::new_site(theme = 'pacollins/hugo-future-imperfect-slim')
 
 <p><img src="/img/post/project_directory.png" width="30%" height="30%"></p>
 
-<p>Every theme may have variable directories, so it&rsquo;s best to refer to the theme&rsquo;s documentation. Most will have either a .toml, .yaml or .json config file, otherwise known as <a href="https://gohugo.io/content-management/front-matter/">&ldquo;Front Matter&rdquo;</a>, which determines the main features of your site.</p>
+<p>Every theme may have variable directories, so it&rsquo;s best to refer to the theme&rsquo;s documentation to understand the setup.</p>
 
-<p>I like to think of front matter as the <em>upfront</em> changes or kind of functionally what would be the settings page if you were using a dynamic blogging website like Wordpress. The inputs in the config file provide values for variables intrinsic to the theme&rsquo;s template. Here&rsquo;s an <a href="https://github.com/pacollins/hugo-future-imperfect-slim/blob/master/exampleSite/config.toml">example</a> of a config.toml using the Future Imperfect Slim theme.</p>
+<p>Most will have either a <strong>config file</strong> in either a .yaml, .toml or .json extension, otherwise known as <a href="https://gohugo.io/content-management/front-matter/">&ldquo;Front Matter&rdquo;</a> that determines the main features of your site.</p>
+
+<p>The <strong>themes folder</strong> contains the directory of your theme and should be left unchanged. Direct changes to your theme will cause issues in site deployment. If you&rsquo;re interested in changing parts of the theme, you can do so by <em>copying</em> folders or files in the theme directory and bringing them to your site&rsquo;s main directory.</p>
+
+<p>The <strong>content and static folders</strong> are likely going to be the most used paths of your blog. The content holds the blog posts as well as the files for other pages of your site. The static folder contains folders for add-on css and javascript files as well as an images folder for image files used throughout the site or on blog posts. Markdown syntax or an html tag when posting a picture on a post would look something like this:</p>
+
+<pre><code># Markdown syntax for images. Make sure to add the / before the name of the image subdirectory in the static folder 
+![My picture](/img/post/a_picture.png)
+
+# HTML img tag. The minimum you need is the src which is the filepath of the image. You can add alt = a description and width and height adjustments
+&lt;img src=&quot;/img/post/a_picture.png&quot; alt=&quot;My picture&quot; height=&quot;50%&quot; width=&quot;50%&quot;&gt;
+
+</code></pre>
+
+<p>Lastly, the <strong>public folder</strong> is a directory automatically created after you build the site through either the <code>blogdown::build_site()</code> or <code>blogdown::serve_site()</code> functions (I use <code>serve_site()</code> the most because I am constantly previewing my changes). The public folder pieces together all the site contents necessary for deployment.</p>
+
+<h2 id="site-layout">Site Layout</h2>
+
+<p>Since the theme takes care of the site look and feel, understanding the layout is not necessary but something I found helpful to customize the template. Admittedly, exploring the layout as somebody who didn&rsquo;t know much HTML, CSS or JavaScript beforehand took an incredible amount of time and effort, but was something I did out of interest of learning as I made the blog. If you have a specific purpose for your site and would like to deploy your blog quickly, you don&rsquo;t need to know these details, and probably wouldn&rsquo;t want to experiment too much in that regard.</p>
+
+<p>However, if you&rsquo;re curious what parts of the site directory manage the aspects of the appearance, the <strong>layouts</strong> or <strong>templates</strong> folder house the HTML scripts that determine the components and their respective location on the site. These scripts also store the <a href="https://gohugo.io/variables/">variables</a> set in the config file, allowing the templates to remain largely unchanged while the config manages most changes needed to be made to the site. <em>When creating a new site, there was no layouts folder already in my main directory, so I had to make a copy from my theme&rsquo;s directory. It&rsquo;s really important to make a copy and not make changes directly through the themes folder because the site won&rsquo;t be able to deploy if it can&rsquo;t recognize the original theme.</em></p>
+
+<p>The remaining aspects of the site layout are managed by <strong>CSS and JavaScript</strong>, stored in respective subdirectories under the static folder as .css and .js files. CSS is the look and feel complement to HTML that sets the colors and styles of the layout components. JavaScript allows adding optional dynamic features to enhance the usability of the site (the light/dark mode switch on my page, for example, is created by JavaScript).</p>
+
+<h1 id="writing-a-blog-post">Writing A Blog Post</h1>
+
+<p><img src="/img/post/writing-a-blog-post.png" width="80%" height="80%"></p>
+
+<p>The <code>blogdown</code> package has a convenient add-in feature similar to what would be available in a blogging website that enables defining most of the post&rsquo;s metadata upfront. A blank .md or .Rmd document is then generated with the front matter populated based on what was entered in the add-in.</p>
+
+<p><em>an example of the post&rsquo;s metadata generated at the beginning of the document</em></p>
+
+<pre><code>---
+title: 'Making A Website With RStudio: The Blogdown Package'
+author: ''
+date: '2019-11-23'
+slug: making-a-static-website-using-blogdown
+categories:
+  - r
+  - web development
+tags:
+  - blogdown
+  - javascript
+  - html
+  - css
+  - jekyll
+description: ''
+linktitle: ''
+type: post
+draft: true
+---
+</code></pre>
+
+<p>To save the post as a draft, adding <code>draft: true</code> at the end keeps it from deploying when serving the website to make any other changes. You can remove that line once you&rsquo;re ready to deploy.</p>
+
+<p>Writing a blog post is essentially just like typing up any markdown document. You can use both <a href="https://www.markdownguide.org/basic-syntax/">markdown syntax</a> or <a href="https://www.markdownguide.org/basic-syntax/#html">HTML tags</a> to format text and add pictures. To add code blocks, <a href="https://www.markdownguide.org/basic-syntax/#code">you can insert code in between three backquotes or insert text between single backquotes for inline code</a>.</p>
 
 <h1 id="previewing-building-deploying">Previewing-Building-Deploying</h1>
 
-<h1 id="cool-add-ins-for-your-page">Cool Add-ins for your page</h1>
+<p>If you want to preview your website, all you have to do is save changes to your files and run <code>blogdown::serve_site()</code> that will run the site on a local server. The preview appears in the Viewer tab in the IDE, but can be extended into a web browser after clicking the &ldquo;show in new window&rdquo; button. Alternatively, you can run <code>blogdown::build_site()</code> if you don&rsquo;t want to preview (the differences between the two are better explained <a href="https://bookdown.org/yihui/blogdown/local-preview.html">here</a>).</p>
+
+<p><img src="/img/post/sitepreview.png" width="90%" height="90%"></p>
+
+<p>One thing to keep in mind is that after running the <code>serve_site()</code> command, it re-runs automatically everytime you save new changes to your site files. If you like to continuously preview your site and have it open in multiple tabs on a browser window, the save button eventually freezes at some point, in which case, you should close out of those tabs as you preview.</p>
+
+<p><img src="/img/post/tabs.png", width="70%"></p>
+
+<p>As you work with your site and make changes, it&rsquo;s good practice to commit your changes using git. If you are brand new to git, some helpful references are the <a href="https://git-scm.com/docs">git reference manual</a> and <a href="https://happygitwithr.com/">Happy Git With R</a>.</p>
+
+<p>In R, there are two ways to commit changes. Either you can use the git add-in or terminal to write the commands. The general workflow for your blog will be as follows:</p>
+
+<h2 id="add-your-changes-to-staging-pre-commit">Add your changes to <em>staging</em> (pre-commit)</h2>
+
+<p>In the git add-in:</p>
+
+<ul>
+<li>Select the changes you want to stage to commit (if you want to add all the changes, select one and hit <code>CTRL+A</code> to select all)</li>
+<li>Click staging</li>
+</ul>
+
+<p>Alternatively, in the terminal:</p>
+
+<pre><code>git add path/example.md # If you want to add a specific example.md file
+git add -A # If you want to add all changes 
+</code></pre>
+
+<h2 id="commit-your-changes-with-a-message-so-you-can-keep-track-of-what-you-re-doing">Commit your changes (with a message so you can keep track of what you&rsquo;re doing)</h2>
+
+<p>Once you have added your changes to staging, you want to <em>commit</em> your changes. You should add a short message that specifies what changes you made. In the git add-in, you can add a message or check &ldquo;amend previous commit&rdquo; that will automatically populate with the same if you&rsquo;ve already committed changes previously.</p>
+
+<p>Alternatively, in the terminal:</p>
+
+<pre><code>git commit -m &quot;add your message here&quot; # If you're making a new commit
+git commit --amend # If you're amending a previous commit 
+</code></pre>
+
+<h2 id="pull-update-local-repository-from-remote-repository">Pull (update local repository from remote repository)</h2>
+
+<p><a href="https://www.atlassian.com/git/tutorials/syncing/git-pull#:~:text=The%20git%20pull%20command%20is,repository%20to%20match%20that%20content.&amp;text=Once%20the%20content%20is%20downloaded,point%20at%20the%20new%20commit.">Git pull</a> makes sure that your local repository matches the remote repository before you make the changes to your local repository and send it back to the remote. If you don&rsquo;t have anything on your remote repository or have not pushed anything from local to remote previously, likely you will have nothing to pull, but this is the general sequence before pushing the changes you made on your local to the remote repository.</p>
+
+<p>In the git add-in, you can pull using the blue arrow facing down.
+Alternatively, in the terminal:</p>
+
+<pre><code>git pull
+</code></pre>
+
+<h2 id="push-update-remote-repository-from-local-repository">Push (update remote repository from local repository)</h2>
+
+<p>Once you have ensured your local repository matches the remote repository, you&rsquo;re ready to <a href="https://www.atlassian.com/git/tutorials/syncing/git-push">push</a> your changes to the remote repository.</p>
+
+<p>In the git add-in, you can push using the green arrow facing up.
+Alternatively, in the terminal:</p>
+
+<pre><code>git push origin master
+</code></pre>
+
+<h2 id="creating-a-netlify-account-to-deploy-page">Creating a Netlify account to deploy page</h2>
+
+<p>If you haven&rsquo;t already created a <a href="https://www.netlify.com/">Netlify</a> account, you should do so once your remote repository contains all your blog&rsquo;s static files and is ready for deployment. Once you create an account, Netlify reads in your repository, specifically looking for the public folder created after serving your blogdown site. As mentioned previously, you want to make sure that you haven&rsquo;t made any changes to the original themes folder of your site which would cause the deployment to fail. If everything is good to go, you should have a running website!</p>
+
+<p>You can choose your own domain name however you&rsquo;d like if you decide you want an alternative to the .netlify.com domain. I decided to use the <a href="https://support.rbind.io/about/">.rbind.io</a> as I mainly made a blogdown for R and related statistics and programming posts (first time I was able to pick my first name without the username being taken!).</p>
+
+<h1 id="cool-stuff-you-can-add-to-your-page">Cool Stuff You Can Add to Your Page</h1>
+
+<h2 id="dark-light-mode-switch">Dark/Light Mode Switch</h2>
+
+<p><img src="/img/post/light-mode-example.png">
+<img src="/img/post/dark-mode-example.png"></p>
+
+<p>I noticed some themes already have a dark/light mode switch built into the template that enables changing the contrast of the theme, so I wanted to add one to my own page. This <a href="https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8"> easy to follow tutorial</a> goes over all the Javascript, HTML and CSS elements to create your own!</p>
+
+<h2 id="favicon">Favicon</h2>
+
+<p><img src="/img/post/favicon-example.png"></p>
+
+<p>A favicon is a little icon that identifies your page, which is probably most noticeable when you have fifty tabs open on your browser at once. It&rsquo;s a small detail I didn&rsquo;t pay attention to until I deployed my website. The theme I used includes a true/false option in the config file to set your own favicon using <a href="https://realfavicongenerator.net">https://realfavicongenerator.net</a>. Once you generate a favicon, you can put the accompanying files in the static folder for it to show up on your page&rsquo;s tabs.</p>
+
+<h2 id="highlight-js">Highlight.js</h2>
+
+<pre><code># An example of HTML code available in the highlightjs.org/static/demo page. I am using theme Dracula
+&lt;!DOCTYPE html&gt;
+&lt;title&gt;Title&lt;/title&gt;
+
+&lt;style&gt;body {width: 500px;}&lt;/style&gt;
+
+&lt;script type=&quot;application/javascript&quot;&gt;
+  function $init() {return true;}
+&lt;/script&gt;
+
+&lt;body&gt;
+  &lt;p checked class=&quot;title&quot; id='title'&gt;Title&lt;/p&gt;
+  &lt;!-- here goes the rest of the page --&gt;
+&lt;/body&gt;
+</code></pre>
+
+<p>Because I have previously written most code either on RStudio or other IDEs, I had never really considered the conundrum of writing code in HTML generated blocks that wouldn&rsquo;t have built in syntax highlighting. <a href="https://highlightjs.org/">Highlight.js</a> is a syntax highlighter developed using Javascript that avoids having to come up with your own configurations for highlighting code. It has over <a href="https://highlightjs.org/static/demo/">90 styles</a>, which I also <a href="http://samia.rbind.io/projects/#gradientdark">contributed to</a> after learning about it while creating this page!</p>
+
+<h2 id="adding-copy-buttons-to-code-blocks">Adding Copy Buttons to Code Blocks</h2>
+
+<pre><code># You can copy this text with a button :) 
+</code></pre>
+
+<p>When browsing blog sites while learning R or other programming/statistical things, I noticed it was always helpful to have a copy button readily available on code chunks. Similar to the dark/light mode switch, creating one involves elements of HTML, CSS and Javascript-the latter which is still very elementary to me. This <a href="https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/">tutorial here</a> does a great job of walking through the steps to include one on your own page.</p>
 
   </div>
  <footer>

@@ -1,5 +1,5 @@
 ---
-title: 'Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1'
+title: 'Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires'
 author: ''
 date: '2020-04-18'
 slug: australia-wildfires-a-tidy-tuesday-project-from-january-2020

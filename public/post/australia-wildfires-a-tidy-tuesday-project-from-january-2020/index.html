@@ -9,7 +9,7 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
   <meta charset="utf-8">
-<title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1 - samia.rbind.io</title>
+<title>Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires - samia.rbind.io</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -27,7 +27,7 @@
 
 
   <meta name="generator" content="Hugo 0.57.2" />
-  <meta itemprop="name" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1">
+  <meta itemprop="name" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires">
 <meta itemprop="description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
  .center { display: block; margin-left: auto; margin-right: auto; }  These heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots.">
 
@@ -42,7 +42,7 @@
 
 <meta itemprop="keywords" content="TidyTuesday,ggplot,sp,sf,raster," />
 
-  <meta property="og:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1" />
+  <meta property="og:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires" />
 <meta property="og:description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
  .center { display: block; margin-left: auto; margin-right: auto; }  These heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots." />
 <meta property="og:type" content="article" />
@@ -55,7 +55,7 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/"/>
 
-<meta name="twitter:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1"/>
+<meta name="twitter:title" content="Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires"/>
 <meta name="twitter:description" content="It&rsquo;s been a while since I&rsquo;ve posted on this blog or have worked on a Tidy Tuesday project, so I thought I&rsquo;d revisit and post the project I did in January for R4DataScience to visualize climate data during the Australia wildfires earlier this year.
  .center { display: block; margin-left: auto; margin-right: auto; }  These heatmap visualizations were inspired by Nick Tierny&rsquo;s tutorial on Github transform Australia&rsquo;s Bureau of Meteorology&rsquo;s heatmap data into viridis themed maps and plots."/>
 <meta name="twitter:site" content="@samiasab90"/>
@@ -63,7 +63,7 @@
   
 
   <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/monokai.min.css">
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css">
   
     
       <link rel="stylesheet" href="/css/normalize.css">
@@ -160,13 +160,13 @@
 
   
     
-    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires-Part%201&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires-Part%201" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
@@ -259,7 +259,7 @@
   <header id ="post-header">
   <div class="title">
     
-        <h2><a href="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/">Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires-Part 1</a></h2>
+        <h2><a href="/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/">Visualizing Climate Data: A Tidy Tuesday Project from January 2020 using data from the Australia Wildfires</a></h2>
     
     <time class="published">
       <p><i class="far fa-calendar-alt"></i>&nbsp;<span class=date>April 18, 2020
@@ -336,13 +336,13 @@
 
   
     
-    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires-Part%201&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
+    <a href="//twitter.com/share?text=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires&amp;url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f" target="_blank" rel="noopener" class="share-btn twitter">
         <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
       </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires-Part%201" target="_blank" rel="noopener" class="share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2faustralia-wildfires-a-tidy-tuesday-project-from-january-2020%2f&amp;title=Visualizing%20Climate%20Data%3a%20A%20Tidy%20Tuesday%20Project%20from%20January%202020%20using%20data%20from%20the%20Australia%20Wildfires" target="_blank" rel="noopener" class="share-btn linkedin">
             <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
           </a>
   
