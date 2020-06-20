@@ -11,7 +11,6 @@ tags:
   - javascript
   - html
   - css
-  - jekyll
 description: ''
 linktitle: ''
 type: post
@@ -180,7 +179,7 @@ I noticed some themes already have a dark/light mode switch built into the templ
 ## Favicon
 <img src="/img/post/favicon-example.png">
 
-A favicon is a little icon that identifies your page, which is probably most noticeable when you have fifty tabs open on your browser at once. It's a small detail I didn't pay attention to until I deployed my website. The theme I used includes a true/false option in the config file to set your own favicon using https://realfavicongenerator.net. Once you generate a favicon, you can put the accompanying files in the static folder for it to show up on your page's tabs. 
+A favicon is a little icon that identifies your page, which is probably most noticeable when you have fifty tabs open on your browser at once. It's a small detail I didn't pay attention to until I deployed my website. The theme I used includes a true/false option in the config file that either enables or disables the favicon HTML code already included in the template, so after setting it to true I generated the icon using https://realfavicongenerator.net and put the accompanying files in the static folder for it to show up on my page's tabs. 
 
 ## Highlight.js
 ```
@@ -199,7 +198,7 @@ A favicon is a little icon that identifies your page, which is probably most not
   <!-- here goes the rest of the page -->
 </body>
 ```
-Because I have previously written most code either on RStudio or other IDEs, I had never really considered the conundrum of writing code in HTML generated blocks that wouldn't have built in syntax highlighting. [Highlight.js](https://highlightjs.org/) is a syntax highlighter developed using Javascript that avoids having to come up with your own configurations for highlighting code. It has over [90 styles](https://highlightjs.org/static/demo/), which I also [contributed to](http://samia.rbind.io/projects/#gradientdark) after learning about it while creating this page!
+Because I have previously written most code either on RStudio or other IDEs, I had never really considered the conundrum of writing code in HTML generated blocks that wouldn't have built-in syntax highlighting. [Highlight.js](https://highlightjs.org/) is a syntax highlighter developed using Javascript that avoids having to come up with your own configurations for highlighting code. It has over [90 styles](https://highlightjs.org/static/demo/), which I also [contributed to](http://samia.rbind.io/projects/#gradientdark) after learning about it while creating this page!
 
 ## Adding Copy Buttons to Code Blocks
 
