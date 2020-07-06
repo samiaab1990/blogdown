@@ -1,0 +1,5 @@
+pre {
+  display: inline-block;
+  white-space:pre-wrap;
+  padding: 1em 1em;
+}
