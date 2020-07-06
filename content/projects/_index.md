@@ -72,5 +72,7 @@ Contributed the following themes to highlight.js for web-based syntax highlighti
   <!-- here goes the rest of the page -->
 </body>
 ```
+
 <a href="https://github.com/highlightjs/highlight.js/blob/master/src/styles/gradient-dark.css"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a>
 <a href="https://highlightjs.org/static/demo/"><button class="gitbtn"> Website <i class="fas fa-globe-americas"></i></button></a>
+
