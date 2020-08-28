@@ -2,8 +2,9 @@
 image: /img/main/page-logo.png
 title: Bookmarks
 ---
+
 ### Geospatial Analysis{#geospatialanalysis}
- [Geocomputation with R](https://geocompr.robinlovelace.net/)
+ <p>[Geocomputation with R](https://geocompr.robinlovelace.net/)
  
  [Smooth and Tidy Spatial Features in R](https://cran.r-project.org/web/packages/smoothr/vignettes/smoothr.html)
 
