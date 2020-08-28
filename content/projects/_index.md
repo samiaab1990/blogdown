@@ -17,8 +17,10 @@ title: Projects
 <p><img class="projimg" src="/img/post/climate_mapgif.gif" width=40% height=30%></p>
 <a href="http://samia.rbind.io/post/australia-wildfires-a-tidy-tuesday-project-from-january-2020/"><button class="gitbtn"> Blog Post <i class="far fa-sticky-note"></i></button></a>
 
-## Contributions 
-### Highlight.js themes {#gradientdark}
+## Contributions
+Packages and projects I've contributed to 
+
+### Highlight.js {#gradientdark}
 <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/gradient-dark.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
