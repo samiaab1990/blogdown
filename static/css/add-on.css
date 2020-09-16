@@ -1114,7 +1114,7 @@ border-radius:3px;
 /*Formatting if image is to be included in blog*/ 
 .postimg {
    display: block;
-   width:30;%;
+   width:30%;
    margin-left:auto;
    margin-right:auto;
 }
@@ -1306,7 +1306,7 @@ input:checked + .slider .dark
 
 /*Styling of headers of all pages*/ 
 .page-header{
- font-size:2em; 
+ font-size:4em; 
  text-align:left;
  padding-bottom:.3em;
  border-bottom: solid 2px var(--header-color) !important;
