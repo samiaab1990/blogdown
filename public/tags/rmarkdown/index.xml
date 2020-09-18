@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rmarkdown on samia.rbind.io</title>
+    <link>/tags/rmarkdown/</link>
+    <description>Recent content in rmarkdown on samia.rbind.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Customizing HTML Codeblocks with Highlight.JS</title>
+      <link>/post/syntax-highlighting-in-html/</link>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/syntax-highlighting-in-html/</guid>
+      <description>Syntax highlighting is an intrinsic part of IDEs and text editors that makes code more readable as it uses color schemes to differentiate attributes of a given programming language, but it&amp;rsquo;s tricky to manually recreate a console with HTML code blocks used in websites or markdown documents to the extent of built-in themes in IDEs and text editors. Although there is the option to keep the code block appearance pretty minimal, dynamic scripting languages, like JavaScript, have made it possible to bring the styling nuances of IDE and text editor themes to HTML.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -37,7 +37,7 @@ The first steps involve creating a new R project, installing the `blogdown` pack
 
 
 The code I typed into the console was as follows:
-```
+```{r}
 # Install and call in the packages
 install.packages("blogdown")
 library(blogdown)
@@ -203,7 +203,7 @@ A favicon is a little icon that identifies your page, which is probably most not
   <!-- here goes the rest of the page -->
 </body>
 ```
-Because I have previously written most code either on RStudio or other IDEs, I had never really considered the conundrum of writing code in HTML generated blocks that wouldn't have built-in syntax highlighting. [Highlight.js](https://highlightjs.org/) is a syntax highlighter developed using Javascript that avoids having to come up with your own configurations for highlighting code. It has over [90 styles](https://highlightjs.org/static/demo/), which I also [contributed to](http://samia.rbind.io/projects/#gradientdark) after learning about it while creating this page!
+Because I have previously written most code either on RStudio or other IDEs, I had never really considered the conundrum of writing code in HTML generated blocks that wouldn't have built-in syntax highlighting. [Highlight.js](https://highlightjs.org/) is a syntax highlighter developed using Javascript that avoids having to come up with your own configurations for highlighting code. It has over [90 styles](https://highlightjs.org/static/demo/), which I also [contributed to](http://samia.rbind.io/projects/#gradient) after learning about it while creating this page!
 
 ## Adding Copy Buttons to Code Blocks
 

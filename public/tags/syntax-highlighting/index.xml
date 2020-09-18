@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>syntax highlighting on samia.rbind.io</title>
+    <link>/tags/syntax-highlighting/</link>
+    <description>Recent content in syntax highlighting on samia.rbind.io</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/syntax-highlighting/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Syntax highlighting in HTML </title>
+      <link>/post/syntax-highlighting-in-html/</link>
+      <pubDate>Wed, 16 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/syntax-highlighting-in-html/</guid>
+      <description>If you use RStudio or any other IDE, likely</description>
+    </item>
+    
+  </channel>
+</rss>
