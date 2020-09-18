@@ -14,7 +14,7 @@ linktitle: ''
 Syntax highlighting is an intrinsic part of IDEs and text editors that makes code more readable as it uses color schemes to differentiate attributes of a given programming language, but it's tricky to manually recreate a console with HTML code blocks used in websites or markdown documents to the extent of built-in themes in IDEs and text editors. Although there is the option to keep the code block appearance pretty minimal, dynamic scripting languages, like JavaScript, have made it possible to bring the styling nuances of IDE and text editor themes to HTML. 
 
 
-There are a [number of syntax highlighters designed for the web](https://webdesign.tutsplus.com/articles/25-syntax-highlighters-tried-and-tested--cms-23931), but the one I became most familiar with after creating a blogdown site was [highlight.js](https://highlightjs.org/) because it was included in my theme's config file.
+There are a [number of syntax highlighters designed for the web](https://webdesign.tutsplus.com/articles/25-syntax-highlighters-tried-and-tested--cms-23931), but the one I became most familiar with after creating a blogdown site was [highlight.js](https://highlightjs.org/) because it was included as an option in my theme's config file.
 
 ```{toml}
 # Sets options for highlight.js
@@ -52,9 +52,9 @@ pre code {
 ```
 The resulting code block from the CSS example above looks like this: 
 
-<img src="/img/post/pre_code_css.png" width="50%" height="50%">
+<img src="/img/post/pre_code_css.png" width="60%" height="60%">
 
-You can still use CSS when highlight.js is enabled to change the font family, the size of the text and attributes of the code block itself but the highlight.js settings will take precedence over any background and font color settings in the CSS. 
+Even if highlight.js is enabled, the CSS for the `<pre>` and `<code>` tags will still apply to the font, text size and styling of the code container, but the color scheme of the highlight.js theme will take precedence over any background and font color properties specified in the stylesheet. 
 
 The rest of the global variables in the config file define the version, the CDN (content delivery network) location where the highlight.js script is originating from, the name of the theme and the languages where the syntax highlighting will apply. The full code for highlight.js in the site template pages looks like this
 
@@ -62,14 +62,14 @@ The rest of the global variables in the config file define the version, the CDN 
 <link rel="stylesheet"
 
 #The CDN host link, version and theme is defined in this line
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
 
 #The CDN host link and version is defined in this line
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
 
 #The languages are defined in this line  
 <script charset="UTF-8"
- src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js"></script>
+src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js"></script>
 ```
 
 There are a couple of ways to [call the script for highlight.js](https://highlightjs.org/usage/) other than in the above code. To use it in RMarkdown, all you need is the theme's .css filename, which can be found in the [styles directory of the highlight.js github page](https://github.com/highlightjs/highlight.js/tree/master/src/styles). 
@@ -85,7 +85,7 @@ There are a couple of ways to [call the script for highlight.js](https://highlig
 I used the [Dracula theme](https://draculatheme.com/highlightjs/) for this site (which is the same theme I use in my RStudio console). As of the current version, 10.2.0, highlight.js has 95 styles, two of which are my very own &#128512;! To use either of the themes on your own website or markdown, you can copy and paste the codes below. 
 
 <p style="font-size:14px"><b>Gradient Light</b></p>
-<img src="/img/post/gradient_light.png" width="50%" height="50%">
+<img src="/img/post/gradient_light.png" width="60%" height="60%">
 
 ```
 <link rel="stylesheet"
@@ -97,7 +97,7 @@ I used the [Dracula theme](https://draculatheme.com/highlightjs/) for this site 
 ```
 
 <p style="font-size:14px"><b>Gradient Dark</b></p>
-<img src="/img/post/gradient_dark.png" width="50%" height="50%">
+<img src="/img/post/gradient_dark.png" width="60%" height="60%">
 
 ```
 <link rel="stylesheet"

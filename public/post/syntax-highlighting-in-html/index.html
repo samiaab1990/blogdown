@@ -33,7 +33,7 @@
 
 <meta itemprop="datePublished" content="2020-09-16T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-09-16T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="582">
+<meta itemprop="wordCount" content="591">
 
   <meta itemprop="image" content="/">
 
@@ -346,7 +346,7 @@
   <div id="content">
     <p>Syntax highlighting is an intrinsic part of IDEs and text editors that makes code more readable as it uses color schemes to differentiate attributes of a given programming language, but it&rsquo;s tricky to manually recreate a console with HTML code blocks used in websites or markdown documents to the extent of built-in themes in IDEs and text editors. Although there is the option to keep the code block appearance pretty minimal, dynamic scripting languages, like JavaScript, have made it possible to bring the styling nuances of IDE and text editor themes to HTML.</p>
 
-<p>There are a <a href="https://webdesign.tutsplus.com/articles/25-syntax-highlighters-tried-and-tested--cms-23931">number of syntax highlighters designed for the web</a>, but the one I became most familiar with after creating a blogdown site was <a href="https://highlightjs.org/">highlight.js</a> because it was included in my theme&rsquo;s config file.</p>
+<p>There are a <a href="https://webdesign.tutsplus.com/articles/25-syntax-highlighters-tried-and-tested--cms-23931">number of syntax highlighters designed for the web</a>, but the one I became most familiar with after creating a blogdown site was <a href="https://highlightjs.org/">highlight.js</a> because it was included as an option in my theme&rsquo;s config file.</p>
 
 <pre><code class="language-toml"># Sets options for highlight.js
   highlightjs           = true
@@ -383,23 +383,23 @@ pre code {
 
 <p>The resulting code block from the CSS example above looks like this:</p>
 
-<p><img src="/img/post/pre_code_css.png" width="50%" height="50%"></p>
+<p><img src="/img/post/pre_code_css.png" width="60%" height="60%"></p>
 
-<p>You can still use CSS when highlight.js is enabled to change the font family, the size of the text and attributes of the code block itself but the highlight.js settings will take precedence over any background and font color settings in the CSS.</p>
+<p>Even if highlight.js is enabled, the CSS for the <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> tags will still apply to the font, text size and styling of the code container, but the color scheme of the highlight.js theme will take precedence over any background and font color properties specified in the stylesheet.</p>
 
 <p>The rest of the global variables in the config file define the version, the CDN (content delivery network) location where the highlight.js script is originating from, the name of the theme and the languages where the syntax highlighting will apply. The full code for highlight.js in the site template pages looks like this</p>
 
 <pre><code>&lt;link rel=&quot;stylesheet&quot;
 
 #The CDN host link, version and theme is defined in this line
-      href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css&quot;&gt;
+href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css&quot;&gt;
 
 #The CDN host link and version is defined in this line
 &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js&quot;&gt;&lt;/script&gt;
 
 #The languages are defined in this line  
 &lt;script charset=&quot;UTF-8&quot;
- src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js&quot;&gt;&lt;/script&gt;
+src=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/go.min.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
 <p>There are a couple of ways to <a href="https://highlightjs.org/usage/">call the script for highlight.js</a> other than in the above code. To use it in RMarkdown, all you need is the theme&rsquo;s .css filename, which can be found in the <a href="https://github.com/highlightjs/highlight.js/tree/master/src/styles">styles directory of the highlight.js github page</a>.</p>
@@ -414,7 +414,7 @@ pre code {
 <p>I used the <a href="https://draculatheme.com/highlightjs/">Dracula theme</a> for this site (which is the same theme I use in my RStudio console). As of the current version, 10.2.0, highlight.js has 95 styles, two of which are my very own &#128512;! To use either of the themes on your own website or markdown, you can copy and paste the codes below.</p>
 
 <p><p style="font-size:14px"><b>Gradient Light</b></p>
-<img src="/img/post/gradient_light.png" width="50%" height="50%"></p>
+<img src="/img/post/gradient_light.png" width="60%" height="60%"></p>
 
 <pre><code>&lt;link rel=&quot;stylesheet&quot;
       href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/gradient-light.min.css&quot;&gt;
@@ -425,7 +425,7 @@ pre code {
 </code></pre>
 
 <p><p style="font-size:14px"><b>Gradient Dark</b></p>
-<img src="/img/post/gradient_dark.png" width="50%" height="50%"></p>
+<img src="/img/post/gradient_dark.png" width="60%" height="60%"></p>
 
 <pre><code>&lt;link rel=&quot;stylesheet&quot;
       href=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/gradient-dark.min.css&quot;&gt;
