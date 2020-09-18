@@ -3,7 +3,7 @@ image: /img/main/page-logo.png
 title: Projects
 ---
 
-## Projects
+
 ### Blogdown {#blogdown} 
 <p><a href="https://github.com/samiaab1990/blogdown"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a>
 <a href="http://samia.rbind.io/post/making-a-static-website-using-blogdown/"><button class="gitbtn"> Blog Post <i class="far fa-sticky-note"></i></button></a></p>
@@ -22,14 +22,17 @@ title: Projects
 
 ### Highlight.js {#gradient}
 #### Gradient themes 
-##### Gradient Light
+
+<p style="font-size:14px"><b>Gradient Light</b></p>
 <p><img src="/img/post/gradient_light.png" width=60%></p>
 <p><a href="https://github.com/highlightjs/highlight.js/blob/master/src/styles/gradient-light.css"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a></p>
 
-##### Gradient Dark
+<p style="font-size:14px"><b>Gradient Dark</b></p>
 <p><img src="/img/post/gradient_dark.png" width=60%></p>
 <p><a href="https://github.com/highlightjs/highlight.js/blob/master/src/styles/gradient-dark.css"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a>
-<a href="https://highlightjs.org/static/demo/"><button class="gitbtn"> Website <i class="fas fa-globe-americas"></i></button></a></p>
+<a href="https://highlightjs.org/static/demo/"><button class="gitbtn"> Website <i class="fas fa-globe-americas"></i></button></a>
+<a href="https://samia.rbind.io/post/syntax-highlighting-in-html/"><button class="gitbtn"> Blog Post <i class="far fa-sticky-note"></i></button></a></p>
 
 ### kableExtra
+
 <a href="https://github.com/haozhu233/kableExtra"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a>

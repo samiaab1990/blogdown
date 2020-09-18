@@ -1306,7 +1306,7 @@ input:checked + .slider .dark
 
 /*Styling of headers of all pages*/ 
 .page-header{
- font-size:4em; 
+ font-size:3.5em; 
  text-align:left;
  padding-bottom:.3em;
  border-bottom: solid 2px var(--header-color) !important;
