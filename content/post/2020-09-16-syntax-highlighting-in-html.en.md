@@ -54,6 +54,7 @@ The resulting code block from the CSS example above looks like this:
 
 <img src="/img/post/pre_code_css.png" width="60%" height="60%">
 
+
 Even if highlight.js is enabled, the CSS for the `<pre>` and `<code>` tags will still apply to the font, text size and styling of the code container, but the color scheme of the highlight.js theme will take precedence over any background and font color properties specified in the stylesheet. 
 
 The rest of the global variables in the config file define the version, the CDN (content delivery network) location where the highlight.js script is originating from, the name of the theme and the languages where the syntax highlighting will apply. The full code for highlight.js in the site template pages looks like this
