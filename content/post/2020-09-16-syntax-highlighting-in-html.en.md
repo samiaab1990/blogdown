@@ -54,8 +54,6 @@ The resulting code block from the CSS example above looks like this:
 
 <img src="/img/post/pre_code_css.png" width="50%" height="50%">
 
-You can still use CSS when highlight.js is enabled to change the font family, the size of the text and attributes of the code block itself but the highlight.js settings will take precedence over any background and font color settings in the CSS. 
-
 The rest of the global variables in the config file define the version, the CDN (content delivery network) location where the highlight.js script is originating from, the name of the theme and the languages where the syntax highlighting will apply. The full code for highlight.js in the site template pages looks like this
 
 ```
