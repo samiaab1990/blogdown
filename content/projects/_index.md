@@ -21,16 +21,9 @@ title: Projects
 ## Contributions
 
 ### Highlight.js {#gradient}
-#### Gradient themes 
+#### Gradient light & dark themes 
 
-<p style="font-size:14px"><b>Gradient Light</b></p>
-<p><img src="/img/post/gradient_light.png" width=60%></p>
-<p><a href="https://github.com/highlightjs/highlight.js/blob/master/src/styles/gradient-light.css"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a></p>
-
-<p style="font-size:14px"><b>Gradient Dark</b></p>
-<p><img src="/img/post/gradient_dark.png" width=60%></p>
-<p><a href="https://github.com/highlightjs/highlight.js/blob/master/src/styles/gradient-dark.css"><button class="gitbtn"> Github <i class="fab fa-github-alt"></i></button></a>
-<a href="https://highlightjs.org/static/demo/"><button class="gitbtn"> Website <i class="fas fa-globe-americas"></i></button></a>
+<a href="https://highlightjs.org/static/demo/"><button class="gitbtn"> Demo <i class="fas fa-laptop-code"></i></i></button></a>
 <a href="https://samia.rbind.io/post/syntax-highlighting-in-html/"><button class="gitbtn"> Blog Post <i class="far fa-sticky-note"></i></button></a></p>
 
 ### kableExtra
